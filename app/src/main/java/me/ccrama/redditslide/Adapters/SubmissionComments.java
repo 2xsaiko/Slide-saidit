@@ -11,7 +11,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 import net.dean.jraw.http.RestResponse;
 import net.dean.jraw.http.SubmissionRequest;
-import net.dean.jraw.models.Comment;
 import net.dean.jraw.models.CommentNode;
 import net.dean.jraw.models.CommentSort;
 import net.dean.jraw.models.Submission;
@@ -29,7 +28,6 @@ import java.util.TreeMap;
 import me.ccrama.redditslide.Authentication;
 import me.ccrama.redditslide.Fragments.CommentPage;
 import me.ccrama.redditslide.LastComments;
-import me.ccrama.redditslide.util.LogUtil;
 import me.ccrama.redditslide.util.NetworkUtil;
 
 /**
@@ -198,7 +196,7 @@ public class SubmissionComments {
         args.put("sort", sort.name().toLowerCase(Locale.ENGLISH));
 
         RestResponse response = Authentication.reddit.execute(Authentication.reddit.request()
-                .path(String.format("/comments/%s", request.getId()))
+                .path(String.format("/comments/%s.json", request.getId()))
                 .query(args)
                 .build());
 

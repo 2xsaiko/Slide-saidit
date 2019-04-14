@@ -2881,7 +2881,7 @@ public class PopulateSubmissionViewHolder {
                 && submission.isSelfPost()
                 && !submission.getSelftext().isEmpty()
                 && !submission.isNsfw()
-                && !submission.getDataNode().get("spoiler").asBoolean()
+                // && !submission.getDataNode().get("spoiler").asBoolean()
                 && !submission.getDataNode().get("selftext_html").asText().trim().isEmpty()) {
             holder.body.setVisibility(View.VISIBLE);
             String text = submission.getDataNode().get("selftext_html").asText();
