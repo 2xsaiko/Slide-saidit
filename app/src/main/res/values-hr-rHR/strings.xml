@@ -181,7 +181,7 @@
     <string name="sorting_search_month">Prošli mjesec</string>
     <string name="sorting_search_year">Prošla godina</string>
     <string name="sorting_search_all">Svo vrijeme</string>
-    <string name="sorting_defaultfor">Zadano za /r/%1$s</string>
+    <string name="sorting_defaultfor">Zadano za /s/%1$s</string>
     <!-- Editor (save/submit a post) actions -->
     <string name="editor_url">URL</string>
     <string name="editor_text">Tekst</string>
@@ -241,7 +241,7 @@
     <string name="multireddit_create_hint">Ime multireddita</string>
     <string name="multireddit_invalid_name">Neispravno ime multireddita</string>
     <string name="multireddit_invalid_name_msg">Imena multireddita mogu sadržavati samo slova, brojeve i podvlake.</string>
-    <string name="multi_add_to">Dodaj /r/%s u</string>
+    <string name="multi_add_to">Dodaj /s/%s u</string>
     <string name="multi_error">Došlo je do pogreške, molimo pokušajte ponovno kasnije</string>
     <string name="btn_import_multi">Uvezi multireddit</string>
     <string name="multi_saved_successfully">Uspješno spremljeno</string>
@@ -283,11 +283,11 @@
     <string name="mail_send_to">Pošaljite poruku korisniku</string>
     <string name="mail_send">Pošalji poruku</string>
     <string name="mail_notification_msg_from">Nova poruka od %1$s</string>
-    <string name="mail_notification_msg_via">Nova poruka preko /r/%1$s</string>
+    <string name="mail_notification_msg_via">Nova poruka preko /s/%1$s</string>
     <string name="mod_mail_notification_msg">Novi moderatorski mail od%1$s</string>
     <string name="mail_reply_to">Odgovori %1$s</string>
     <string name="mail_notification_author">%1$s iz %2$s</string>
-    <string name="mail_notification_subreddit">%1$s putem /r/%2$s</string>
+    <string name="mail_notification_subreddit">%1$s putem /s/%2$s</string>
     <string name="mail_theirs">Pogledaj njihovu poruku</string>
     <string name="mail_re">re: %1$s</string>
     <string name="mail_mark_read">Označi pročitano</string>
@@ -581,7 +581,7 @@
     <string name="reorder_selected">\u0020označen</string>
     <string name="reorder_move">Pomakni na vrh</string>
     <string name="reorder_not_found_err">Podreddit nije pronađen, ovdje su neki prijedlozi</string>
-    <string name="reorder_subscribed_toast">Pretplaćen na /r/%1$s</string>
+    <string name="reorder_subscribed_toast">Pretplaćen na /s/%1$s</string>
     <string name="FAQ">Često postavljena pitanja</string>
     <string name="sync_subscriptions">Sinkroniziraj pretplate</string>
     <string name="deleting">Brisanje&#8230;</string>
@@ -589,8 +589,8 @@
     <string name="btn_add_collection">Dodavanje zbirke</string>
     <string name="add_to_subs">DODAJ U PRETPLATE</string>
     <string name="sub_added">Podreddit dodan!</string>
-    <string name="subscribe_to">Pretplati se na /r/%1$s</string>
-    <string name="unsubscribe_from">Ukloni pretplatu za /r/%1$s</string>
+    <string name="subscribe_to">Pretplati se na /s/%1$s</string>
+    <string name="unsubscribe_from">Ukloni pretplatu za /s/%1$s</string>
     <string name="btn_add_to_sublist">DODAJ NA POPIS PODREDDITA</string>
     <string name="btn_remove_from_sublist">UKLONI IZ SUB POPISA</string>
     <string name="just_unsub">SAMO PONIŠTI PRETPLATU</string>
@@ -706,12 +706,12 @@
     <string name="time_minutes_short">%dm</string>
     <string name="time_seconds_short">%dsek</string>
     <!-- Strings present during the login process -->
-    <string name="login_subscribe_rslideforreddit">Pretplatite se na /r/slideforreddit?</string>
+    <string name="login_subscribe_rslideforreddit">Pretplatite se na /s/slideforreddit?</string>
     <string name="login_sync_colors">Sinkronizirati boje sada?</string>
     <string name="login_starting">Postavljanje stvari!</string>
     <string name="login_starting_desc">Ovo bi trebalo trajati samo sekundu&#8230;</string>
     <!-- Over 18 prompt when visiting a NSFW subreddit -->
-    <string name="over18_title">/r/%1$s sadrži sadržaj za odrasle</string>
+    <string name="over18_title">/s/%1$s sadrži sadržaj za odrasle</string>
     <!-- Subreddit color synchronization - https://redd.it/41054l -->
     <string name="color_sync_complete">Sinkronizacija dovršena</string>
     <!-- Discover section: find -->
@@ -724,7 +724,7 @@
     <string name="sub_post_notifs_threshold">Prag ocjene</string>
     <string name="sub_post_notifs_settings_title">Subredditi za provjeru</string>
     <string name="sub_post_notifs_settings_search">Traži ime subreddita</string>
-    <string name="sub_post_notifs_notification_title">Nove objave u /r/%1$s</string>
+    <string name="sub_post_notifs_notification_title">Nove objave u /s/%1$s</string>
     <!-- Internal browser -->
     <string name="internal_browser_extracting_progress">Izvlačenje artikala&#8230;</string>
     <string name="internal_browser_readermode">Način čitanja</string>
@@ -774,7 +774,7 @@
         <item quantity="other">"%d odabrano"</item>
     </plurals>
     <!--Filtering dialog -->
-    <string name="filter_posts_sub">Objave iz /r/%1$s</string>
+    <string name="filter_posts_sub">Objave iz /s/%1$s</string>
     <string name="filter_posts_user">Objave od /u/%1$s</string>
     <string name="filter_btn">Filter</string>
     <!-- Caching -->
@@ -788,7 +788,7 @@
     <string name="btn_report">Izvješće</string>
     <string name="report_post">Prijavi objavi</string>
     <string name="report_comment">Prijavi komentar</string>
-    <string name="report_sub_rules">/r/%s pravila</string>
+    <string name="report_sub_rules">/s/%s pravila</string>
     <string name="report_site_rules">Reddit pravila</string>
     <string name="report_another_reason">Drugi razlog</string>
     <string name="report_other">Ostalo</string>

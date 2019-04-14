@@ -180,7 +180,7 @@
     <string name="sorting_search_month">Претходни месец</string>
     <string name="sorting_search_year">Претходна година</string>
     <string name="sorting_search_all">Одувек</string>
-    <string name="sorting_defaultfor">Подразумевано за /r/%1$s</string>
+    <string name="sorting_defaultfor">Подразумевано за /s/%1$s</string>
     <!-- Editor (save/submit a post) actions -->
     <string name="editor_url">Адреса</string>
     <string name="editor_text">Текст</string>
@@ -249,7 +249,7 @@
     <string name="multireddit_create_hint">Име мултиредита</string>
     <string name="multireddit_invalid_name">Неисправно име мултиредита</string>
     <string name="multireddit_invalid_name_msg">Мултиредит имена могу садржати само слова, бројеве и доње црте</string>
-    <string name="multi_add_to">Додај /r/%s у</string>
+    <string name="multi_add_to">Додај /s/%s у</string>
     <string name="multi_subreddit_added">Субредит додат у /m/%1$s</string>
     <string name="multi_error">Дошло је до грешке, покушај поново касније</string>
     <string name="btn_import_multi">Увези мултиредит</string>
@@ -294,7 +294,7 @@
     <string name="mail_send_to">Пошаљи поруку кориснику %1$s</string>
     <string name="mail_send">Пошаљи поруку</string>
     <string name="mail_notification_msg_from">Нова порука од корисника %1$s</string>
-    <string name="mail_notification_msg_via">Нова порука са /r/%1$s</string>
+    <string name="mail_notification_msg_via">Нова порука са /s/%1$s</string>
     <string name="mail_reply_to">Одговори кориснику %1$s</string>
     <string name="mail_notification_author">%1$s од %2$s</string>
     <string name="mail_theirs">Погледај њихову поруку</string>
@@ -587,8 +587,8 @@
     <string name="reorder_move">Помери на врх</string>
     <string name="reorder_domain_placeholder">\u0020(само име домена)</string>
     <string name="reorder_not_found_err">Субредит није нађен, ево неких предлога</string>
-    <string name="reorder_subscribed_toast">Претплаћен на /r/%1$s</string>
-    <string name="reorder_unsubscribed_toast">Отказана претплата са /r/%1$s</string>
+    <string name="reorder_subscribed_toast">Претплаћен на /s/%1$s</string>
+    <string name="reorder_unsubscribed_toast">Отказана претплата са /s/%1$s</string>
     <string name="FAQ">ЧПП</string>
     <string name="alphabetize_subreddits">Сортирај субредите по абецеди</string>
     <string name="sync_subscriptions">Синхронизовање претплата</string>
@@ -599,8 +599,8 @@
     <string name="add_to_subs">ДОДАЈ У ПРЕТПЛАТЕ</string>
     <string name="sub_added">Субредит додат!</string>
     <string name="reorder_subs_FAQ">ЧПП преуређивање субредита</string>
-    <string name="subscribe_to">Претплати се на /r/%1$s</string>
-    <string name="unsubscribe_from">Откажи претплату на /r/%1$s</string>
+    <string name="subscribe_to">Претплати се на /s/%1$s</string>
+    <string name="unsubscribe_from">Откажи претплату на /s/%1$s</string>
     <string name="reorder_subreddits_title">Одаберите субредит за додавање</string>
     <string name="reorder_add_or_search_subreddit">Додај или тражи субредит</string>
     <string name="reorder_subreddit_name">Име субредита</string>
@@ -703,13 +703,13 @@
     <string name="time_minutes_short">%dm</string>
     <string name="time_seconds_short">%ds</string>
     <!-- Strings present during the login process -->
-    <string name="login_subscribe_rslideforreddit">Претплати се на /r/slideforreddit?</string>
+    <string name="login_subscribe_rslideforreddit">Претплати се на /s/slideforreddit?</string>
     <string name="login_sync_colors">Синхронизуј боје сад?</string>
     <string name="login_authenticating">Slide проверава идентитет</string>
     <string name="login_starting">Подешавам ствари!</string>
     <string name="login_starting_desc">Ово не треба да трају дуже од секунде&#8230;</string>
     <!-- Over 18 prompt when visiting a NSFW subreddit -->
-    <string name="over18_title">/r/%1$s садржи садржај за одрасле</string>
+    <string name="over18_title">/s/%1$s садржи садржај за одрасле</string>
     <string name="over18_desc">Да ли сте преко 18 и да ли желите да видите садржај за одрасле?</string>
     <string name="over18_desc_loggedout">Пријавите се да заувек искључите ово упозорење</string>
     <!-- Subreddit color synchronization - https://redd.it/41054l -->

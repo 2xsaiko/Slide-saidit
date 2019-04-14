@@ -163,7 +163,7 @@
     <string name="sorting_search_month">Viimeisin kuukausi</string>
     <string name="sorting_search_year">Viimeisin vuosi</string>
     <string name="sorting_search_all">Kaikelta ajalta</string>
-    <string name="sorting_defaultfor">Oletusarvo /r/%1$s</string>
+    <string name="sorting_defaultfor">Oletusarvo /s/%1$s</string>
     <!-- Editor (save/submit a post) actions -->
     <string name="editor_url">URL</string>
     <string name="editor_text">Teksti</string>

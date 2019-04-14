@@ -481,7 +481,7 @@
     <string name="donate_err_title">Donasjon mislyktes :(</string>
     <string name="donate_err_msg">Uheldigvis gikk ikke donasjonen gjennom. Sjekk at du er koblet til nettet og prøv igjen. Takk for støtten!</string>
     <string name="donate_success_title">Donasjonen var vellykket!</string>
-    <string name="donate_success_msg">Takk så mye for støtten til Slide for Reddit! Den er av stor betydning. Hvis du støter på problemer med appen, send meg en e-post eller skriv på /r/slideforreddit når som helst!</string>
+    <string name="donate_success_msg">Takk så mye for støtten til Slide for Reddit! Den er av stor betydning. Hvis du støter på problemer med appen, send meg en e-post eller skriv på /s/slideforreddit når som helst!</string>
     <string name="donate_success_btn">Værsågod!</string>
     <!-- Offline mode -->
     <string name="offline_caching">Cacher innlegg</string>
@@ -527,15 +527,15 @@
     <string name="time_minutes_short">%dm</string>
     <string name="time_seconds_short">%ds</string>
     <!-- Strings present during the login process -->
-    <string name="login_subscribe_rslideforreddit">Abonnere på /r/slideforreddit?</string>
-    <string name="login_subscribe_rslideforreddit_desc">Ønsker du å abonnere på /r/slideforreddit for å få de siste nyhetene og for å rapportere problemer?</string>
+    <string name="login_subscribe_rslideforreddit">Abonnere på /s/slideforreddit?</string>
+    <string name="login_subscribe_rslideforreddit_desc">Ønsker du å abonnere på /s/slideforreddit for å få de siste nyhetene og for å rapportere problemer?</string>
     <string name="login_sync_colors">Synkroniser farger nå?</string>
     <string name="login_sync_colors_desc">Ønsker du å synkronisere subreddit-fargene nå? Dette kan gjøres senere i innstillinger → Subreddit-temaer</string>
     <string name="login_authenticating">Slide autoriserer</string>
     <string name="login_starting">Setter opp ting!</string>
     <string name="login_starting_desc">Dette tar kun et par sekunder&#8230;</string>
     <!-- Over 18 prompt when visiting a NSFW subreddit -->
-    <string name="over18_title">/r/%1$s inneholder voksent innhold</string>
+    <string name="over18_title">/s/%1$s inneholder voksent innhold</string>
     <string name="over18_desc">Er du over 18 og villig til å se voksent innhold?</string>
     <string name="over18_desc_loggedout">Logg inn for å deaktivere denne advarselen permanent</string>
     <string name="over18_desc_loggedin">Du kan deaktivere dette permanent i innstillinger → Reddit innstillinger → Vis NSFW innhold</string>

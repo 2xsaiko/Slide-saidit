@@ -182,7 +182,7 @@
     <string name="sorting_search_month">Geçen ay</string>
     <string name="sorting_search_year">Geçen sene</string>
     <string name="sorting_search_all">Ezelden beri</string>
-    <string name="sorting_defaultfor">/r/%1$s için varsayılan</string>
+    <string name="sorting_defaultfor">/s/%1$s için varsayılan</string>
     <!-- Editor (save/submit a post) actions -->
     <string name="editor_url">Adres</string>
     <string name="editor_text">Metin</string>
@@ -256,7 +256,7 @@
     <string name="multireddit_create_hint">Multireddit adı</string>
     <string name="multireddit_invalid_name">Geçersiz multireddit adı</string>
     <string name="multireddit_invalid_name_msg">Multireddit adları yalnızca harf, sayı ve alt çizgi içerebilir</string>
-    <string name="multi_add_to">/R/%s için Ekle</string>
+    <string name="multi_add_to">/s/%s için Ekle</string>
     <string name="multi_subreddit_added">Subreddit /m/%1$s için eklendi</string>
     <string name="multi_error">Bir hata oluştu. Lütfen daha sonra tekrar deneyin.</string>
     <string name="btn_import_multi">Multreddit\'i içeri aktar</string>
@@ -301,11 +301,11 @@
     <string name="mail_send_to">%1$s kişisine bir mesaj gönder</string>
     <string name="mail_send">Bir mesaj gönder</string>
     <string name="mail_notification_msg_from">%1$s\'den yeni mesaj</string>
-    <string name="mail_notification_msg_via">/r/%1$s aracılığıyla yeni mesaj</string>
+    <string name="mail_notification_msg_via">/s/%1$s aracılığıyla yeni mesaj</string>
     <string name="mod_mail_notification_msg">%1$s\'dan yeni modmail</string>
     <string name="mail_reply_to">%1$s kişisine cevapla</string>
     <string name="mail_notification_author">%2$s kişisinden %1$s</string>
-    <string name="mail_notification_subreddit">%1$s aracılıyla /r/%2$s</string>
+    <string name="mail_notification_subreddit">%1$s aracılıyla /s/%2$s</string>
     <string name="mail_theirs">Onların mesajını görüntüle</string>
     <string name="mail_re">ynt: %1$s</string>
     <string name="mail_mark_read">Okundu olarak işaretle</string>
@@ -666,8 +666,8 @@
     <string name="reorder_move">En Üste Taşı</string>
     <string name="reorder_domain_placeholder">\u0020(sadece alan adı ismi)</string>
     <string name="reorder_not_found_err">Subreddit bulunamadı, bir kaç öneri</string>
-    <string name="reorder_subscribed_toast">/r/%1$s\'e abone olundu</string>
-    <string name="reorder_unsubscribed_toast">/r/%1$s\'e abonelikten çıkıldı</string>
+    <string name="reorder_subscribed_toast">/s/%1$s\'e abone olundu</string>
+    <string name="reorder_unsubscribed_toast">/s/%1$s\'e abonelikten çıkıldı</string>
     <string name="sorting_faq"><b>Subredditleri nasıl yenilerim?</b>\nSubredditleri yenilemek için, araç çubuğundaki yenile ikonuna tıkla!\n\n<b>Bazı subredditlerin aboneliğinden çıktım ama yinede listedeler!</b>\nSlide, tarayıcıdan aboneliğinden çıkılmış subları normal aboneliklere çevirir. Onları da silmek için subreddit üzerine basılı tut ve kaldır tuşuna bas!\n\n<b>Koleksiyonları nasıl kullanırım?</b>\nBir koleksiyon kullanmak için, + FAB tuşuna basın ve \'Koleksiyon oluştur\'u seçin. Böylece seçtiğiniz sublar ana ekranda tek bir sub gibi davranır!</string>
     <string name="FAQ">S.S.S</string>
     <string name="alphabetize_subreddits">Subredditleri alfabetik sıraya diz</string>
@@ -680,8 +680,8 @@
     <string name="add_to_subs">ABONELİKLERE EKLE</string>
     <string name="sub_added">Subreddit eklendi!</string>
     <string name="reorder_subs_FAQ">Subredditlerin sırasını değiştirme SSS</string>
-    <string name="subscribe_to">/r/%1$s\'e abone ol</string>
-    <string name="unsubscribe_from">/r/%1$s\'e abonelikten çık</string>
+    <string name="subscribe_to">/s/%1$s\'e abone ol</string>
+    <string name="unsubscribe_from">/s/%1$s\'e abonelikten çık</string>
     <string name="btn_add_to_sublist">SUB LİSTESİNE EKLE</string>
     <string name="btn_remove_from_sublist">SUB LİSTESİNDEN ÇIKAR</string>
     <string name="just_unsub">SADECE ABONELİKTEN ÇIK</string>
@@ -743,7 +743,7 @@
     <string name="donate_err_title">Bağış başarısız :(</string>
     <string name="donate_err_msg">Ne yazık ki, bağışınız ulaşmadı. Internet\'e bağlı olduğunuzdan emin olun ve tekrar deneyin! Desteğiniz için teşekkür ederim!</string>
     <string name="donate_success_title">Bağış başarılı!</string>
-    <string name="donate_success_msg">Slide for Reddit\'e desteğiniz için çok teşekkür ederiz! Bu benim için gerçekten çok önemli. Eğer herhangi bir sorunla karşılaşırsanız, bana bir e-posta atın ya da istediğiniz zaman /r/slideforreddit \'e mesaj yazın!</string>
+    <string name="donate_success_msg">Slide for Reddit\'e desteğiniz için çok teşekkür ederiz! Bu benim için gerçekten çok önemli. Eğer herhangi bir sorunla karşılaşırsanız, bana bir e-posta atın ya da istediğiniz zaman /s/slideforreddit \'e mesaj yazın!</string>
     <string name="donate_success_btn">Bir şey değil!</string>
     <!-- Offline mode -->
     <string name="offline_caching">Gönderiler ön belleğe alınıyor</string>
@@ -794,15 +794,15 @@
     <string name="time_minutes_short">%dd</string>
     <string name="time_seconds_short">%ds</string>
     <!-- Strings present during the login process -->
-    <string name="login_subscribe_rslideforreddit">/r/slideforreddit\'e abone ol?</string>
-    <string name="login_subscribe_rslideforreddit_desc">/r/slideforreddit\'e sorunları bildirmek ve son durumdan haberdar olmak için abone olmak ister misiniz?</string>
+    <string name="login_subscribe_rslideforreddit">/s/slideforreddit\'e abone ol?</string>
+    <string name="login_subscribe_rslideforreddit_desc">/s/slideforreddit\'e sorunları bildirmek ve son durumdan haberdar olmak için abone olmak ister misiniz?</string>
     <string name="login_sync_colors">Renkleri şimdi eşle?</string>
     <string name="login_sync_colors_desc">Subreddit renklerini şimdi eşlemek ister misiniz? Ayarlar → Subreddit temaları kısmından da yapabilirsiniz</string>
     <string name="login_authenticating">Slide bilgilerinizi doğruluyor</string>
     <string name="login_starting">Bir kaç şey ayarlanıyor!</string>
     <string name="login_starting_desc">Bu sadece bir kaç saniye sürer&#8230;</string>
     <!-- Over 18 prompt when visiting a NSFW subreddit -->
-    <string name="over18_title">/r/%1$s yetişkin içeriği içeriyor</string>
+    <string name="over18_title">/s/%1$s yetişkin içeriği içeriyor</string>
     <string name="over18_desc">On sekiz yaşın üzerinde ve yetişkin içeriği görmek istiyor musunuz?</string>
     <string name="over18_desc_loggedout">Bu uyarıyı devre dışı bırakmak için oturum açın</string>
     <string name="over18_desc_loggedin">Bu uyarıyı Ayarlar → Reddit tercihleri → NSFW içeriği göster kısmından kapatabilirsiniz</string>
@@ -818,7 +818,7 @@
     <string name="discover_popular">Popüler</string>
     <string name="discover_trending">Yükselen</string>
     <!-- Subreddit post notifiactions -->
-    <string name="sub_post_notifs_title">\n/r/%1$s\'daki yeni gönderilerden haberdar ol?</string>
+    <string name="sub_post_notifs_title">\n/s/%1$s\'daki yeni gönderilerden haberdar ol?</string>
     <string name="sub_post_notifs_title_settings">Yeni gönderilerden haberdar ol?</string>
     <string name="sub_post_notifs_menu">Yeni gönderilerden haberdar ol</string>
     <string name="sub_post_notify">Bildir</string>
@@ -828,8 +828,8 @@
     <string name="sub_post_notifs_settings_none">Haberdar edilecek subreddit yok</string>
     <string name="sub_post_notifs_settings_title">Konrol edilecek subredditler</string>
     <string name="sub_post_notifs_settings_search">Sub ismini ara</string>
-    <string name="sub_post_notifs_notification_title">/r/%1$s\'daki yeni gönderiler</string>
-    <string name="sub_post_notifs_notification_btn">/R/%1$s\'ı izlemeyi durdur</string>
+    <string name="sub_post_notifs_notification_title">/s/%1$s\'daki yeni gönderiler</string>
+    <string name="sub_post_notifs_notification_btn">/s/%1$s\'ı izlemeyi durdur</string>
     <string name="title_sub_post_notifs">Subreddit gönderi bildirimleri</string>
     <!-- Internal browser -->
     <string name="internal_browser_extracting_error">Üzgünüz, makale alınabilir değil</string>
@@ -902,7 +902,7 @@
     </plurals>
     <!--Filtering dialog -->
     <string name="filter_title">Neyi filtrelemek istiyorsunuz?</string>
-    <string name="filter_posts_sub">/r/%1$s\'dan gönderiler</string>
+    <string name="filter_posts_sub">/s/%1$s\'dan gönderiler</string>
     <string name="filter_posts_user">/u/%1$s tarafından gönderiler</string>
     <string name="filter_posts_urls">%1$s\'a bağlantı veren gönderiler</string>
     <string name="filter_open_externally">%s adreslerini harici olarak aç</string>
@@ -1053,7 +1053,7 @@
     <string name="open_links_externally">Bu sunucuyu her zaman harici olarak aç</string>
     <string name="hide_read_posts">Okunmuş gönderileri gizle</string>
     <string name="gallery_mode">Galeri modu</string>
-    <string name="friends_sort_error">/r/ friends sıralanamaz</string>
+    <string name="friends_sort_error">/s/ friends sıralanamaz</string>
     <string name="shadowbox_comments_nolinks">Yorumlarda bağlantı bulunamadı</string>
     <string name="pro_previews">Önizle (%d)</string>
     <string name="draw_undo">Geri al</string>

@@ -190,7 +190,7 @@
     <string name="sorting_search_month">За последний месяц</string>
     <string name="sorting_search_year">За последний год</string>
     <string name="sorting_search_all">За всё время</string>
-    <string name="sorting_defaultfor">По умолчанию для /r/%1$s</string>
+    <string name="sorting_defaultfor">По умолчанию для /s/%1$s</string>
     <!-- Editor (save/submit a post) actions -->
     <string name="editor_url">Ссылка</string>
     <string name="editor_text">Текст</string>
@@ -264,7 +264,7 @@
     <string name="multireddit_create_hint">Имя мультиреддита</string>
     <string name="multireddit_invalid_name">Неверное название мультиреддита</string>
     <string name="multireddit_invalid_name_msg">Имена мультиреддитов могут содержать только буквы, цифры и подчеркивания</string>
-    <string name="multi_add_to">Добавить /r/%s в</string>
+    <string name="multi_add_to">Добавить /s/%s в</string>
     <string name="multi_subreddit_added">Сабреддит добавлен в /m/%1$s</string>
     <string name="multi_error">Произошла ошибка, повторите попытку позже</string>
     <string name="btn_import_multi">Импортировать мультиреддит</string>
@@ -309,11 +309,11 @@
     <string name="mail_send_to">Отправить сообщение %1$s</string>
     <string name="mail_send">Отправить сообщение</string>
     <string name="mail_notification_msg_from">Новое сообщение от %1$s</string>
-    <string name="mail_notification_msg_via">Новое сообщение из /r/%1$s</string>
+    <string name="mail_notification_msg_via">Новое сообщение из /s/%1$s</string>
     <string name="mod_mail_notification_msg">Новое модераторское сообщение от %1$s</string>
     <string name="mail_reply_to">Ответ %1$s</string>
     <string name="mail_notification_author">%1$s от %2$s</string>
-    <string name="mail_notification_subreddit">%1$s из /r/%2$s</string>
+    <string name="mail_notification_subreddit">%1$s из /s/%2$s</string>
     <string name="mail_theirs">Просмотреть их сообщение</string>
     <string name="mail_re">re: %1$s</string>
     <string name="mail_mark_read">Отметить как прочитанное</string>
@@ -613,7 +613,7 @@
     <string name="settings_theme_tinting">Режим окрашивания публикаций</string>
     <string name="settings_reddit_thumbnail_mode">Режим миниатюр</string>
     <string name="settings_layout_actionbar_mode">Режим панели действий</string>
-    <string name="settings_theme_tint_outside_desc">Менять цвет фона только в мультиреддитах, на главной странице и /r/all</string>
+    <string name="settings_theme_tint_outside_desc">Менять цвет фона только в мультиреддитах, на главной странице и /s/all</string>
     <string name="settings_layout_small_content_tag">Уменьшенный тег содержимого</string>
     <string name="settings_links_force_external">Принудительно использовать внешний браузер</string>
     <string name="settings_links_force_external_desc">Выберите домены, которые всегда будут открываться во внешнем браузере</string>
@@ -672,8 +672,8 @@
     <string name="reorder_move">Переместить в начало</string>
     <string name="reorder_domain_placeholder">\u0020(только доменное имя)</string>
     <string name="reorder_not_found_err">Сабреддит не найден, вот некоторые предложения</string>
-    <string name="reorder_subscribed_toast">Подписан на /r/%1$s</string>
-    <string name="reorder_unsubscribed_toast">Отписан от /r/%1$s</string>
+    <string name="reorder_subscribed_toast">Подписан на /s/%1$s</string>
+    <string name="reorder_unsubscribed_toast">Отписан от /s/%1$s</string>
     <string name="FAQ">Часто задаваемые вопросы</string>
     <string name="alphabetize_subreddits">Сортировать сабреддиты по алфавиту</string>
     <string name="sync_subscriptions">Синхронизовать подписки</string>
@@ -684,8 +684,8 @@
     <string name="btn_add_collection">Добавить коллекцию</string>
     <string name="add_to_subs">ДОБАВИТЬ В ПОДПИСКИ</string>
     <string name="sub_added">Сабреддит добавлен!</string>
-    <string name="subscribe_to">Подписаться на /r/%1$s</string>
-    <string name="unsubscribe_from">Отписаться от /r/%1$s</string>
+    <string name="subscribe_to">Подписаться на /s/%1$s</string>
+    <string name="unsubscribe_from">Отписаться от /s/%1$s</string>
     <string name="btn_add_to_sublist">ДОБАВИТЬ В СПИСОК ПОДПИСОК</string>
     <string name="btn_remove_from_sublist">УДАЛИТЬ ИЗ СПИСКА ПОДПИСОК</string>
     <string name="just_unsub">ТОЛЬКО ОТПИСАТЬСЯ</string>
@@ -811,15 +811,15 @@
     <string name="time_minutes_short">%dм</string>
     <string name="time_seconds_short">%d</string>
     <!-- Strings present during the login process -->
-    <string name="login_subscribe_rslideforreddit">Подписаться на /r/slideforreddit?</string>
-    <string name="login_subscribe_rslideforreddit_desc">Хотели бы вы подписаться на /r/slideforreddit для получения последних новостей и сообщения об ошибках?</string>
+    <string name="login_subscribe_rslideforreddit">Подписаться на /s/slideforreddit?</string>
+    <string name="login_subscribe_rslideforreddit_desc">Хотели бы вы подписаться на /s/slideforreddit для получения последних новостей и сообщения об ошибках?</string>
     <string name="login_sync_colors">Синхронизировать цвета?</string>
     <string name="login_sync_colors_desc">Вы хотите синхронизировать теперь ваши цвета subreddit? Это может быть сделано позднее в настройках → Темы Subreddit</string>
     <string name="login_authenticating">Slide выполняет вход</string>
     <string name="login_starting">Настраиваем!</string>
     <string name="login_starting_desc">Это займёт всего секунду&#8230;</string>
     <!-- Over 18 prompt when visiting a NSFW subreddit -->
-    <string name="over18_title">/r/%1$s содержит зрелое содержание</string>
+    <string name="over18_title">/s/%1$s содержит зрелое содержание</string>
     <string name="over18_desc">Вам больше восемнадцати и вы желаете видеть контент для взрослых?</string>
     <string name="over18_desc_loggedout">Авторизируйтесь, чтобы отключить это предупреждение навсегда</string>
     <string name="over18_desc_loggedin">Вы можете отключить это навсегда в Настройки → Предпочтения Reddit → Показывать NSFW-контент</string>
@@ -837,7 +837,7 @@
     <string name="discover_popular">Популярное</string>
     <string name="discover_trending">Набирающее популярность</string>
     <!-- Subreddit post notifiactions -->
-    <string name="sub_post_notifs_title">Получать уведомления о новых записях в \n/r/%1$s?</string>
+    <string name="sub_post_notifs_title">Получать уведомления о новых записях в \n/s/%1$s?</string>
     <string name="sub_post_notifs_title_settings">Уведомлять о новых записях?</string>
     <string name="sub_post_notifs_menu">Уведомлять о новых записях</string>
     <string name="sub_post_notify">Уведомлять</string>
@@ -847,8 +847,8 @@
     <string name="sub_post_notifs_settings_none">Нет сабреддитов для уведомления</string>
     <string name="sub_post_notifs_settings_title">Сабреддиты для проверки</string>
     <string name="sub_post_notifs_settings_search">Поиск по названию сабреддита</string>
-    <string name="sub_post_notifs_notification_title">Новая запись в /r/%1$s</string>
-    <string name="sub_post_notifs_notification_btn">Прекратить отслеживание /r/%1$s</string>
+    <string name="sub_post_notifs_notification_title">Новая запись в /s/%1$s</string>
+    <string name="sub_post_notifs_notification_btn">Прекратить отслеживание /s/%1$s</string>
     <string name="title_sub_post_notifs">Уведомления о записях в сабреддитах</string>
     <!-- Internal browser -->
     <string name="internal_browser_extracting_error">Извините, не удалось извлечь статью</string>
@@ -904,7 +904,7 @@
     <string name="sidebar_findingmods">Поиск модераторов</string>
     <string name="snackbar_flair_success">Пометка успешно установлена</string>
     <string name="snackbar_flair_error">Ошибка при установке пометки, попробуйте позже</string>
-    <string name="sidebar_submods">Модераторы /r/%s</string>
+    <string name="sidebar_submods">Модераторы /s/%s</string>
     <string name="sidebar_flair">Пометка: %1$s</string>
     <string name="sidebar_notfound">Сайдбар не найден</string>
     <plurals name="reorder_selected">
@@ -915,7 +915,7 @@
     </plurals>
     <!--Filtering dialog -->
     <string name="filter_title">Что вы хотите фильтровать?</string>
-    <string name="filter_posts_sub">Записи из /r/%1$s</string>
+    <string name="filter_posts_sub">Записи из /s/%1$s</string>
     <string name="filter_posts_user">Записи от /u/%1$s</string>
     <string name="filter_posts_urls">Записи ведущие на %1$s</string>
     <string name="filter_open_externally">Открывать URL %s внешними приложениями</string>
@@ -1058,7 +1058,7 @@
     <string name="open_links_externally">Всегда открывать этот сайт во внешнем браузере</string>
     <string name="hide_read_posts">Скрыть прочтенные записи</string>
     <string name="gallery_mode">Режим галереи</string>
-    <string name="friends_sort_error">/r/friends не сортируется</string>
+    <string name="friends_sort_error">/s/friends не сортируется</string>
     <string name="shadowbox_comments_nolinks">В комментариях не найдено ссылок</string>
     <string name="pro_previews">Предпросмотр (%d)</string>
     <string name="draw_undo">Отменить</string>

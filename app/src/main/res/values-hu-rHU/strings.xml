@@ -178,7 +178,7 @@
     <string name="sorting_search_month">Elmúlt hónap</string>
     <string name="sorting_search_year">Elmúlt év</string>
     <string name="sorting_search_all">Mindenkori</string>
-    <string name="sorting_defaultfor">/r/%1$s alapbeállítása</string>
+    <string name="sorting_defaultfor">/s/%1$s alapbeállítása</string>
     <!-- Editor (save/submit a post) actions -->
     <string name="editor_url">URL</string>
     <string name="editor_text">Szöveg</string>
@@ -250,7 +250,7 @@
     <string name="multireddit_create_hint">Multireddit neve</string>
     <string name="multireddit_invalid_name">Érvénytelen multireddit név</string>
     <string name="multireddit_invalid_name_msg">A multireddit nevek csak betűket, számokat és aláhúzásjeleket tartalmazhatnak.</string>
-    <string name="multi_add_to">/r/%s hozzáadása</string>
+    <string name="multi_add_to">/s/%s hozzáadása</string>
     <string name="multi_subreddit_added">Alreddit hozzáadva a /m/%1$s multireddit-hez</string>
     <string name="multi_error">Hiba történt, kérlek, próbáld újra később</string>
     <string name="btn_import_multi">Multireddit importálása</string>
@@ -295,11 +295,11 @@
     <string name="mail_send_to">Üzenet küldése neki: %1$s</string>
     <string name="mail_send">Üzenet küldése</string>
     <string name="mail_notification_msg_from">Új üzenet, küldő: %1$s</string>
-    <string name="mail_notification_msg_via">Új üzenet: /r/%1$s</string>
+    <string name="mail_notification_msg_via">Új üzenet: /s/%1$s</string>
     <string name="mod_mail_notification_msg">Új modmail tőle: %1$s</string>
     <string name="mail_reply_to">Válasz neki: %1$s</string>
     <string name="mail_notification_author">%1$s / %2$s</string>
-    <string name="mail_notification_subreddit">%1$s innen: /r/%2$s</string>
+    <string name="mail_notification_subreddit">%1$s innen: /s/%2$s</string>
     <string name="mail_theirs">Eredeti üzenet megtekintése</string>
     <string name="mail_re">re: %1$s</string>
     <string name="mail_mark_read">Megjelölés olvasottként</string>
@@ -633,13 +633,13 @@
     <string name="time_minutes_short">%dp</string>
     <string name="time_seconds_short">%dmp</string>
     <!-- Strings present during the login process -->
-    <string name="login_subscribe_rslideforreddit">Feliratkozol a /r/slideforreddit-re?</string>
+    <string name="login_subscribe_rslideforreddit">Feliratkozol a /s/slideforreddit-re?</string>
     <string name="login_sync_colors">Szinkronizáljam a színeket?</string>
     <string name="login_sync_colors_desc">Szeretnéd szinkronizálni az alredditek színeit most? Ezt később is megteheted itt: Beállítások → Alreddit témák</string>
     <string name="login_authenticating">A Slide hitelesít</string>
     <string name="login_starting">Beállítás</string>
     <!-- Over 18 prompt when visiting a NSFW subreddit -->
-    <string name="over18_title">/r/%1$s felnőtt tartalmakat tartalmaz</string>
+    <string name="over18_title">/s/%1$s felnőtt tartalmakat tartalmaz</string>
     <!-- Subreddit color synchronization - https://redd.it/41054l -->
     <string name="color_sync_complete">Szinkronizálás befejezve</string>
     <plurals name="color_sync_colored">

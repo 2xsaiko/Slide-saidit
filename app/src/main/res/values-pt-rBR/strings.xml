@@ -182,7 +182,7 @@
     <string name="sorting_search_month">Mês passado</string>
     <string name="sorting_search_year">Ano passado</string>
     <string name="sorting_search_all">Todo o tempo</string>
-    <string name="sorting_defaultfor">Padrão para /r/%1$s</string>
+    <string name="sorting_defaultfor">Padrão para /s/%1$s</string>
     <!-- Editor (save/submit a post) actions -->
     <string name="editor_url">URL</string>
     <string name="editor_text">Texto</string>
@@ -256,7 +256,7 @@
     <string name="multireddit_create_hint">Nome do Multireddit</string>
     <string name="multireddit_invalid_name">Nome do multireddit inválido</string>
     <string name="multireddit_invalid_name_msg">Os nomes de Multireddit podem conter apenas letras, números e sublinhados.</string>
-    <string name="multi_add_to">Adicionar /r/%s para</string>
+    <string name="multi_add_to">Adicionar /s/%s para</string>
     <string name="multi_subreddit_added">Subreddit adicionado a /m/%1$s</string>
     <string name="multi_error">Ocorreu um erro, por favor tente novamente mais tarde</string>
     <string name="btn_import_multi">Importar multireddit</string>
@@ -301,11 +301,11 @@
     <string name="mail_send_to">Enviar mensagem para %1$s</string>
     <string name="mail_send">Enviar uma mensagem</string>
     <string name="mail_notification_msg_from">Nova mensagem de %1$s</string>
-    <string name="mail_notification_msg_via">Nova mensagem via /r/%1$s</string>
+    <string name="mail_notification_msg_via">Nova mensagem via /s/%1$s</string>
     <string name="mod_mail_notification_msg">Novo modmail de %1$s</string>
     <string name="mail_reply_to">Resposta para %1$s</string>
     <string name="mail_notification_author">%1$s de %2$s</string>
-    <string name="mail_notification_subreddit">%1$s via /r/%2$s</string>
+    <string name="mail_notification_subreddit">%1$s via /s/%2$s</string>
     <string name="mail_theirs">Visualizar a mensagem</string>
     <string name="mail_re">re: %1$s</string>
     <string name="mail_mark_read">Marcar como lida</string>
@@ -666,8 +666,8 @@
     <string name="reorder_move">Mover para o Topo</string>
     <string name="reorder_domain_placeholder">\u0020(apenas o nome do domínio)</string>
     <string name="reorder_not_found_err">Subreddit não encontrado, aqui estão algumas sugestões</string>
-    <string name="reorder_subscribed_toast">Inscrito em /r/%1$s</string>
-    <string name="reorder_unsubscribed_toast">Inscrição de /r/%1$s cancelada</string>
+    <string name="reorder_subscribed_toast">Inscrito em /s/%1$s</string>
+    <string name="reorder_unsubscribed_toast">Inscrição de /s/%1$s cancelada</string>
     <string name="sorting_faq"><b>Como atualizar subreddits?</b>\nPara atualizar subreddits, pressione no ícone atualizar na barra de ferramentas!\n\n<b>Anulei a subscrição de alguns subreddits mas eles ainda estão na lista!</b>\nO Slide irá converter subscrições anuladas do navegador em subscrições casuais. Para removê-las, pressione longamente o(s) subreddit(s) e pressione em remover!\n\n<b>Como utilizar coleções?</b>\nPara criar uma coleção, pressione + FAB e selecione \"Criar uma coleção\". Isso permite que tenha vários subs atuando como um subreddit na tela principal!</string>
     <string name="FAQ">FAQ</string>
     <string name="alphabetize_subreddits">Alfabetizar subreddits</string>
@@ -680,8 +680,8 @@
     <string name="add_to_subs">ADICIONAR AS INSCRIÇÕES</string>
     <string name="sub_added">Subreddit adicionado!</string>
     <string name="reorder_subs_FAQ">Reordenar perguntas frequentes de Subreddits</string>
-    <string name="subscribe_to">Inscrever em /r/%1$s</string>
-    <string name="unsubscribe_from">Cancelar inscrição de /r/%1$s</string>
+    <string name="subscribe_to">Inscrever em /s/%1$s</string>
+    <string name="unsubscribe_from">Cancelar inscrição de /s/%1$s</string>
     <string name="btn_add_to_sublist">ADICIONAR À LISTA DE SUB</string>
     <string name="btn_remove_from_sublist">REMOVER DA LISTA DE SUBs</string>
     <string name="just_unsub">APENAS CANCELAR A INSCRIÇÃO</string>
@@ -794,15 +794,15 @@
     <string name="time_minutes_short">%dm</string>
     <string name="time_seconds_short">%ds</string>
     <!-- Strings present during the login process -->
-    <string name="login_subscribe_rslideforreddit">Inscrever-se para o /r/slideforreddit?</string>
-    <string name="login_subscribe_rslideforreddit_desc">Gostaria de inscrever-se para o /r/slideforreddit, para poder obter as últimas notícias e reportar problemas?</string>
+    <string name="login_subscribe_rslideforreddit">Inscrever-se para o /s/slideforreddit?</string>
+    <string name="login_subscribe_rslideforreddit_desc">Gostaria de inscrever-se para o /s/slideforreddit, para poder obter as últimas notícias e reportar problemas?</string>
     <string name="login_sync_colors">Sincronizar as cores agora?</string>
     <string name="login_sync_colors_desc">Você gostaria de sincronizar suas cores de subreddit agora? Isso pode ser feito posteriormente nas Configurações → Temas de subreddit</string>
     <string name="login_authenticating">Slide está autenticando</string>
     <string name="login_starting">Configurando as coisas!</string>
     <string name="login_starting_desc">Isto deve demorar só um segundo&#8230;</string>
     <!-- Over 18 prompt when visiting a NSFW subreddit -->
-    <string name="over18_title">/r/%1$s contém conteúdo adulto</string>
+    <string name="over18_title">/s/%1$s contém conteúdo adulto</string>
     <string name="over18_desc">Você tem mais de dezoito anos e está disposto a ver conteúdo adulto?</string>
     <string name="over18_desc_loggedout">Logue para desabilitar este aviso permanentemente</string>
     <string name="over18_desc_loggedin">Você pode desabilitar essa opção permanentemente nas Configurações → Preferências do reddit → Mostrar conteúdo NSFW</string>
@@ -818,7 +818,7 @@
     <string name="discover_popular">Popular</string>
     <string name="discover_trending">Tendências</string>
     <!-- Subreddit post notifiactions -->
-    <string name="sub_post_notifs_title">Ser notificado sobre novas publicações em\n/r/%1$s?</string>
+    <string name="sub_post_notifs_title">Ser notificado sobre novas publicações em\n/s/%1$s?</string>
     <string name="sub_post_notifs_title_settings">Ser notificado sobre novas publicações?</string>
     <string name="sub_post_notifs_menu">Ser notificado sobre novas publicações</string>
     <string name="sub_post_notify">Notificar</string>
@@ -828,8 +828,8 @@
     <string name="sub_post_notifs_settings_none">Sem subreddits para notificar</string>
     <string name="sub_post_notifs_settings_title">Subreddits para verificar</string>
     <string name="sub_post_notifs_settings_search">Pesquisar nome do sub</string>
-    <string name="sub_post_notifs_notification_title">Nova publicação em/r/%1$s</string>
-    <string name="sub_post_notifs_notification_btn">Deixar de seguir /r/%1$s</string>
+    <string name="sub_post_notifs_notification_title">Nova publicação em/s/%1$s</string>
+    <string name="sub_post_notifs_notification_btn">Deixar de seguir /s/%1$s</string>
     <string name="title_sub_post_notifs">Notificações de publicações de subreddits</string>
     <!-- Internal browser -->
     <string name="internal_browser_extracting_error">Desculpe, o artigo não pôde ser extraído</string>
@@ -902,7 +902,7 @@
     </plurals>
     <!--Filtering dialog -->
     <string name="filter_title">O que você gostaria de importar?</string>
-    <string name="filter_posts_sub">Publicações de /r/%1$s</string>
+    <string name="filter_posts_sub">Publicações de /s/%1$s</string>
     <string name="filter_posts_user">Publicações de /u/%1$s</string>
     <string name="filter_posts_urls">Publicações que se referem a %1$s</string>
     <string name="filter_open_externally">Abrir %s URLs externamente</string>
@@ -1053,7 +1053,7 @@
     <string name="open_links_externally">Abrir sempre este domínio externamente</string>
     <string name="hide_read_posts">Ocultar publicações lidas</string>
     <string name="gallery_mode">Modo galeria</string>
-    <string name="friends_sort_error">/r/ friends não é ordenável</string>
+    <string name="friends_sort_error">/s/ friends não é ordenável</string>
     <string name="shadowbox_comments_nolinks">Nenhum links encontrado nos comentários</string>
     <string name="pro_previews">Pré-visualização (%d)</string>
     <string name="draw_undo">Desfazer</string>

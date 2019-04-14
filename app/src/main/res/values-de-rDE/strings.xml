@@ -193,7 +193,7 @@ Möchten Sie Slide for Reddit unterstützen?</string>
     <string name="sorting_search_month">Letzten Monat</string>
     <string name="sorting_search_year">Letztes Jahr</string>
     <string name="sorting_search_all">Aller Zeiten</string>
-    <string name="sorting_defaultfor">Standard für /r/%1$s</string>
+    <string name="sorting_defaultfor">Standard für /s/%1$s</string>
     <!-- Editor (save/submit a post) actions -->
     <string name="editor_url">URL</string>
     <string name="editor_text">Text</string>
@@ -267,7 +267,7 @@ Möchten Sie Slide for Reddit unterstützen?</string>
     <string name="multireddit_create_hint">Multireddit-Name</string>
     <string name="multireddit_invalid_name">Ungültiger Multireddit-Name</string>
     <string name="multireddit_invalid_name_msg">Multireddit-Namen dürfen nur Buchstaben, Zahlen und Unterstriche enthalten.</string>
-    <string name="multi_add_to">/r/%s hinzufügen zu</string>
+    <string name="multi_add_to">/s/%s hinzufügen zu</string>
     <string name="multi_subreddit_added">Subreddit wurde zu /m/%1$s hinzugefügt</string>
     <string name="multi_error">Es ist ein Fehler aufgetreten, bitte versuchen Sie es später noch einmal</string>
     <string name="btn_import_multi">Multireddit importieren</string>
@@ -312,11 +312,11 @@ Möchten Sie Slide for Reddit unterstützen?</string>
     <string name="mail_send_to">Schreibe eine Nachricht an %1$s</string>
     <string name="mail_send">Sende eine Nachricht</string>
     <string name="mail_notification_msg_from">Neue Nachricht von %1$s</string>
-    <string name="mail_notification_msg_via">Neue Nachricht von /r/%1$s</string>
+    <string name="mail_notification_msg_via">Neue Nachricht von /s/%1$s</string>
     <string name="mod_mail_notification_msg">Neue Mod-Nachricht von %1$s</string>
     <string name="mail_reply_to">Antworte an %1$s</string>
     <string name="mail_notification_author">%1$s von %2$s</string>
-    <string name="mail_notification_subreddit">%1$s von /r/%2$s</string>
+    <string name="mail_notification_subreddit">%1$s von /s/%2$s</string>
     <string name="mail_theirs">Deren Nachricht anzeigen</string>
     <string name="mail_re">Re: %1$s</string>
     <string name="mail_mark_read">Als gelesen markieren</string>
@@ -677,8 +677,8 @@ Möchten Sie Slide for Reddit unterstützen?</string>
     <string name="reorder_move">Nach oben bewegen</string>
     <string name="reorder_domain_placeholder">\u0020(nur die Domain)</string>
     <string name="reorder_not_found_err">Subreddit nicht gefunden, aber hier sind ein paar Vorschläge</string>
-    <string name="reorder_subscribed_toast">/r/%1$s abonniert</string>
-    <string name="reorder_unsubscribed_toast">/r/%1$s abbestellt</string>
+    <string name="reorder_subscribed_toast">/s/%1$s abonniert</string>
+    <string name="reorder_unsubscribed_toast">/s/%1$s abbestellt</string>
     <string name="sorting_faq"><b>Wie kann ich Subreddits aktualisieren?</b>\nUm Subreddits zu aktualisieren, drücke auf das Neuladen-Symbol in der Symbolleiste!\n\n<b>Ich habe ein Subreddit-Abo abbestellt aber es ist noch immer in der Liste!</b>\nSlide behält im Browser abbestellte Subreddits als "Lockere Abos". Willst du diese entfernen, halte den Subreddit gedrückt und klicke entfernen!\n\n<b>Wie benutze ich Sammlungen?</b>\nKlicke den + Aktionsknopf und wähle \'Sammlung erzeugen\'. Sammlungen mehrerer Subs verhalten sich in der Hauptansicht wie ein einziger Subreddit!</string>
     <string name="FAQ">Häufige Fragen / FAQ</string>
     <string name="alphabetize_subreddits">Sortiere Subreddits alphabetisch</string>
@@ -691,8 +691,8 @@ Möchten Sie Slide for Reddit unterstützen?</string>
     <string name="add_to_subs">ZU ABOS HINZUFÜGEN</string>
     <string name="sub_added">Subreddit hinzugefügt!</string>
     <string name="reorder_subs_FAQ">Subreddit FAQ anordnen</string>
-    <string name="subscribe_to">Abonniere /r/%1$s</string>
-    <string name="unsubscribe_from">/r/%1$s abbestellen</string>
+    <string name="subscribe_to">Abonniere /s/%1$s</string>
+    <string name="unsubscribe_from">/s/%1$s abbestellen</string>
     <string name="btn_add_to_sublist">ZU SUB-LISTE HINZUFÜGEN</string>
     <string name="btn_remove_from_sublist">VON SUB-LISTE ENTFERNEN</string>
     <string name="just_unsub">NUR ABMELDEN</string>
@@ -805,15 +805,15 @@ Möchten Sie Slide for Reddit unterstützen?</string>
     <string name="time_minutes_short">%dm</string>
     <string name="time_seconds_short">%ds</string>
     <!-- Strings present during the login process -->
-    <string name="login_subscribe_rslideforreddit">/r/slideforreddit abonnieren?</string>
-    <string name="login_subscribe_rslideforreddit_desc">Möchtest du /r/slideforreddit abonnieren, um über die Neuigkeiten informiert zu werden?</string>
+    <string name="login_subscribe_rslideforreddit">/s/slideforreddit abonnieren?</string>
+    <string name="login_subscribe_rslideforreddit_desc">Möchtest du /s/slideforreddit abonnieren, um über die Neuigkeiten informiert zu werden?</string>
     <string name="login_sync_colors">Farben jetzt synchronisieren?</string>
     <string name="login_sync_colors_desc">Möchten Sie die Subreddit-Farben jetzt synchronisieren? Das kann auch später über die Einstellungen→Subreddit Themes erledigt werden</string>
     <string name="login_authenticating">Slide authentifiziert sich</string>
     <string name="login_starting">Einige Dinge einrichten...</string>
     <string name="login_starting_desc">Dies sollte nur eine Sekunde dauern!</string>
     <!-- Over 18 prompt when visiting a NSFW subreddit -->
-    <string name="over18_title">/r/%1$s enthält jugendgefährdende Inhalte</string>
+    <string name="over18_title">/s/%1$s enthält jugendgefährdende Inhalte</string>
     <string name="over18_desc">Bist du volljährig und möchtest jugendfreie Inhalte sehen?</string>
     <string name="over18_desc_loggedout">Log dich ein, um diese Warnung dauerhaft zu deaktivieren</string>
     <string name="over18_desc_loggedin">Sie können das auch permanent in den Einstellungen→Reddit Einstellungen→ Zeige NSFW Inhalt deaktivieren</string>
@@ -829,7 +829,7 @@ Möchten Sie Slide for Reddit unterstützen?</string>
     <string name="discover_popular">Beliebt</string>
     <string name="discover_trending">Angesagt</string>
     <!-- Subreddit post notifiactions -->
-    <string name="sub_post_notifs_title">Über neue Posts in\n/r/%1$s benachrichtigt werden?</string>
+    <string name="sub_post_notifs_title">Über neue Posts in\n/s/%1$s benachrichtigt werden?</string>
     <string name="sub_post_notifs_title_settings">Über neue Posts benachrichtigt werden?</string>
     <string name="sub_post_notifs_menu">Werde über neue Posts benachrichtigt</string>
     <string name="sub_post_notify">Benachrichtigen</string>
@@ -839,8 +839,8 @@ Möchten Sie Slide for Reddit unterstützen?</string>
     <string name="sub_post_notifs_settings_none">Keine Subreddits zu benachrichtigen</string>
     <string name="sub_post_notifs_settings_title">Zu überprüfende Subreddits</string>
     <string name="sub_post_notifs_settings_search">Subname suchen</string>
-    <string name="sub_post_notifs_notification_title">Neuer Post in /r/%1$s</string>
-    <string name="sub_post_notifs_notification_btn">/r/%1$s nicht mehr verfolgen</string>
+    <string name="sub_post_notifs_notification_title">Neuer Post in /s/%1$s</string>
+    <string name="sub_post_notifs_notification_btn">/s/%1$s nicht mehr verfolgen</string>
     <string name="title_sub_post_notifs">Subreddit Post Benachrichtigungen</string>
     <!-- Internal browser -->
     <string name="internal_browser_extracting_error">Artikel konnte nicht extrahiert werden</string>
@@ -904,7 +904,7 @@ Möchten Sie Slide for Reddit unterstützen?</string>
     <string name="sidebar_findingmods">Moderatoren finden</string>
     <string name="snackbar_flair_success">Flair erfolgreich gesetzt</string>
     <string name="snackbar_flair_error">Fehler beim setzen des Flairs, probiere es bald noch einmal</string>
-    <string name="sidebar_submods">Moderatoren von /r/%s</string>
+    <string name="sidebar_submods">Moderatoren von /s/%s</string>
     <string name="sidebar_flair">Flair: %1$s</string>
     <string name="sidebar_notfound">Keine Sidebar gefunden</string>
     <plurals name="reorder_selected">
@@ -913,7 +913,7 @@ Möchten Sie Slide for Reddit unterstützen?</string>
     </plurals>
     <!--Filtering dialog -->
     <string name="filter_title">Was möchtest du filtern?</string>
-    <string name="filter_posts_sub">Beiträge von /r/%1$s</string>
+    <string name="filter_posts_sub">Beiträge von /s/%1$s</string>
     <string name="filter_posts_user">Beiträge von /u/%1$s</string>
     <string name="filter_posts_urls">Beiträge, die auf %1$s verweisen</string>
     <string name="filter_open_externally">URLs von %s extern öffnen</string>

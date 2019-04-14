@@ -164,7 +164,7 @@
     <string name="sorting_search_month">Luna trecută</string>
     <string name="sorting_search_year">Anul trecut</string>
     <string name="sorting_search_all">Dintotdeauna</string>
-    <string name="sorting_defaultfor">Implicit pentru /r/%1$s</string>
+    <string name="sorting_defaultfor">Implicit pentru /s/%1$s</string>
     <!-- Editor (save/submit a post) actions -->
     <string name="editor_url">URL</string>
     <string name="editor_text">Text</string>
@@ -522,8 +522,8 @@
     <string name="reorder_move">Mută sus</string>
     <string name="reorder_domain_placeholder">\u0020(doar numele domeniului)</string>
     <string name="reorder_not_found_err">Subreddit-ul nu a fost găsit, iată câteva sugestii</string>
-    <string name="reorder_subscribed_toast">Abonat la /r/%1$s</string>
-    <string name="reorder_unsubscribed_toast">Dezabonat de la /r/%1$s</string>
+    <string name="reorder_subscribed_toast">Abonat la /s/%1$s</string>
+    <string name="reorder_unsubscribed_toast">Dezabonat de la /s/%1$s</string>
     <string name="FAQ">Întrebări frecvente</string>
     <string name="alphabetize_subreddits">Alfabetizează subreddit-urile</string>
     <string name="sync_subscriptions">Sincronizează abonamentele</string>
@@ -534,8 +534,8 @@
     <string name="add_to_subs">ADAUGĂ LA ABONAMENTE</string>
     <string name="sub_added">Subreddit adăugat!</string>
     <string name="reorder_subs_FAQ">Ordonarea subreddit-urilor FAQ</string>
-    <string name="subscribe_to">Abonează-te la /r/%1$s</string>
-    <string name="unsubscribe_from">Dezabonare de la /r/%1$s</string>
+    <string name="subscribe_to">Abonează-te la /s/%1$s</string>
+    <string name="unsubscribe_from">Dezabonare de la /s/%1$s</string>
     <string name="just_unsub">DOAR DEZABONEAZĂ-MĂ</string>
     <string name="subscribe_caps">ABONEAZĂ-TE</string>
     <string name="unsubscribe_caps">DEZABONEAZĂ-TE</string>
@@ -625,15 +625,15 @@
     <string name="time_minutes_short">%d luni</string>
     <string name="time_seconds_short">%d secunde</string>
     <!-- Strings present during the login process -->
-    <string name="login_subscribe_rslideforreddit">Te abonezi la /r/slideforreddit?</string>
-    <string name="login_subscribe_rslideforreddit_desc">Doriți să vă abonați la /r/slideforreddit pentru noutăți și raportare de probleme?</string>
+    <string name="login_subscribe_rslideforreddit">Te abonezi la /s/slideforreddit?</string>
+    <string name="login_subscribe_rslideforreddit_desc">Doriți să vă abonați la /s/slideforreddit pentru noutăți și raportare de probleme?</string>
     <string name="login_sync_colors">Sincronizați culorile acum?</string>
     <string name="login_sync_colors_desc">Doriți să sincronizați culorile subreddit-ului acum? Acest lucru poate fi făcut mai târziu în Setări → Teme subreddit</string>
     <string name="login_authenticating">Slide se autentifică</string>
     <string name="login_starting">Setăm lucrurile!</string>
     <string name="login_starting_desc">Ar trebui să dureze o secundă&#8230;</string>
     <!-- Over 18 prompt when visiting a NSFW subreddit -->
-    <string name="over18_title">/r/%1$s are conținut pentru adulți</string>
+    <string name="over18_title">/s/%1$s are conținut pentru adulți</string>
     <string name="over18_desc">Aveți peste 18 ani și doriți să vedeți conținut pentru adulți?</string>
     <string name="over18_desc_loggedout">Logați-vă pentru a dezactiva această avertizare permanent</string>
     <string name="over18_desc_loggedin">Puteți dezactiva permanent în Setări →Preferințe Reddit → Arată conținut NSFW</string>
@@ -645,7 +645,7 @@
     <string name="discover_popular">Popular</string>
     <string name="discover_trending">Trenduri</string>
     <!-- Subreddit post notifiactions -->
-    <string name="sub_post_notifs_title">Vrei să fii notificat de postări noi în\n/r/%1$s?</string>
+    <string name="sub_post_notifs_title">Vrei să fii notificat de postări noi în\n/s/%1$s?</string>
     <string name="sub_post_notifs_title_settings">Vrei să fii notificat de postări noi?</string>
     <string name="sub_post_notifs_menu">Fii notificat de postări noi</string>
     <string name="sub_post_notify">Notifică</string>
@@ -697,7 +697,7 @@
     <string name="load_medium_quality_imgur_images">Încarcă imagini Imgur de calitate medie</string>
     <string name="choose_color_title">Alege o culoare</string>
     <!-- Sidebar strings (multis, flairs) -->
-    <string name="sidebar_submods">Moderatorii /r/%s</string>
+    <string name="sidebar_submods">Moderatorii /s/%s</string>
     <plurals name="reorder_selected">
         <item quantity="one">"%d selectat"</item>
         <item quantity="few">"%d selectat"</item>

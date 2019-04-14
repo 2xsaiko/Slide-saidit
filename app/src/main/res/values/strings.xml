@@ -208,7 +208,7 @@
     <string name="sorting_search_month">Past month</string>
     <string name="sorting_search_year">Past year</string>
     <string name="sorting_search_all">All time</string>
-    <string name="sorting_defaultfor">Default for /r/%1$s</string>
+    <string name="sorting_defaultfor">Default for /s/%1$s</string>
 
 
     <!-- Editor (save/submit a post) actions -->
@@ -292,7 +292,7 @@
     <string name="multireddit_create_hint">Multireddit name</string>
     <string name="multireddit_invalid_name">Invalid multireddit name</string>
     <string name="multireddit_invalid_name_msg">Multireddit names may only contain letters, numbers and underscores</string>
-    <string name="multi_add_to">Add /r/%s to</string>
+    <string name="multi_add_to">Add /s/%s to</string>
     <string name="multi_subreddit_added">Subreddit added to /m/%1$s</string>
     <string name="multi_error">An error occurred, please try again later</string>
     <string name="btn_import_multi">Import multireddit</string>
@@ -342,11 +342,11 @@
     <string name="mail_send_to">Send a message to %1$s</string>
     <string name="mail_send">Send a message</string>
     <string name="mail_notification_msg_from">New message from %1$s</string>
-    <string name="mail_notification_msg_via">New message via /r/%1$s</string>
+    <string name="mail_notification_msg_via">New message via /s/%1$s</string>
     <string name="mod_mail_notification_msg">New modmail from %1$s</string>
     <string name="mail_reply_to">Reply to %1$s</string>
     <string name="mail_notification_author">%1$s from %2$s</string>
-    <string name="mail_notification_subreddit">%1$s via /r/%2$s</string>
+    <string name="mail_notification_subreddit">%1$s via /s/%2$s</string>
     <string name="mail_theirs">View their message</string>
     <string name="mail_re">re: %1$s</string>
     <string name="mail_mark_read">Mark read</string>
@@ -800,8 +800,8 @@
     <string name="reorder_move">Move to Top</string>
     <string name="reorder_domain_placeholder">\u0020(only the domain name)</string>
     <string name="reorder_not_found_err">Subreddit not found, here are some suggestions</string>
-    <string name="reorder_subscribed_toast">Subscribed to /r/%1$s</string>
-    <string name="reorder_unsubscribed_toast">Unsubscribed from /r/%1$s</string>
+    <string name="reorder_subscribed_toast">Subscribed to /s/%1$s</string>
+    <string name="reorder_unsubscribed_toast">Unsubscribed from /s/%1$s</string>
     <string name="sorting_faq"><b>How do I refresh subreddits?</b>\nTo refresh subreddits, click the refresh icon in the toolbar!\n\n<b>I unsubscribed from some subreddits but they are still in the list!</b>\nSlide will convert unsubscribed subs from the browser into casual subscriptions. To remove them, long press on the subreddit(s) and click remove!\n\n<b>How do I use collections?</b>\nTo create a collection, click the + FAB and select \'Create a collection\'. This allows you to have multiple subs acting as one subreddit in the main screen!</string>
     <string name="FAQ">FAQ</string>
     <string name="alphabetize_subreddits">Alphabetize subreddits</string>
@@ -814,8 +814,8 @@
     <string name="add_to_subs">ADD TO SUBSCRIPTIONS</string>
     <string name="sub_added">Subreddit added!</string>
     <string name="reorder_subs_FAQ">Reorder Subreddits FAQ</string>
-    <string name="subscribe_to">Subscribe to /r/%1$s</string>
-    <string name="unsubscribe_from">Unsubscribe from /r/%1$s</string>
+    <string name="subscribe_to">Subscribe to /s/%1$s</string>
+    <string name="unsubscribe_from">Unsubscribe from /s/%1$s</string>
     <string name="btn_add_to_sublist">ADD TO SUB LIST</string>
     <string name="btn_remove_from_sublist">REMOVE FROM SUB LIST</string>
     <string name="just_unsub">JUST UNSUBSCRIBE</string>
@@ -945,8 +945,8 @@
 
 
     <!-- Strings present during the login process -->
-    <string name="login_subscribe_rslideforreddit">Subscribe to /r/slideforreddit?</string>
-    <string name="login_subscribe_rslideforreddit_desc">Would you like to subscribe to /r/slideforreddit for the latest news and to report issues?</string>
+    <string name="login_subscribe_rslideforreddit">Subscribe to /s/slideforreddit?</string>
+    <string name="login_subscribe_rslideforreddit_desc">Would you like to subscribe to /s/slideforreddit for the latest news and to report issues?</string>
     <string name="login_sync_colors">Sync colors now?</string>
     <string name="login_sync_colors_desc">Would you like to sync your subreddit colors now? This can be done later in Settings → Subreddit themes</string>
     <string name="login_authenticating">Slide is authenticating</string>
@@ -955,7 +955,7 @@
 
 
     <!-- Over 18 prompt when visiting a NSFW subreddit -->
-    <string name="over18_title">/r/%1$s contains mature content</string>
+    <string name="over18_title">/s/%1$s contains mature content</string>
     <string name="over18_desc">Are you over eighteen and willing to see adult content?</string>
     <string name="over18_desc_loggedout">Log in to disable this warning permanently</string>
     <string name="over18_desc_loggedin">You can disable this permanently in Settings → Reddit preferences → Show NSFW content</string>
@@ -976,7 +976,7 @@
     <string name="discover_trending">Trending</string>
 
     <!-- Subreddit post notifiactions -->
-    <string name="sub_post_notifs_title">Be notified of new posts in\n/r/%1$s?</string>
+    <string name="sub_post_notifs_title">Be notified of new posts in\n/s/%1$s?</string>
     <string name="sub_post_notifs_title_settings">Be notified of new posts?</string>
     <string name="sub_post_notifs_menu">Be notified of new posts</string>
     <string name="sub_post_notify">Notify</string>
@@ -986,8 +986,8 @@
     <string name="sub_post_notifs_settings_none">No subreddits to notify</string>
     <string name="sub_post_notifs_settings_title">Subreddits to check</string>
     <string name="sub_post_notifs_settings_search">Search sub name</string>
-    <string name="sub_post_notifs_notification_title">New post in /r/%1$s</string>
-    <string name="sub_post_notifs_notification_btn">Stop tracking /r/%1$s</string>
+    <string name="sub_post_notifs_notification_title">New post in /s/%1$s</string>
+    <string name="sub_post_notifs_notification_btn">Stop tracking /s/%1$s</string>
     <string name="title_sub_post_notifs">Subreddit post notifications</string>
 
     <!-- Internal browser -->
@@ -1058,7 +1058,7 @@
     <string name="sidebar_findingmods">Finding moderators</string>
     <string name="snackbar_flair_success">Flair set successfully</string>
     <string name="snackbar_flair_error">Error setting flair, try again soon</string>
-    <string name="sidebar_submods">/r/%s mods</string>
+    <string name="sidebar_submods">/s/%s mods</string>
     <string name="sidebar_flair">Flair: %1$s</string>
     <string name="sidebar_notfound">No sidebar found</string>
     <plurals name="reorder_selected">
@@ -1067,7 +1067,7 @@
 
     <!--Filtering dialog -->
     <string name="filter_title">What would you like to filter?</string>
-    <string name="filter_posts_sub">Posts from /r/%1$s</string>
+    <string name="filter_posts_sub">Posts from /s/%1$s</string>
     <string name="filter_posts_user">Posts by /u/%1$s</string>
     <string name="filter_posts_urls">Posts linking to %1$s</string>
     <string name="filter_open_externally">Open %s URLs externally</string>
@@ -1098,7 +1098,7 @@
     <string name="report_post">Report post</string>
     <string name="report_comment">Report comment</string>
     <string name="report_loading">Loading reasons…</string>
-    <string name="report_sub_rules">/r/%s Rules</string>
+    <string name="report_sub_rules">/s/%s Rules</string>
     <string name="report_site_rules">Reddit Rules</string>
     <string name="report_another_reason">Another Reason</string>
     <string name="report_other">Other</string>
@@ -1230,7 +1230,7 @@
     <string name="open_links_externally">Always open this host externally</string>
     <string name="hide_read_posts">Hide read posts</string>
     <string name="gallery_mode">Gallery mode</string>
-    <string name="friends_sort_error">/r/ friends is unsortable</string>
+    <string name="friends_sort_error">/s/ friends is unsortable</string>
     <string name="shadowbox_comments_nolinks">No links found in comments</string>
     <string name="pro_previews">Preview (%d)</string>
     <string name="draw_undo">Undo</string>

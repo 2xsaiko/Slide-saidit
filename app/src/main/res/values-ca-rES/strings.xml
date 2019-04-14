@@ -189,7 +189,7 @@
     <string name="sorting_search_month">El mes passat</string>
     <string name="sorting_search_year">L\'any passat</string>
     <string name="sorting_search_all">Tot el temps</string>
-    <string name="sorting_defaultfor">Per defecte per a /r/%1$s</string>
+    <string name="sorting_defaultfor">Per defecte per a /s/%1$s</string>
     <!-- Editor (save/submit a post) actions -->
     <string name="editor_url">Enllaç</string>
     <string name="editor_text">Text</string>
@@ -263,7 +263,7 @@
     <string name="multireddit_create_hint">Nom del multireddit</string>
     <string name="multireddit_invalid_name">Nom del multireddit invàlid</string>
     <string name="multireddit_invalid_name_msg">Els noms dels multireddits només poden contenir lletres, números i guions baixos</string>
-    <string name="multi_add_to">Afegeix /r/%s a</string>
+    <string name="multi_add_to">Afegeix /s/%s a</string>
     <string name="multi_subreddit_added">Subreddit afegit a /m/%1$s</string>
     <string name="multi_error">S\'ha produït un error, intenti-ho més tard</string>
     <string name="btn_import_multi">Importar multireddit</string>
@@ -308,11 +308,11 @@
     <string name="mail_send_to">Envia un missatge a %1$s</string>
     <string name="mail_send">Envia un missatge</string>
     <string name="mail_notification_msg_from">Nou missatge de %1$s</string>
-    <string name="mail_notification_msg_via">Nou missatge via /r/%1$s</string>
+    <string name="mail_notification_msg_via">Nou missatge via /s/%1$s</string>
     <string name="mod_mail_notification_msg">Nou correu de moderació de %1$s</string>
     <string name="mail_reply_to">Respon a %1$s</string>
     <string name="mail_notification_author">%1$s de %2$s</string>
-    <string name="mail_notification_subreddit">%1$s via /r/%2$s</string>
+    <string name="mail_notification_subreddit">%1$s via /s/%2$s</string>
     <string name="mail_theirs">Mostra el seu missatge</string>
     <string name="mail_re">re: %1$s</string>
     <string name="mail_mark_read">Marcar com a llegit</string>
@@ -635,7 +635,7 @@
     <string name="settings_theme_tinting">Modalitat de coloració del subreddit</string>
     <string name="settings_reddit_thumbnail_mode">Mode de miniatura</string>
     <string name="settings_layout_actionbar_mode">Mode barra d\'acció</string>
-    <string name="settings_theme_tint_outside_desc">Tintar el fons solament a multireddits, la pàgina principal i a /r/all</string>
+    <string name="settings_theme_tint_outside_desc">Tintar el fons solament a multireddits, la pàgina principal i a /s/all</string>
     <string name="settings_layout_small_content_tag">Etiqueta de contingut més petita</string>
     <string name="settings_links_force_external">Forçar un navegador extern</string>
     <string name="settings_links_force_external_desc">Escollir dominis que s\'obriran sempre externament</string>
@@ -720,8 +720,8 @@
     <string name="reorder_move">Moure a la part superior</string>
     <string name="reorder_domain_placeholder">\u0020(nomès el nom del domini)</string>
     <string name="reorder_not_found_err">No s\'ha trobat el subreddit, aquí tens algunes suggerències</string>
-    <string name="reorder_subscribed_toast">Subscrit a /r/%1$s</string>
-    <string name="reorder_unsubscribed_toast">Subscripció a /r/%1$s desfeta</string>
+    <string name="reorder_subscribed_toast">Subscrit a /s/%1$s</string>
+    <string name="reorder_unsubscribed_toast">Subscripció a /s/%1$s desfeta</string>
     <string name="sorting_faq"><b>Com actualitzo els subreddits?</b>\nPer actualitzar els subreddits, premi la icona d\'actualització a la barra d\'eines!\n\n<b>He cancel·lat la meva subscripció a alguns subreddits però encara apareixen!</b>\nSlide convertirà aquells subreddits els quals has cancel·lat la teva subscripció en subscripcions casuals. Per eliminar-los, manten-los premuts i selecciona eliminar!\n\n<b>Com puc utilitzar col·leccions?</b>\nPer crear una col·lecció, prem el FAB + i selecciona \'Crear una col·lecció\'. Això us permetrà tenir diversos subs actuan com un de sol a la pàgina principal!</string>
     <string name="FAQ">Preguntes freqüents</string>
     <string name="alphabetize_subreddits">Ordenar els subreddits en ordre alfabètic</string>
@@ -734,8 +734,8 @@
     <string name="add_to_subs">AFEGIR A LES SUBSCRIPCIONS</string>
     <string name="sub_added">Subreddit afegit!</string>
     <string name="reorder_subs_FAQ">Reordenar les preguntes freqüents dels subreddits</string>
-    <string name="subscribe_to">Subscriure\'s a /r/%1$s</string>
-    <string name="unsubscribe_from">Cancel·lar la subscripció a /r/%1$s</string>
+    <string name="subscribe_to">Subscriure\'s a /s/%1$s</string>
+    <string name="unsubscribe_from">Cancel·lar la subscripció a /s/%1$s</string>
     <string name="btn_add_to_sublist">AFEGIR AL LLISTAT DE SUBS</string>
     <string name="btn_remove_from_sublist">ELIMINAR DEL LLISTAT DE SUBS</string>
     <string name="just_unsub">SOLS CANCEL·LAR LA CUBSCRIPCIÓ</string>
@@ -849,15 +849,15 @@
     <string name="time_minutes_short">%dm</string>
     <string name="time_seconds_short">%ds</string>
     <!-- Strings present during the login process -->
-    <string name="login_subscribe_rslideforreddit">Subscriure\'s a /r/slideforreddit?</string>
-    <string name="login_subscribe_rslideforreddit_desc">Voldrieu subscriure\'s a /r/slideforreddit per obtenir les darreres notícies i informar d\'errors?</string>
+    <string name="login_subscribe_rslideforreddit">Subscriure\'s a /s/slideforreddit?</string>
+    <string name="login_subscribe_rslideforreddit_desc">Voldrieu subscriure\'s a /s/slideforreddit per obtenir les darreres notícies i informar d\'errors?</string>
     <string name="login_sync_colors">Sincronitzar colors ara?</string>
     <string name="login_sync_colors_desc">Voldrieu sincronitzar els vostres colors de subreddits? Ho podeu desfer posteriorment a Configuració → Temes dels Subreddits</string>
     <string name="login_authenticating">Slide s\'està autenticant</string>
     <string name="login_starting">Establint els darrers canvis!</string>
     <string name="login_starting_desc">Només tardarà uns segons&#8230;</string>
     <!-- Over 18 prompt when visiting a NSFW subreddit -->
-    <string name="over18_title">/r/%1$s conté material per adults</string>
+    <string name="over18_title">/s/%1$s conté material per adults</string>
     <string name="over18_desc">Sou major d\'edat i voleu veure contingut per adults?</string>
     <string name="over18_desc_loggedout">Conecteu-vos per deshabitar aquest avís permanentment</string>
     <string name="over18_desc_loggedin">Podeu deshabilitar-ho permanentment a Configuració → Preferències de Reddit → Mostrar contingut NSFW</string>
@@ -873,7 +873,7 @@
     <string name="discover_popular">Popular</string>
     <string name="discover_trending">Tendència</string>
     <!-- Subreddit post notifiactions -->
-    <string name="sub_post_notifs_title">Rebre notificacions de les noves publicacions a\n/r/%1$s?</string>
+    <string name="sub_post_notifs_title">Rebre notificacions de les noves publicacions a\n/s/%1$s?</string>
     <string name="sub_post_notifs_title_settings">Rebre notificacions de les noves publicacions?</string>
     <string name="sub_post_notifs_menu">Rebre notificacions de les noves publicacions</string>
     <string name="sub_post_notify">Notificar</string>
@@ -884,7 +884,7 @@
     <string name="sub_post_notifs_settings_title">Subreddits a controlar</string>
     <string name="sub_post_notifs_settings_search">Cercar subreddit pel nom</string>
     <string name="sub_post_notifs_notification_title">Nova publicació a r/%1$s</string>
-    <string name="sub_post_notifs_notification_btn">Aturar el seguiment a /r/%1$s</string>
+    <string name="sub_post_notifs_notification_btn">Aturar el seguiment a /s/%1$s</string>
     <string name="title_sub_post_notifs">Notifications de publicació per Subreddits</string>
     <!-- Internal browser -->
     <string name="internal_browser_extracting_error">Disculpes, no s\'ha pogut extreure l\'article</string>
@@ -948,7 +948,7 @@
     <string name="sidebar_findingmods">Cercant moderadors</string>
     <string name="snackbar_flair_success">Bandereta establerta amb èxit</string>
     <string name="snackbar_flair_error">Error establint la bandereta, torna a provar-ho en breu</string>
-    <string name="sidebar_submods">moderadors de /r/%s</string>
+    <string name="sidebar_submods">moderadors de /s/%s</string>
     <string name="sidebar_flair">Bandereta: %1$s</string>
     <string name="sidebar_notfound">No s\'ha trobar cap barra lateral</string>
     <plurals name="reorder_selected">
@@ -957,7 +957,7 @@
     </plurals>
     <!--Filtering dialog -->
     <string name="filter_title">Que voldrieu filtrar?</string>
-    <string name="filter_posts_sub">Publicacions de /r/%1$s</string>
+    <string name="filter_posts_sub">Publicacions de /s/%1$s</string>
     <string name="filter_posts_user">Publicacions de /u/%1$s</string>
     <string name="filter_posts_urls">Publicacions enllaçant a %1$s</string>
     <string name="filter_open_externally">Obrir enllaços %s externament</string>
@@ -985,7 +985,7 @@
     <string name="report_post">Denunciar publicació</string>
     <string name="report_comment">Denunciar el comentari</string>
     <string name="report_loading">Carregant raons&#8230;</string>
-    <string name="report_sub_rules">Normes de /r/%s</string>
+    <string name="report_sub_rules">Normes de /s/%s</string>
     <string name="report_site_rules">Normes de Reddit</string>
     <string name="report_another_reason">Una altra raó</string>
     <string name="report_other">Altre</string>
@@ -1116,7 +1116,7 @@
     <string name="open_links_externally">Obrir sempre aquest amfitrió externament</string>
     <string name="hide_read_posts">Ocultar publicacions ja llegides</string>
     <string name="gallery_mode">Mode de galeria</string>
-    <string name="friends_sort_error">No es pot ordenar /r/ friends</string>
+    <string name="friends_sort_error">No es pot ordenar /s/ friends</string>
     <string name="shadowbox_comments_nolinks">No s\'han trobat enllaços en els comentaris</string>
     <string name="pro_previews">Vista prèvia (%d)</string>
     <string name="draw_undo">Desfer</string>

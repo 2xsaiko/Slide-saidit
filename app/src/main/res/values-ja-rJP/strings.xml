@@ -185,7 +185,7 @@
     <string name="sorting_search_month">過去 1 カ月</string>
     <string name="sorting_search_year">過去 1 年間</string>
     <string name="sorting_search_all">常時</string>
-    <string name="sorting_defaultfor">/r/%1$s のデフォルト</string>
+    <string name="sorting_defaultfor">/s/%1$s のデフォルト</string>
     <!-- Editor (save/submit a post) actions -->
     <string name="editor_url">URL</string>
     <string name="editor_text">文字</string>
@@ -259,7 +259,7 @@
     <string name="multireddit_create_hint">Multireddit 名</string>
     <string name="multireddit_invalid_name">Multireddit 名が正しくありません</string>
     <string name="multireddit_invalid_name_msg">Multireddit の名前は、文字、数字、およびアンダー スコアのみ含めることができます。</string>
-    <string name="multi_add_to">/r/%s を追加</string>
+    <string name="multi_add_to">/s/%s を追加</string>
     <string name="multi_subreddit_added">Subreddit を /m/%1$s に追加しました</string>
     <string name="multi_error">エラーが発生しました。もう一度やり直してください</string>
     <string name="btn_import_multi">Multireddit のインポート</string>
@@ -304,11 +304,11 @@
     <string name="mail_send_to">%1$s にメッセージを送信</string>
     <string name="mail_send">メッセージを送信</string>
     <string name="mail_notification_msg_from">%1$s から新しいメッセージ</string>
-    <string name="mail_notification_msg_via">/r/%1$s 経由で新しいメッセージ</string>
+    <string name="mail_notification_msg_via">/s/%1$s 経由で新しいメッセージ</string>
     <string name="mod_mail_notification_msg">モデレーター%1$sからメッセージが届いています</string>
     <string name="mail_reply_to">%1$s へ返信</string>
     <string name="mail_notification_author">%2$s から %1$s</string>
-    <string name="mail_notification_subreddit">/r/%2$s 経由で %1$s</string>
+    <string name="mail_notification_subreddit">/s/%2$s 経由で %1$s</string>
     <string name="mail_theirs">彼らのメッセージを表示</string>
     <string name="mail_re">返信: %1$s</string>
     <string name="mail_mark_read">既読にする</string>
@@ -676,8 +676,8 @@
     <string name="reorder_move">先頭に移動</string>
     <string name="reorder_domain_placeholder">\u0020(ドメイン名のみ)</string>
     <string name="reorder_not_found_err">Subreddit が見つかりません。いくつかの提案があります</string>
-    <string name="reorder_subscribed_toast">/r/%1$s に登録しました</string>
-    <string name="reorder_unsubscribed_toast">/r/%1$s から登録解除しました</string>
+    <string name="reorder_subscribed_toast">/s/%1$s に登録しました</string>
+    <string name="reorder_unsubscribed_toast">/s/%1$s から登録解除しました</string>
     <string name="sorting_faq"><b>Subreddit を更新する方法は?</b>\nSubreddit を更新するには、ツールバーの更新アイコンをクリックしてください!\n\n<b>いくつかの Subreddit の購読を解除しましたが、まだリストに残っています!</b>\nSlide はブラウザーから購読を解除したサブをカジュアルな購読に変換します。それを削除するには、Subreddit の上で長押しして、削除をクリックしてください!\n\n<b>コレクションの使用方法は?</b>\nコレクションを作成するには、+ FAB をクリックして、「コレクションを作成」を選択します。これにより、メイン画面に 1 つの Subreddit として動作する複数のサブを持つことができます!</string>
     <string name="FAQ">よくある質問</string>
     <string name="alphabetize_subreddits">サブレディットをアルファベット順に並び替え</string>
@@ -690,8 +690,8 @@
     <string name="add_to_subs">購読に追加</string>
     <string name="sub_added">Subreddit を追加しました!</string>
     <string name="reorder_subs_FAQ">Subreddit FAQ の順序を変更</string>
-    <string name="subscribe_to">/r/%1$s に登録</string>
-    <string name="unsubscribe_from">/r/%1$s から登録解除</string>
+    <string name="subscribe_to">/s/%1$s に登録</string>
+    <string name="unsubscribe_from">/s/%1$s から登録解除</string>
     <string name="btn_add_to_sublist">サブリストに追加</string>
     <string name="btn_remove_from_sublist">サブリストから削除</string>
     <string name="just_unsub">購読解除だけ</string>
@@ -753,7 +753,7 @@
     <string name="donate_err_title">寄付に失敗 :(</string>
     <string name="donate_err_msg">残念ながら、寄付は行われていません。インターネットに接続していることを確認して、もう一度やり直してください! あなたのサポートに感謝します!</string>
     <string name="donate_success_title">正常に寄付しました!</string>
-    <string name="donate_success_msg">Slide for Reddit のご支援大変ありがとうございました! 私にとってそれは本当に多くの意味があります。何か問題が発生した場合は、私にメールを送るか、いつでも /r/slideforreddit に投稿してください!</string>
+    <string name="donate_success_msg">Slide for Reddit のご支援大変ありがとうございました! 私にとってそれは本当に多くの意味があります。何か問題が発生した場合は、私にメールを送るか、いつでも /s/slideforreddit に投稿してください!</string>
     <string name="donate_success_btn">どういたしまして！</string>
     <!-- Offline mode -->
     <string name="offline_caching">キャッシュのサブミッション</string>
@@ -797,15 +797,15 @@
     <string name="time_minutes_short">%d分</string>
     <string name="time_seconds_short">%d秒</string>
     <!-- Strings present during the login process -->
-    <string name="login_subscribe_rslideforreddit">/r/slideforredditを購読しますか?</string>
-    <string name="login_subscribe_rslideforreddit_desc">最新のお知らせや問題の報告の為に/r/slideforredditを購読しますか?</string>
+    <string name="login_subscribe_rslideforreddit">/s/slideforredditを購読しますか?</string>
+    <string name="login_subscribe_rslideforreddit_desc">最新のお知らせや問題の報告の為に/s/slideforredditを購読しますか?</string>
     <string name="login_sync_colors">色を今同期しますか?</string>
     <string name="login_sync_colors_desc">今あなたのサブレディットの色を同期しますか? 後で 設定 → サブレディット テーマ からでも変更できます</string>
     <string name="login_authenticating">Slideは認証中です</string>
     <string name="login_starting">色々設定しましょう!</string>
     <string name="login_starting_desc">こんなのすぐに済むハズなんだけどなぁ...</string>
     <!-- Over 18 prompt when visiting a NSFW subreddit -->
-    <string name="over18_title">/r/%1$sには成人向けコンテンツが含まれています</string>
+    <string name="over18_title">/s/%1$sには成人向けコンテンツが含まれています</string>
     <string name="over18_desc">あなたは18歳以上で、成人向けコンテンツを閲覧しますか?</string>
     <string name="over18_desc_loggedout">この注意を永久に表示しない為にはログインして下さい</string>
     <string name="over18_desc_loggedin">この機能は 設定 → Reddit 設定 → NSFWコンテンツを表示する で無効化できます</string>
@@ -820,7 +820,7 @@
     <string name="discover_popular">人気</string>
     <string name="discover_trending">上昇中</string>
     <!-- Subreddit post notifiactions -->
-    <string name="sub_post_notifs_title">次の新しい投稿を通知しますか\n/r/%1$s?</string>
+    <string name="sub_post_notifs_title">次の新しい投稿を通知しますか\n/s/%1$s?</string>
     <string name="sub_post_notifs_title_settings">新しい投稿を通知しますか?</string>
     <string name="sub_post_notifs_menu">新しい投稿を通知する</string>
     <string name="sub_post_notify">通知</string>
@@ -830,8 +830,8 @@
     <string name="sub_post_notifs_settings_none">通知する Subreddit はありません</string>
     <string name="sub_post_notifs_settings_title">チェックする Subreddit</string>
     <string name="sub_post_notifs_settings_search">サブ名を検索</string>
-    <string name="sub_post_notifs_notification_title">/r/%1$s に新しい投稿</string>
-    <string name="sub_post_notifs_notification_btn">/r/%1$s の追跡を停止</string>
+    <string name="sub_post_notifs_notification_title">/s/%1$s に新しい投稿</string>
+    <string name="sub_post_notifs_notification_btn">/s/%1$s の追跡を停止</string>
     <string name="title_sub_post_notifs">Subreddit 投稿の通知</string>
     <!-- Internal browser -->
     <string name="internal_browser_extracting_error">申し訳ありません。記事を抽出できませんでした</string>
@@ -895,7 +895,7 @@
     <string name="sidebar_findingmods">モデレーターの検索</string>
     <string name="snackbar_flair_success">フレアを正常に設定しました</string>
     <string name="snackbar_flair_error">フレアの設定時にエラーが発生しました。もう一度やり直してください</string>
-    <string name="sidebar_submods">/r/%s mods</string>
+    <string name="sidebar_submods">/s/%s mods</string>
     <string name="sidebar_flair">フレア: %1$s</string>
     <string name="sidebar_notfound">サイドバーが見つかりません</string>
     <plurals name="reorder_selected">
@@ -903,7 +903,7 @@
     </plurals>
     <!--Filtering dialog -->
     <string name="filter_title">何をフィルターしますか?</string>
-    <string name="filter_posts_sub">/r/%1$s から投稿</string>
+    <string name="filter_posts_sub">/s/%1$s から投稿</string>
     <string name="filter_posts_user">/u/%1$s による投稿</string>
     <string name="filter_posts_urls">%1$s にリンクしている投稿</string>
     <string name="filter_open_externally">%s URL を外部で開く</string>
@@ -1054,7 +1054,7 @@
     <string name="open_links_externally">常に外部からこのホストを開く</string>
     <string name="hide_read_posts">既読の投稿を非表示</string>
     <string name="gallery_mode">ギャラリーモード</string>
-    <string name="friends_sort_error">/r/ 友達は並び替えできません</string>
+    <string name="friends_sort_error">/s/ 友達は並び替えできません</string>
     <string name="shadowbox_comments_nolinks">コメントにリンクは見つかりません</string>
     <string name="pro_previews">プレビュー (%d)</string>
     <string name="draw_undo">元に戻す</string>

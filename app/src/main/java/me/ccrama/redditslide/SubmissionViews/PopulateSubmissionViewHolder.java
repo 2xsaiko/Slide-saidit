@@ -540,7 +540,7 @@ public class PopulateSubmissionViewHolder {
         final boolean isAddedToReadLaterList = ReadLater.isToBeReadLater(submission);
         if (Authentication.didOnline) {
             b.sheet(1, profile, "/u/" + submission.getAuthor())
-                    .sheet(2, sub, "/r/" + submission.getSubredditName());
+                    .sheet(2, sub, "/s/" + submission.getSubredditName());
             String save = mContext.getString(R.string.btn_save);
             if (ActionStates.isSaved(submission)) {
                 save = mContext.getString(R.string.comment_unsave);

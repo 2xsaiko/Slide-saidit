@@ -185,7 +185,7 @@
     <string name="sorting_search_month">上个月</string>
     <string name="sorting_search_year">去年</string>
     <string name="sorting_search_all">全部时间</string>
-    <string name="sorting_defaultfor">默认为 /r/%1$s</string>
+    <string name="sorting_defaultfor">默认为 /s/%1$s</string>
     <!-- Editor (save/submit a post) actions -->
     <string name="editor_url">链接</string>
     <string name="editor_text">文本</string>
@@ -259,7 +259,7 @@
     <string name="multireddit_create_hint">多版块名称</string>
     <string name="multireddit_invalid_name">无效的多版块名称</string>
     <string name="multireddit_invalid_name_msg">多版块名称只能包含字母、数字和下划线</string>
-    <string name="multi_add_to">将 /r/%s 添加到</string>
+    <string name="multi_add_to">将 /s/%s 添加到</string>
     <string name="multi_subreddit_added">版块已添加到 /m/%1$s</string>
     <string name="multi_error">出错。请稍后重试</string>
     <string name="btn_import_multi">导入多版块</string>
@@ -304,11 +304,11 @@
     <string name="mail_send_to">发送一条信息给 %1$s</string>
     <string name="mail_send">发送一条信息</string>
     <string name="mail_notification_msg_from">来自 %1$s 的新消息</string>
-    <string name="mail_notification_msg_via">来自 /r/%1$s 的新消息</string>
+    <string name="mail_notification_msg_via">来自 /s/%1$s 的新消息</string>
     <string name="mod_mail_notification_msg">来自 %1$s 的新的版主邮件</string>
     <string name="mail_reply_to">回复 %1$s</string>
     <string name="mail_notification_author">%2$s 的 %1$s</string>
-    <string name="mail_notification_subreddit">来自 /r/%2$s 的 %1$s</string>
+    <string name="mail_notification_subreddit">来自 /s/%2$s 的 %1$s</string>
     <string name="mail_theirs">查看他们的消息</string>
     <string name="mail_re">re: %1$s</string>
     <string name="mail_mark_read">标记为已读</string>
@@ -713,8 +713,8 @@
     <string name="reorder_move">移至顶部</string>
     <string name="reorder_domain_placeholder">\u0020(仅域名)</string>
     <string name="reorder_not_found_err">版块未找到，这是一些建议</string>
-    <string name="reorder_subscribed_toast">已订阅 /r/%1$s</string>
-    <string name="reorder_unsubscribed_toast">取消订阅 /r/%1$s</string>
+    <string name="reorder_subscribed_toast">已订阅 /s/%1$s</string>
+    <string name="reorder_unsubscribed_toast">取消订阅 /s/%1$s</string>
     <string name="sorting_faq"><b> 如何刷新版块？ </b>\n要刷新版块，请单击工具栏中的刷新图标! \n\n<b> 我取消订阅一些版块，但他们仍然在列表中! </b>\nSlide 将已取消订阅的版块从浏览器转换成临时订阅。要删除它们, 请长按版块, 然后单击 "删除"! \n\n<b> 如何使用集合？ </b>\n 要创建一个集合, 请单击 \"+\", 然后选择 \"创建集合\"。这可以让你有多个版块作为一个版块在主屏幕!</string>
     <string name="FAQ">常见问题</string>
     <string name="alphabetize_subreddits">按字母排序版块</string>
@@ -727,8 +727,8 @@
     <string name="add_to_subs">添加到订阅</string>
     <string name="sub_added">版块已添加</string>
     <string name="reorder_subs_FAQ">重新排序版块常见问题</string>
-    <string name="subscribe_to">订阅 /r/%1$s</string>
-    <string name="unsubscribe_from">取消订阅 /r/%1$s</string>
+    <string name="subscribe_to">订阅 /s/%1$s</string>
+    <string name="unsubscribe_from">取消订阅 /s/%1$s</string>
     <string name="btn_add_to_sublist">添加到版块列表</string>
     <string name="btn_remove_from_sublist">从版块列表删除</string>
     <string name="just_unsub">只是取消订阅</string>
@@ -791,7 +791,7 @@
     <string name="donate_err_title">捐赠失败 :(</string>
     <string name="donate_err_msg">很遗憾，捐赠未完成。确保你已连接到网络再试一次！感谢你的支持！</string>
     <string name="donate_success_title">捐赠成功！</string>
-    <string name="donate_success_msg">非常感谢您支持 Slide for Reddit！这对我来说意义重大。如果你遇到任何问题，随时向我发邮件或者在 /r/slideforreddit 发帖！</string>
+    <string name="donate_success_msg">非常感谢您支持 Slide for Reddit！这对我来说意义重大。如果你遇到任何问题，随时向我发邮件或者在 /s/slideforreddit 发帖！</string>
     <string name="donate_success_btn">感激不尽！</string>
     <!-- Offline mode -->
     <string name="offline_caching">正在缓存提交</string>
@@ -835,15 +835,15 @@
     <string name="time_minutes_short">%d分</string>
     <string name="time_seconds_short">%d秒</string>
     <!-- Strings present during the login process -->
-    <string name="login_subscribe_rslideforreddit">订阅 /r/slideforreddit？</string>
-    <string name="login_subscribe_rslideforreddit_desc">你想订阅 /r/slideforreddit 以获得最新消息和报告问题？</string>
+    <string name="login_subscribe_rslideforreddit">订阅 /s/slideforreddit？</string>
+    <string name="login_subscribe_rslideforreddit_desc">你想订阅 /s/slideforreddit 以获得最新消息和报告问题？</string>
     <string name="login_sync_colors">现在同步颜色？</string>
     <string name="login_sync_colors_desc">你想现在同步你的版块颜色吗？这可在以后再做，设置→版块主题</string>
     <string name="login_authenticating">Slide 正在验证</string>
     <string name="login_starting">开始设置</string>
     <string name="login_starting_desc">这应该只需要一秒钟...</string>
     <!-- Over 18 prompt when visiting a NSFW subreddit -->
-    <string name="over18_title">/r/%1$s 含有成人內容</string>
+    <string name="over18_title">/s/%1$s 含有成人內容</string>
     <string name="over18_desc">你已年满十八并愿意看到成人内容吗？</string>
     <string name="over18_desc_loggedout">登录以永久禁用此警告</string>
     <string name="over18_desc_loggedin">你可以永久禁用此选项，在设置→ Reddit 首选项→显示 NSFW 内容</string>
@@ -858,7 +858,7 @@
     <string name="discover_popular">流行</string>
     <string name="discover_trending">趋势</string>
     <!-- Subreddit post notifiactions -->
-    <string name="sub_post_notifs_title">被新帖子通知在\n/r/%1$s?</string>
+    <string name="sub_post_notifs_title">被新帖子通知在\n/s/%1$s?</string>
     <string name="sub_post_notifs_title_settings">新帖通知?</string>
     <string name="sub_post_notifs_menu">新帖通知</string>
     <string name="sub_post_notify">通知</string>
@@ -868,8 +868,8 @@
     <string name="sub_post_notifs_settings_none">没有版块要通知</string>
     <string name="sub_post_notifs_settings_title">要检查的版块</string>
     <string name="sub_post_notifs_settings_search">搜索版块名称</string>
-    <string name="sub_post_notifs_notification_title">新帖子在 /r/%1$s</string>
-    <string name="sub_post_notifs_notification_btn">停止跟踪 /r/%1$s</string>
+    <string name="sub_post_notifs_notification_title">新帖子在 /s/%1$s</string>
+    <string name="sub_post_notifs_notification_btn">停止跟踪 /s/%1$s</string>
     <string name="title_sub_post_notifs">版块帖子通知</string>
     <!-- Internal browser -->
     <string name="internal_browser_extracting_error">对不起，文章无法提取</string>
@@ -933,7 +933,7 @@
     <string name="sidebar_findingmods">搜索版主</string>
     <string name="snackbar_flair_success">签名设置成功</string>
     <string name="snackbar_flair_error">设置签名出错，稍后再试</string>
-    <string name="sidebar_submods">/r/%s 版主</string>
+    <string name="sidebar_submods">/s/%s 版主</string>
     <string name="sidebar_flair">签名：%1$s</string>
     <string name="sidebar_notfound">未找到侧栏</string>
     <plurals name="reorder_selected">
@@ -941,7 +941,7 @@
     </plurals>
     <!--Filtering dialog -->
     <string name="filter_title">你想要过滤什么？</string>
-    <string name="filter_posts_sub">帖子从 /r/%1$s</string>
+    <string name="filter_posts_sub">帖子从 /s/%1$s</string>
     <string name="filter_posts_user">帖子由 /u/%1$s</string>
     <string name="filter_posts_urls">帖子链接到 %1$s</string>
     <string name="filter_open_externally">在外部打开 %s URLs</string>
@@ -969,7 +969,7 @@
     <string name="report_post">举报帖子</string>
     <string name="report_comment">举报评论</string>
     <string name="report_loading">原因加载中&#8230;</string>
-    <string name="report_sub_rules">/r/%s 规则</string>
+    <string name="report_sub_rules">/s/%s 规则</string>
     <string name="report_site_rules">Reddit 规则</string>
     <string name="report_another_reason">其它原因</string>
     <string name="report_other">其它</string>
@@ -1099,7 +1099,7 @@
     <string name="open_links_externally">始终在外部打开此链接</string>
     <string name="hide_read_posts">隐藏已读帖子</string>
     <string name="gallery_mode">图库模式</string>
-    <string name="friends_sort_error">/r/ 朋友是不可排序</string>
+    <string name="friends_sort_error">/s/ 朋友是不可排序</string>
     <string name="shadowbox_comments_nolinks">在评论中找不到链接</string>
     <string name="pro_previews">预览 (%d)</string>
     <string name="draw_undo">撤销</string>

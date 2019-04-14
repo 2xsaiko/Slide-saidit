@@ -178,7 +178,7 @@
     <string name="sorting_search_month">Bulan lalu</string>
     <string name="sorting_search_year">Tahun lalu</string>
     <string name="sorting_search_all">Semua waktu</string>
-    <string name="sorting_defaultfor">Default untuk /r/%1$s</string>
+    <string name="sorting_defaultfor">Default untuk /s/%1$s</string>
     <!-- Editor (save/submit a post) actions -->
     <string name="editor_url">URL</string>
     <string name="editor_text">Teks</string>
@@ -252,7 +252,7 @@
     <string name="multireddit_create_hint">Nama multireddit</string>
     <string name="multireddit_invalid_name">Nama multireddit tidak valid</string>
     <string name="multireddit_invalid_name_msg">Nama multireddit hanya boleh berisi huruf, angka dan garis bawah</string>
-    <string name="multi_add_to">Tambahkan /r/%s ke</string>
+    <string name="multi_add_to">Tambahkan /s/%s ke</string>
     <string name="multi_subreddit_added">Subreddit ditambahkan ke /m/%1$s</string>
     <string name="multi_error">Terjadi kesalahan, silakan coba lagi nanti</string>
     <string name="btn_import_multi">Impor multireddit</string>
@@ -297,11 +297,11 @@
     <string name="mail_send_to">Kirim pesan ke %1$s</string>
     <string name="mail_send">Kirim sebuah pesan</string>
     <string name="mail_notification_msg_from">Pesan baru dari %1$s</string>
-    <string name="mail_notification_msg_via">Pesan baru via /r/%1$s</string>
+    <string name="mail_notification_msg_via">Pesan baru via /s/%1$s</string>
     <string name="mod_mail_notification_msg">Modmail baru dari %1$s</string>
     <string name="mail_reply_to">Balas ke %1$s</string>
     <string name="mail_notification_author">%1$s dari %2$s</string>
-    <string name="mail_notification_subreddit">%1$s via /r/%2$s</string>
+    <string name="mail_notification_subreddit">%1$s via /s/%2$s</string>
     <string name="mail_theirs">Lihat pesan mereka</string>
     <string name="mail_re">re: %1$s</string>
     <string name="mail_mark_read">Tandai dibaca</string>
@@ -660,8 +660,8 @@ ini juga akan menghapus ikon dari layar depan anda.</string>
     <string name="reorder_move">Kembali ke atas</string>
     <string name="reorder_domain_placeholder">\u0020 (hanya nama domain)</string>
     <string name="reorder_not_found_err">Subreddit tidak ditemukan, berikut adalah beberapa saran</string>
-    <string name="reorder_subscribed_toast">Berlangganan ke /r/%1$s</string>
-    <string name="reorder_unsubscribed_toast">Berhenti Berlangganan ke /r/%1$s</string>
+    <string name="reorder_subscribed_toast">Berlangganan ke /s/%1$s</string>
+    <string name="reorder_unsubscribed_toast">Berhenti Berlangganan ke /s/%1$s</string>
     <string name="sorting_faq"><b>Bagaimana cara memperbarui subreddits?</b>\n untuk menyegarkan subreddits, klik ikon segarkan di toolbar! \n\n<b>saya berhenti berlangganan dari beberapa subreddits tetapi mereka masih dalam daftar!</b> \nSlide akan mengkonversi subs berhenti berlangganan dari browser ke langganan biasa. Untuk menghapusnya, Pendam pada subreddit(s) dan klik Hapus! \n\n <b>bagaimana cara menggunakan koleksi?</b> \nTo membuat koleksi, klik + FAB dan pilih \'Buat koleksi\'. Hal ini memungkinkan Anda untuk memiliki beberapa subs bertindak sebagai satu subreddit di layar utama!</string>
     <string name="FAQ">FAQ</string>
     <string name="alphabetize_subreddits">Abjad subreddits</string>
@@ -674,8 +674,8 @@ ini juga akan menghapus ikon dari layar depan anda.</string>
     <string name="add_to_subs">TAMBAHKAN KE LANGGANAN</string>
     <string name="sub_added">Subreddit ditambahkan!</string>
     <string name="reorder_subs_FAQ">Menyusun ulang Subreddits FAQ</string>
-    <string name="subscribe_to">Berlangganan ke /r/%1$s</string>
-    <string name="unsubscribe_from">Berhenti berlangganan dari /r/%1$s</string>
+    <string name="subscribe_to">Berlangganan ke /s/%1$s</string>
+    <string name="unsubscribe_from">Berhenti berlangganan dari /s/%1$s</string>
     <string name="btn_add_to_sublist">TAMBAHKAN KE SUB DAFTAR</string>
     <string name="btn_remove_from_sublist">HAPUS DARI SUB DAFTAR</string>
     <string name="just_unsub">HANYA BERHENTI BERLANGGANAN</string>
@@ -781,15 +781,15 @@ ini juga akan menghapus ikon dari layar depan anda.</string>
     <string name="time_minutes_short">%dm</string>
     <string name="time_seconds_short">%ds</string>
     <!-- Strings present during the login process -->
-    <string name="login_subscribe_rslideforreddit">Berlangganan /r/slideforreddit?</string>
-    <string name="login_subscribe_rslideforreddit_desc">Apakah Anda ingin berlangganan untuk /r/slideforreddit untuk berita terbaru dan laporan masalah?</string>
+    <string name="login_subscribe_rslideforreddit">Berlangganan /s/slideforreddit?</string>
+    <string name="login_subscribe_rslideforreddit_desc">Apakah Anda ingin berlangganan untuk /s/slideforreddit untuk berita terbaru dan laporan masalah?</string>
     <string name="login_sync_colors">Sinkronkan warna sekarang?</string>
     <string name="login_sync_colors_desc">Ingin Anda sinkronkan warna subreddit Anda sekarang? Ini dapat dilakukan nanti dalam pengaturan → Subreddit tema</string>
     <string name="login_authenticating">Slide otentikasi</string>
     <string name="login_starting">Menetapkan segalanya!</string>
     <string name="login_starting_desc">Ini hanya harus mengambil kedua&#8230;</string>
     <!-- Over 18 prompt when visiting a NSFW subreddit -->
-    <string name="over18_title">/r/%1$s berisi konten dewasa</string>
+    <string name="over18_title">/s/%1$s berisi konten dewasa</string>
     <string name="over18_desc">Apakah Anda selama delapan belas dan bersedia untuk melihat konten dewasa?</string>
     <string name="over18_desc_loggedout">Log in untuk menonaktifkan peringatan ini secara permanen</string>
     <string name="over18_desc_loggedin">Anda dapat menonaktifkan ini secara permanen dalam pengaturan → Reddit preferensi → Tampilkan NSFW konten</string>
@@ -804,7 +804,7 @@ ini juga akan menghapus ikon dari layar depan anda.</string>
     <string name="discover_popular">Populer</string>
     <string name="discover_trending">Tren</string>
     <!-- Subreddit post notifiactions -->
-    <string name="sub_post_notifs_title">Diberitahu baru posting in\n/r/%1$s?</string>
+    <string name="sub_post_notifs_title">Diberitahu baru posting in\n/s/%1$s?</string>
     <string name="sub_post_notifs_title_settings">Memperoleh pemberitahuan tentang posting baru?</string>
     <string name="sub_post_notifs_menu">Diberitahu tentang posting baru</string>
     <string name="sub_post_notify">Memberitahukan</string>
@@ -814,8 +814,8 @@ ini juga akan menghapus ikon dari layar depan anda.</string>
     <string name="sub_post_notifs_settings_none">Tidak subreddits untuk memberitahu</string>
     <string name="sub_post_notifs_settings_title">Subreddits untuk memeriksa</string>
     <string name="sub_post_notifs_settings_search">Nama sub pencarian</string>
-    <string name="sub_post_notifs_notification_title">Posting baru di/r/%1$s</string>
-    <string name="sub_post_notifs_notification_btn">Menghentikan pelacakan /r/%1$s</string>
+    <string name="sub_post_notifs_notification_title">Posting baru di/s/%1$s</string>
+    <string name="sub_post_notifs_notification_btn">Menghentikan pelacakan /s/%1$s</string>
     <string name="title_sub_post_notifs">Subreddit posting pemberitahuan</string>
     <!-- Internal browser -->
     <string name="internal_browser_extracting_error">Maaf, artikel tidak diekstraksi</string>
@@ -879,7 +879,7 @@ ini juga akan menghapus ikon dari layar depan anda.</string>
     <string name="sidebar_findingmods">Temukan moderator</string>
     <string name="snackbar_flair_success">Flair berhasil diatur</string>
     <string name="snackbar_flair_error">Kesalahan pengaturan Flair, coba lagi segera</string>
-    <string name="sidebar_submods">/r/%s mods</string>
+    <string name="sidebar_submods">/s/%s mods</string>
     <string name="sidebar_flair">Flair: %1$s</string>
     <string name="sidebar_notfound">Tidak ada sidebar yang ditemukan</string>
     <plurals name="reorder_selected">
@@ -887,7 +887,7 @@ ini juga akan menghapus ikon dari layar depan anda.</string>
     </plurals>
     <!--Filtering dialog -->
     <string name="filter_title">Apa yang ingin Anda saring?</string>
-    <string name="filter_posts_sub">Posting dari /r/%1$s</string>
+    <string name="filter_posts_sub">Posting dari /s/%1$s</string>
     <string name="filter_posts_user">Posting oleh /u/%1$s</string>
     <string name="filter_posts_urls">Posting yang menghubungkan ke %1$s</string>
     <string name="filter_open_externally">Buka URL %s secara eksternal</string>
@@ -1032,7 +1032,7 @@ ini juga akan menghapus ikon dari layar depan anda.</string>
     <string name="open_links_externally">Selalu buka host ini secara eksternal</string>
     <string name="hide_read_posts">Sembunyikan pos yang sudah dibaca</string>
     <string name="gallery_mode">Mode galeri</string>
-    <string name="friends_sort_error">Teman /r/ tidak bisa diurutkan</string>
+    <string name="friends_sort_error">Teman /s/ tidak bisa diurutkan</string>
     <string name="shadowbox_comments_nolinks">Tidak ada link yang ditemukan dalam komentar</string>
     <string name="pro_previews">Tinjauan (%d)</string>
     <string name="draw_undo">Kembali</string>

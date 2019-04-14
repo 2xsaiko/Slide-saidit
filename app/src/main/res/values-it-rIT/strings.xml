@@ -184,7 +184,7 @@
     <string name="sorting_search_month">Ultimo mese</string>
     <string name="sorting_search_year">Ultimo anno</string>
     <string name="sorting_search_all">Di sempre</string>
-    <string name="sorting_defaultfor">Impostazione predefinita per /r/%1$s</string>
+    <string name="sorting_defaultfor">Impostazione predefinita per /s/%1$s</string>
     <!-- Editor (save/submit a post) actions -->
     <string name="editor_url">URL</string>
     <string name="editor_text">Testo</string>
@@ -258,7 +258,7 @@
     <string name="multireddit_create_hint">Nome multireddit</string>
     <string name="multireddit_invalid_name">Nome del multireddit non valido</string>
     <string name="multireddit_invalid_name_msg">I nomi dei multireddit possono contenere solo lettere, numeri e trattini bassi.</string>
-    <string name="multi_add_to">Aggiungi /r/%s a</string>
+    <string name="multi_add_to">Aggiungi /s/%s a</string>
     <string name="multi_subreddit_added">Subreddit aggiunto a /m/%1$s</string>
     <string name="multi_error">Si è verificato un errore, riprova più tardi</string>
     <string name="btn_import_multi">Importa multireddit</string>
@@ -303,7 +303,7 @@
     <string name="mail_send_to">Invia un messaggio a %1$s</string>
     <string name="mail_send">Invia un messaggio</string>
     <string name="mail_notification_msg_from">Nuovo messaggio da %1$s</string>
-    <string name="mail_notification_msg_via">Nuovo messaggio tramite /r/%1$s</string>
+    <string name="mail_notification_msg_via">Nuovo messaggio tramite /s/%1$s</string>
     <string name="mod_mail_notification_msg">Nuova mod mail da %1$s</string>
     <string name="mail_reply_to">Rispondi a %1$s</string>
     <string name="mail_notification_author">%1$s da %2$s</string>
@@ -670,8 +670,8 @@
     <string name="reorder_move">Sposta in cima</string>
     <string name="reorder_domain_placeholder">\u0020(solo il nome del dominio)</string>
     <string name="reorder_not_found_err">Subreddit non trovato, ecco alcuni suggerimenti</string>
-    <string name="reorder_subscribed_toast">Iscritto a /r/%1$s</string>
-    <string name="reorder_unsubscribed_toast">Disiscritto da /r/%1$s</string>
+    <string name="reorder_subscribed_toast">Iscritto a /s/%1$s</string>
+    <string name="reorder_unsubscribed_toast">Disiscritto da /s/%1$s</string>
     <string name="sorting_faq"><b>Come aggiorno i subreddits?</b>\nPer aggiornare i subreddits, clicca sull\'icona di aggiornamento nella barra strumenti!\n\n<b>Mi sono disiscritto da alcuni subreddit ma appaiono ancora nella lista!</b>\nSlide converte i sub disiscritti in iscrizioni casuali. Per rimuoverle, premi a lungo sul/sui subreddit(s) e clicca rimuovi!\n\n<b>Come uso le collezioni?</b>\nPer creare una collezione, clicca il FAB + e seleziona \"Crea una collezione\". Questo ti permette di avere più subreddit come se fossero uno solo, tutto nella schermata principale!</string>
     <string name="FAQ">FAQ</string>
     <string name="alphabetize_subreddits">Subreddit in ordine alfabetico</string>
@@ -684,8 +684,8 @@
     <string name="add_to_subs">AGGIUNGI ALLE ISCRIZIONI</string>
     <string name="sub_added">Subreddit aggiunto!</string>
     <string name="reorder_subs_FAQ">FAQ Riordina subreddit</string>
-    <string name="subscribe_to">Iscriviti a /r/%1$s</string>
-    <string name="unsubscribe_from">Disiscriviti da /r/%1$s</string>
+    <string name="subscribe_to">Iscriviti a /s/%1$s</string>
+    <string name="unsubscribe_from">Disiscriviti da /s/%1$s</string>
     <string name="btn_add_to_sublist">AGGIUNGI ALL\'ELENCO DEI SUB</string>
     <string name="btn_remove_from_sublist">RIMUOVI DALL\'ELENCO DEI SUB</string>
     <string name="just_unsub">RIMUOVI SOLAMENTE L\'ISCRIZIONE</string>
@@ -798,15 +798,15 @@
     <string name="time_minutes_short">%dm</string>
     <string name="time_seconds_short">%ds</string>
     <!-- Strings present during the login process -->
-    <string name="login_subscribe_rslideforreddit">Vuoi iscriverti a /r/slideforreddit?</string>
-    <string name="login_subscribe_rslideforreddit_desc">Vorresti iscriverti a /r/slideforreddit per le ultime notizie e per segnalare malfunzionamenti?</string>
+    <string name="login_subscribe_rslideforreddit">Vuoi iscriverti a /s/slideforreddit?</string>
+    <string name="login_subscribe_rslideforreddit_desc">Vorresti iscriverti a /s/slideforreddit per le ultime notizie e per segnalare malfunzionamenti?</string>
     <string name="login_sync_colors">Sincronizzare i colori?</string>
     <string name="login_sync_colors_desc">Vorresti sincronizzare i colori dei tuoi subreddit adesso? Puoi anche farlo più avanti in Impostazioni → Temi dei subreddit</string>
     <string name="login_authenticating">Slide si sta autenticando</string>
     <string name="login_starting">Impostando le ultime cose!</string>
     <string name="login_starting_desc">Dovrebbe volerci solo un secondo&#8230;</string>
     <!-- Over 18 prompt when visiting a NSFW subreddit -->
-    <string name="over18_title">/r/%1$s contiene materiale per adulti</string>
+    <string name="over18_title">/s/%1$s contiene materiale per adulti</string>
     <string name="over18_desc">Hai più di diciotto anni e confermi di voler visualizzare contenuti per adulti?</string>
     <string name="over18_desc_loggedout">Esegui il login per rimuovere permanentemente questo avviso</string>
     <string name="over18_desc_loggedin">Puoi disabilitare permanentemente questo avviso in Impostazioni → Mostra contenuto NSFW</string>
@@ -822,7 +822,7 @@
     <string name="discover_popular">Popolare</string>
     <string name="discover_trending">Di tendenza</string>
     <!-- Subreddit post notifiactions -->
-    <string name="sub_post_notifs_title">Essere avvisati di nuovi post in\n/r/%1$s?</string>
+    <string name="sub_post_notifs_title">Essere avvisati di nuovi post in\n/s/%1$s?</string>
     <string name="sub_post_notifs_title_settings">Essere avvisato dei nuovi post?</string>
     <string name="sub_post_notifs_menu">Vieni avvisato dei nuovi post</string>
     <string name="sub_post_notify">Notifica</string>
@@ -832,8 +832,8 @@
     <string name="sub_post_notifs_settings_none">Nessun subreddit da cui ricevere notifiche</string>
     <string name="sub_post_notifs_settings_title">Subreddit da controllare</string>
     <string name="sub_post_notifs_settings_search">Cerca subreddit per nome</string>
-    <string name="sub_post_notifs_notification_title">Nuovo post in /r/%1$s</string>
-    <string name="sub_post_notifs_notification_btn">Smetti di tenere traccia di /r/%1$s</string>
+    <string name="sub_post_notifs_notification_title">Nuovo post in /s/%1$s</string>
+    <string name="sub_post_notifs_notification_btn">Smetti di tenere traccia di /s/%1$s</string>
     <string name="title_sub_post_notifs">Notifiche post Subreddit</string>
     <!-- Internal browser -->
     <string name="internal_browser_extracting_error">Spiacente, l\'articolo non può essere estratto</string>
@@ -897,7 +897,7 @@
     <string name="sidebar_findingmods">Ricerca dei moderatori in corso</string>
     <string name="snackbar_flair_success">Etichetta impostata con successo</string>
     <string name="snackbar_flair_error">Si è verificato un errore impostando l\'etichetta, riprova più tardi</string>
-    <string name="sidebar_submods">/r/%s moderatori</string>
+    <string name="sidebar_submods">/s/%s moderatori</string>
     <string name="sidebar_flair">Etichetta: %1$s</string>
     <string name="sidebar_notfound">Nessuna sidebar trovata</string>
     <plurals name="reorder_selected">
@@ -906,7 +906,7 @@
     </plurals>
     <!--Filtering dialog -->
     <string name="filter_title">Cosa vorresti filtrare?</string>
-    <string name="filter_posts_sub">Messaggi da /r/%1$s</string>
+    <string name="filter_posts_sub">Messaggi da /s/%1$s</string>
     <string name="filter_posts_user">Post di /u/%1$s</string>
     <string name="filter_posts_urls">Post linking verso %1$s</string>
     <string name="filter_open_externally">Apri URLs %s all\'esterno</string>
@@ -1059,7 +1059,7 @@
     <string name="open_links_externally">Apri sempre questo dominio esternamente</string>
     <string name="hide_read_posts">Nascondi post già letti</string>
     <string name="gallery_mode">Modalità galleria</string>
-    <string name="friends_sort_error">/r/friends non è ordinabile</string>
+    <string name="friends_sort_error">/s/friends non è ordinabile</string>
     <string name="shadowbox_comments_nolinks">Nessun link trovato nei commenti</string>
     <string name="pro_previews">Anteprima (%d)</string>
     <string name="draw_undo">Annulla azione</string>

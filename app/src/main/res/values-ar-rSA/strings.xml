@@ -206,7 +206,7 @@
     <string name="multireddit_create_hint">اسم Multireddit</string>
     <string name="multireddit_invalid_name">اسم غير صالح لMultireddit</string>
     <string name="multireddit_invalid_name_msg">أسماء Multireddit قد تحتوي فقط على أحرف وأرقام وتسطير</string>
-    <string name="multi_add_to">إضافة/r/%s</string>
+    <string name="multi_add_to">إضافة/s/%s</string>
     <string name="multi_subreddit_added">Subreddit إضافة إلى/m/%1$s</string>
     <string name="multi_error">لقد وقع خطأ. الرجاء المحاولة مرة أخرى لاحقاً</string>
     <string name="btn_import_multi">استيراد multireddit</string>

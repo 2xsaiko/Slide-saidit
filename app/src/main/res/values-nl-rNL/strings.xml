@@ -166,7 +166,7 @@
     <string name="sorting_search_month">Afgelopen maand</string>
     <string name="sorting_search_year">Afgelopen jaar</string>
     <string name="sorting_search_all">Altijd</string>
-    <string name="sorting_defaultfor">Standaard voor /r/%1$s</string>
+    <string name="sorting_defaultfor">Standaard voor /s/%1$s</string>
     <!-- Editor (save/submit a post) actions -->
     <string name="editor_url">URL</string>
     <string name="editor_text">Tekst</string>
@@ -542,7 +542,7 @@
     <string name="settings_theme_tinting">Bericht kleurmode</string>
     <string name="settings_reddit_thumbnail_mode">Thumbnailmode</string>
     <string name="settings_layout_actionbar_mode">Werkbalkmode</string>
-    <string name="settings_theme_tint_outside_desc">Alleen de achtergrond kleuren in multireddits, voorpagina en /r/all</string>
+    <string name="settings_theme_tint_outside_desc">Alleen de achtergrond kleuren in multireddits, voorpagina en /s/all</string>
     <string name="settings_layout_small_content_tag">Kleinere contenttag</string>
     <string name="settings_links_force_external">Forceer externe browser</string>
     <string name="settings_links_force_external_desc">Kies domeinen die altijd extern geopend worden</string>
@@ -627,7 +627,7 @@
     <string name="donate_err_title">Donatie mislukt :(</string>
     <string name="donate_err_msg">De donatie kon helaas niet worden voltooid. Zorg ervoor dat je bent verbonden met het internet en probeer het opnieuw! Bedankt voor je steun!</string>
     <string name="donate_success_title">Donatie gelukt!</string>
-    <string name="donate_success_msg">Bedankt voor het steunen van Slide voor Reddit! Het betekent echt veel voor mij. Als je een probleem ondervindt, stuur me een e-mail of plaats een bericht in /r/slideforreddit!</string>
+    <string name="donate_success_msg">Bedankt voor het steunen van Slide voor Reddit! Het betekent echt veel voor mij. Als je een probleem ondervindt, stuur me een e-mail of plaats een bericht in /s/slideforreddit!</string>
     <string name="donate_success_btn">Graag gedaan!</string>
     <!-- Offline mode -->
     <string name="offline_caching">Berichten aan het cachen</string>
@@ -673,15 +673,15 @@
     <string name="time_minutes_short">%dm</string>
     <string name="time_seconds_short">%ds</string>
     <!-- Strings present during the login process -->
-    <string name="login_subscribe_rslideforreddit">Abonneren op /r/slideforreddit?</string>
-    <string name="login_subscribe_rslideforreddit_desc">Wil je abonneren op /r/slideforreddit voor het laatste nieuws en om problemen te melden?</string>
+    <string name="login_subscribe_rslideforreddit">Abonneren op /s/slideforreddit?</string>
+    <string name="login_subscribe_rslideforreddit_desc">Wil je abonneren op /s/slideforreddit voor het laatste nieuws en om problemen te melden?</string>
     <string name="login_sync_colors">Kleuren nu synchroniseren?</string>
     <string name="login_sync_colors_desc">Wil je de subredditkleuren nu synchroniseren? Je kan dit later doen via Instellingen → Subreddit-thema\'s</string>
     <string name="login_authenticating">Slide is aan het aanmelden</string>
     <string name="login_starting">Bezig met voorbereiden!</string>
     <string name="login_starting_desc">Een seconde geduld&#8230;</string>
     <!-- Over 18 prompt when visiting a NSFW subreddit -->
-    <string name="over18_title">/r/%1$s bevat inhoud voor volwassenen</string>
+    <string name="over18_title">/s/%1$s bevat inhoud voor volwassenen</string>
     <string name="over18_desc">Ben je ouder dan 18 jaar en wil je inhoud voor volwassenen zien?</string>
     <string name="over18_desc_loggedout">Meld je aan om deze melding permanent uit te schakelen</string>
     <string name="over18_desc_loggedin">Je kan deze melding permanent uitschakelen in Instellingen → Reddit-voorkeuren → Toon NSFW-inhoud</string>

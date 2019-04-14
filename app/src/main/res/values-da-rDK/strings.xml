@@ -152,7 +152,7 @@
     <string name="sorting_search_month">Sidste måned</string>
     <string name="sorting_search_year">Sidste år</string>
     <string name="sorting_search_all">For altid</string>
-    <string name="sorting_defaultfor">Standard for /r/%1$s</string>
+    <string name="sorting_defaultfor">Standard for /s/%1$s</string>
     <!-- Editor (save/submit a post) actions -->
     <string name="editor_url">URL</string>
     <string name="editor_text">Tekst</string>
