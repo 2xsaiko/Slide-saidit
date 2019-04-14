@@ -48,8 +48,8 @@ import me.ccrama.redditslide.util.LogUtil;
  * Created by ccrama on 5/27/2015.
  */
 public class Login extends BaseActivityAnim {
-    private static final String CLIENT_ID    = "KI2Nl9A_ouG9Qw";
-    private static final String REDIRECT_URL = "http://www.ccrama.me";
+    private static final String CLIENT_ID    = "WxRFjBhnxNAWHA";
+    private static final String REDIRECT_URL = "https://github.com/therealfarfetchd/Slide-saidit";
     Dialog                           d;
     CaseInsensitiveArrayList subNames;
 
@@ -78,9 +78,9 @@ public class Login extends BaseActivityAnim {
         final OAuthHelper oAuthHelper = Authentication.reddit.getOAuthHelper();
         final Credentials credentials = Credentials.installedApp(CLIENT_ID, REDIRECT_URL);
         String authorizationUrl =
-                oAuthHelper.getAuthorizationUrl(credentials, true, scopes).toExternalForm();
-        authorizationUrl = authorizationUrl.replace("www.", "i.");
-        authorizationUrl = authorizationUrl.replace("%3A%2F%2Fi", "://www");
+                oAuthHelper.getAuthorizationUrl(credentials, true, true, scopes).toExternalForm();
+        // authorizationUrl = authorizationUrl.replace("www.", "i.");
+        // authorizationUrl = authorizationUrl.replace("%3A%2F%2Fi", "://www");
         Log.v(LogUtil.getTag(), "Auth URL: " + authorizationUrl);
         final WebView webView = (WebView) findViewById(R.id.web);
         webView.clearCache(true);
