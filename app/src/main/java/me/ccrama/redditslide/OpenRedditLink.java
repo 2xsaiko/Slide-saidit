@@ -7,7 +7,17 @@ import android.net.Uri;
 
 import java.util.Arrays;
 
-import me.ccrama.redditslide.Activities.*;
+import me.ccrama.redditslide.Activities.CommentsScreenSingle;
+import me.ccrama.redditslide.Activities.MainActivity;
+import me.ccrama.redditslide.Activities.MultiredditOverview;
+import me.ccrama.redditslide.Activities.OpenContent;
+import me.ccrama.redditslide.Activities.Profile;
+import me.ccrama.redditslide.Activities.Search;
+import me.ccrama.redditslide.Activities.SendMessage;
+import me.ccrama.redditslide.Activities.Submit;
+import me.ccrama.redditslide.Activities.SubredditView;
+import me.ccrama.redditslide.Activities.Website;
+import me.ccrama.redditslide.Activities.Wiki;
 import me.ccrama.redditslide.Visuals.Palette;
 import me.ccrama.redditslide.util.LinkUtil;
 import me.ccrama.redditslide.util.LogUtil;
@@ -54,11 +64,6 @@ public class OpenRedditLink {
                 i.putExtra(CommentsScreenSingle.EXTRA_CONTEXT, Reddit.EMPTY_STRING);
                 i.putExtra(CommentsScreenSingle.EXTRA_NP, np);
                 i.putExtra(CommentsScreenSingle.EXTRA_SUBMISSION, parts[1]);
-                break;
-            }
-            case LIVE: {
-                i = new Intent(context, LiveThread.class);
-                i.putExtra(LiveThread.EXTRA_LIVEURL, parts[2]);
                 break;
             }
             case WIKI: {
@@ -285,19 +290,19 @@ public class OpenRedditLink {
         }
 
 
-        if(url.contains("amp.reddit.com")){
-            url = url.substring(url.indexOf("amp.reddit.com") + 14, url.length());
+        if(url.contains("amp.saidit.net")){
+            url = url.substring(url.indexOf("amp.saidit.net") + 14, url.length());
         }
 
         // Strip unused prefixes that don't require special handling
         url = url.replaceFirst("(?i)^(https?://)?(www\\.)?((ssl|pay|amp|old|new)\\.)?", "");
 
-        if (url.matches("(?i)[a-z0-9-_]+\\.reddit\\.com.*")) { // tests for subdomain
+        if (url.matches("(?i)[a-z0-9-_]+\\.saidit\\.net.*")) { // tests for subdomain
             String subdomain = url.split("\\.", 2)[0];
-            String domainRegex = "(?i)" + subdomain + "\\.reddit\\.com";
+            String domainRegex = "(?i)" + subdomain + "\\.saidit\\.net";
             if (subdomain.equalsIgnoreCase("np")) {
                 // no participation link: https://www.reddit.com/r/NoParticipation/wiki/index
-                url = url.replaceFirst(domainRegex, "reddit.com");
+                url = url.replaceFirst(domainRegex, "saidit.net");
                 url = "np" + url;
             } else if (subdomain.matches("beta|blog|code|mod|out|store")) {
                 return "";
@@ -306,19 +311,19 @@ public class OpenRedditLink {
                     Either the subdomain is a language tag (with optional region) or
                     a single letter domain, which for simplicity are ignored.
                  */
-                url = url.replaceFirst(domainRegex, "reddit.com");
+                url = url.replaceFirst(domainRegex, "saidit.net");
             } else {
                 // subdomain is a subreddit, change subreddit.reddit.com to reddit.com/r/subreddit
-                url = url.replaceFirst(domainRegex, "reddit.com/r/" + subdomain);
+                url = url.replaceFirst(domainRegex, "saidit.net/s/" + subdomain);
             }
         }
 
-        if (url.startsWith("/")) url = "reddit.com" + url;
+        if (url.startsWith("/")) url = "saidit.net" + url;
         if (url.endsWith("/")) url = url.substring(0, url.length() - 1);
 
-        // Converts links such as reddit.com/help to reddit.com/r/reddit.com/wiki
+        // Converts links such as saidit.net/help to saidit.net/r/saidit/wiki
         if (url.matches("(?i)[^/]++/(?>w|wiki|help)(?>$|/.*)")) {
-            url = url.replaceFirst("(?i)/(?>w|wiki|help)", "/r/reddit.com/wiki");
+            url = url.replaceFirst("(?i)/(?>w|wiki|help)", "/s/saidit/wiki");
         }
 
         return url;
@@ -327,49 +332,48 @@ public class OpenRedditLink {
     /**
      * Determines the reddit link type
      *
-     * @param url Reddit.com link
+     * @param url saidit.net link
      * @return LinkType
      */
     public static RedditLinkType getRedditLinkType(String url) {
-        if (url.matches("(?i)redd\\.it/\\w+")) {
-            // Redd.it link. Format: redd.it/post_id
-            return RedditLinkType.SHORTENED;
-        } else if (url.matches("(?i)reddit\\.com/live/[^/]*")) {
-            return RedditLinkType.LIVE;
-        } else if (url.matches("(?i)reddit\\.com/message/compose.*")) {
+//        if (url.matches("(?i)redd\\.it/\\w+")) {
+//             Redd.it link. Format: redd.it/post_id
+//            return RedditLinkType.SHORTENED;
+//        } else
+        if (url.matches("(?i)saidit\\.net/message/compose.*")) {
             return RedditLinkType.MESSAGE;
-        } else if (url.matches("(?i)reddit\\.com(?:/r/[a-z0-9-_.]+)?/(?:w|wiki|help).*")) {
-            // Wiki link. Format: reddit.com/r/$subreddit/w[iki]/$page [optional]
+        } else if (url.matches("(?i)saidit\\.net(?:/s/[a-z0-9-_.]+)?/(?:w|wiki|help).*")) {
+            // Wiki link. Format: saidit.net/s/$subreddit/w[iki]/$page [optional]
             return RedditLinkType.WIKI;
-        } else if (url.matches("(?i)reddit\\.com/r/[a-z0-9-_.]+/about.*")) {
-            // Unhandled link. Format: reddit.com/r/$subreddit/about/$page [optional]
+        } else if (url.matches("(?i)saidit\\.net/s/[a-z0-9-_.]+/about.*")) {
+            // Unhandled link. Format: saidit.net/s/$subreddit/about/$page [optional]
             return RedditLinkType.OTHER;
-        } else if (url.matches("(?i)reddit\\.com/r/[a-z0-9-_.]+/search.*")) {
-            // Wiki link. Format: reddit.com/r/$subreddit/search?q= [optional]
+        } else if (url.matches("(?i)saidit\\.net/s/[a-z0-9-_.]+/search.*")) {
+            // Wiki link. Format: saidit.net/s/$subreddit/search?q= [optional]
             return RedditLinkType.SEARCH;
-        } else if (url.matches("(?i)reddit\\.com/r/[a-z0-9-_.]+/submit.*")) {
-            // Submit post link. Format: reddit.com/r/$subreddit/submit
+        } else if (url.matches("(?i)saidit\\.net/s/[a-z0-9-_.]+/submit.*")) {
+            // Submit post link. Format: saidit.net/s/$subreddit/submit
             return RedditLinkType.SUBMIT;
-        } else if (url.matches("(?i)reddit\\.com/(?:r|u(?:ser)?)/[a-z0-9-_.]+/comments/\\w+/[\\w-]*/.*")) {
-            // Permalink to comments. Format: reddit.com/r [or u or user]/$subreddit/comments/$post_id/$post_title [can be empty]/$comment_id
+        } else if (url.matches("(?i)saidit\\.net/(?:s|u(?:ser)?)/[a-z0-9-_.]+/comments/\\w+/[\\w-]*/.*")) {
+            // Permalink to comments. Format: saidit.net/s [or u or user]/$subreddit/comments/$post_id/$post_title [can be empty]/$comment_id
             return RedditLinkType.COMMENT_PERMALINK;
-        } else if (url.matches("(?i)reddit\\.com/(?:r|u(?:ser)?)/[a-z0-9-_.]+/comments/\\w+.*")) {
-            // Submission. Format: reddit.com/r [or u or user]/$subreddit/comments/$post_id/$post_title [optional]
+        } else if (url.matches("(?i)saidit\\.net/(?:s|u(?:ser)?)/[a-z0-9-_.]+/comments/\\w+.*")) {
+            // Submission. Format: saidit.net/s [or u or user]/$subreddit/comments/$post_id/$post_title [optional]
             return RedditLinkType.SUBMISSION;
-        } else if (url.matches("(?i)reddit\\.com/comments/\\w+.*")) {
-            // Submission without a given subreddit. Format: reddit.com/comments/$post_id/$post_title [optional]
+        } else if (url.matches("(?i)saidit\\.net/comments/\\w+.*")) {
+            // Submission without a given subreddit. Format: saidit.net/comments/$post_id/$post_title [optional]
             return RedditLinkType.SUBMISSION_WITHOUT_SUB;
-        } else if (url.matches("(?i)reddit\\.com/r/[a-z0-9-_.]+.*")) {
-            // Subreddit. Format: reddit.com/r/$subreddit/$sort [optional]
+        } else if (url.matches("(?i)saidit\\.net/s/[a-z0-9-_.]+.*")) {
+            // Subreddit. Format: saidit.net/r/$subreddit/$sort [optional]
             return RedditLinkType.SUBREDDIT;
-        } else if (url.matches("(?i)reddit\\.com/u(?:ser)?/[a-z0-9-_]+.*/m/[a-z0-9_]+.*")) {
-            // Multireddit. Format: reddit.com/u [or user]/$username/m/$multireddit/$sort [optional]
+        } else if (url.matches("(?i)saidit\\.net/u(?:ser)?/[a-z0-9-_]+.*/m/[a-z0-9_]+.*")) {
+            // Multireddit. Format: saidit.net/u [or user]/$username/m/$multireddit/$sort [optional]
             return RedditLinkType.MULTIREDDIT;
-        } else if (url.matches("(?i)reddit\\.com/u(?:ser)?/[a-z0-9-_]+.*")) {
-            // User. Format: reddit.com/u [or user]/$username/$page [optional]
+        } else if (url.matches("(?i)saidit\\.net/u(?:ser)?/[a-z0-9-_]+.*")) {
+            // User. Format: saidit.net/u [or user]/$username/$page [optional]
             return RedditLinkType.USER;
-        } else if (url.matches("^reddit\\.com$")) {
-            // Reddit home link
+        } else if (url.matches("^saidit\\.net$")) {
+            // Saidit home link
             return RedditLinkType.HOME;
         } else {
             //Open all links that we can't open in another app
@@ -388,7 +392,6 @@ public class OpenRedditLink {
         SEARCH,
         MESSAGE,
         MULTIREDDIT,
-        LIVE,
         SUBMIT,
         HOME,
         OTHER

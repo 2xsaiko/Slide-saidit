@@ -526,7 +526,7 @@
     <string name="settings_filter_selfttext">Metin filtreleri</string>
     <string name="settings_filter_title">Başlık fitreleri</string>
     <string name="settings_filter_hint">Noktalı virgüllerle ayrılmış dizeleri girin</string>
-    <string name="settings_prefs_reddit">Bütün reddit.com ayarlarını görüntüle</string>
+    <string name="settings_prefs_reddit">Bütün saidit.net ayarlarını görüntüle</string>
     <string name="settings_font_post">Gönderi başlığı yazı tipi</string>
     <string name="settings_font_comment">Yorum yazı tipi</string>
     <string name="settings_comment_crop">Yorum görünümünde öne çıkan görüntüyü kırp</string>

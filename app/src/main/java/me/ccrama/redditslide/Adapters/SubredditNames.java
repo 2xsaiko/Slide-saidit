@@ -117,14 +117,15 @@ public class SubredditNames {
                 PostMatch.subreddits = SettingValues.subredditFilters.replaceAll("^[,\\s]+", "").split("[,\\s]+");
 
             try {
-            if (subredditPaginators[0].equalsIgnoreCase("trending")) {
-                List<String> trending = Authentication.reddit.getTrendingSubreddits();
-
-                for (String s : trending) {
-                    things.add(Authentication.reddit.getSubreddit(s));
-                }
-                nomore = true;
-            } else if (subredditPaginators[0].equalsIgnoreCase("popular")) {
+//            if (subredditPaginators[0].equalsIgnoreCase("trending")) {
+//                List<String> trending = Authentication.reddit.getTrendingSubreddits();
+//
+//                for (String s : trending) {
+//                    things.add(Authentication.reddit.getSubreddit(s));
+//                }
+//                nomore = true;
+//            } else
+            if (subredditPaginators[0].equalsIgnoreCase("popular")) {
                 stillShow = true;
                 if (reset || paginator == null) {
                     paginator = new SubredditStream(Authentication.reddit, subredditPaginators[0]);

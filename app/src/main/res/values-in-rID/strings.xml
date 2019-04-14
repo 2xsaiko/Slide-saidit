@@ -520,7 +520,7 @@ ini juga akan menghapus ikon dari layar depan anda.</string>
     <string name="settings_filter_selfttext">Filter Selftext</string>
     <string name="settings_filter_title">Filter judul</string>
     <string name="settings_filter_hint">Masukkan rangkaian yang cocok dengan tanda koma</string>
-    <string name="settings_prefs_reddit">Lihat semua reddit.com preferensi</string>
+    <string name="settings_prefs_reddit">Lihat semua saidit.net preferensi</string>
     <string name="settings_font_post">Ukuran judul posting</string>
     <string name="settings_font_comment">Ukuran komentar</string>
     <string name="settings_comment_crop">Kerat gambar dalam tampilan komentar</string>

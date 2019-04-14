@@ -43,7 +43,6 @@ import me.ccrama.redditslide.R;
 import me.ccrama.redditslide.Reddit;
 import me.ccrama.redditslide.SettingValues;
 import me.ccrama.redditslide.Visuals.Palette;
-import me.ccrama.redditslide.util.LogUtil;
 
 public class CheckForMail extends BroadcastReceiver {
 
@@ -181,7 +180,7 @@ public class CheckForMail extends BroadcastReceiver {
                             openPIBase = new Intent(c, OpenContent.class);
                             String context = m.getDataNode().get("context").asText();
                             openPIBase.putExtra(OpenContent.EXTRA_URL,
-                                    "https://reddit.com" + context.substring(0,
+                                    "https://saidit.net" + context.substring(0,
                                             context.lastIndexOf("/")));
                             openPIBase.setAction(m.getSubject());
 
@@ -372,7 +371,7 @@ public class CheckForMail extends BroadcastReceiver {
                     for (Submission s : messages) {
                         Intent readIntent = new Intent(c, OpenContent.class);
                         readIntent.putExtra(OpenContent.EXTRA_URL,
-                                "https://reddit.com" + s.getPermalink());
+                                "https://saidit.net" + s.getPermalink());
                         readIntent.setAction(s.getTitle());
                         PendingIntent readPI = PendingIntent.getActivity(c,
                                 (int) (s.getCreated().getTime() / 1000), readIntent,
@@ -386,7 +385,7 @@ public class CheckForMail extends BroadcastReceiver {
 
                         NotificationCompat.BigTextStyle notiStyle =
                                 new NotificationCompat.BigTextStyle();
-                        notiStyle.setBigContentTitle("/r/" + s.getSubredditName());
+                        notiStyle.setBigContentTitle("/s/" + s.getSubredditName());
 
                         notiStyle.bigText(Html.fromHtml(s.getTitle() + " " + c.getString(
                                 R.string.submission_properties_seperator_comments)) + " "
@@ -402,7 +401,7 @@ public class CheckForMail extends BroadcastReceiver {
                                         .setWhen(System.currentTimeMillis())
                                         .setAutoCancel(true)
                                         .setChannelId(Reddit.CHANNEL_SUBCHECKING)
-                                        .setContentTitle("/r/"
+                                        .setContentTitle("/s/"
                                                 + s.getSubredditName()
                                                 + " " + c.getString(
                                                 R.string.submission_properties_seperator_comments) + " "

@@ -539,7 +539,7 @@
     <string name="settings_filter_selfttext">Фильтры текстовых записей</string>
     <string name="settings_filter_title">Фильтры титров</string>
     <string name="settings_filter_hint">Введите строки для проверки, разделённые запятыми</string>
-    <string name="settings_prefs_reddit">Посмотреть все настройки reddit.com</string>
+    <string name="settings_prefs_reddit">Посмотреть все настройки saidit.net</string>
     <string name="settings_font_post">Шрифт заголовка постов</string>
     <string name="settings_font_comment">Шрифт комментария</string>
     <string name="settings_comment_crop">Обрезать изображение в записи при просмотре комментариев</string>

@@ -162,11 +162,11 @@ public class InboxAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     && !Authentication.name.equalsIgnoreCase(
                     comment.getDataNode().get("dest").asText())
                     && !comment.getDataNode().get("dest").asText().equals("reddit")) {
-                author = comment.getDataNode().get("dest").asText().replace("#", "/r/");
+                author = comment.getDataNode().get("dest").asText().replace("#", "/s/");
                 direction = "to ";
             }
             if (comment.getDataNode().has("subreddit") && author == null || author.isEmpty()) {
-                direction = "via /r/" + comment.getSubreddit();
+                direction = "via /s/" + comment.getSubreddit();
             }
             titleString.append(direction);
             if (author != null) {
@@ -198,7 +198,7 @@ public class InboxAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     .isNull()) {
                 titleString.append(spacer);
                 String subname = comment.getDataNode().get("subreddit").asText();
-                SpannableStringBuilder subreddit = new SpannableStringBuilder("/r/" + subname);
+                SpannableStringBuilder subreddit = new SpannableStringBuilder("/s/" + subname);
                 if ((SettingValues.colorSubName
                         && Palette.getColor(subname) != Palette.getDefaultColor())) {
                     subreddit.setSpan(new ForegroundColorSpan(Palette.getColor(subname)), 0,
@@ -280,7 +280,7 @@ public class InboxAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                             && !Authentication.name.equalsIgnoreCase(
                             comment.getDataNode().get("dest").asText())
                             && !comment.getDataNode().get("dest").asText().equals("reddit")) {
-                        author = comment.getDataNode().get("dest").asText().replace("#", "/r/");
+                        author = comment.getDataNode().get("dest").asText().replace("#", "/s/");
                     }
                     if (comment.getAuthor() != null) {
                         b.sheet(1, profile, "/u/" + author);
@@ -343,7 +343,7 @@ public class InboxAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                                 case 30: {
                                     String context = comment.getDataNode().get("context").asText();
                                     new OpenRedditLink(mContext,
-                                            "https://reddit.com" + context.substring(0,
+                                            "https://saidit.net" + context.substring(0,
                                                     context.lastIndexOf("/")));
                                 }
                                 break;

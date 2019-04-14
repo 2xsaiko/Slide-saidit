@@ -110,7 +110,6 @@ import me.ccrama.redditslide.Views.PreCachingLayoutManagerComments;
 import me.ccrama.redditslide.Visuals.Palette;
 import me.ccrama.redditslide.handler.ToolbarScrollHideHandler;
 import me.ccrama.redditslide.util.LinkUtil;
-import me.ccrama.redditslide.util.LogUtil;
 import me.ccrama.redditslide.util.NetworkUtil;
 import me.ccrama.redditslide.util.OnSingleClickListener;
 import me.ccrama.redditslide.util.SubmissionParser;
@@ -1250,7 +1249,7 @@ public class CommentPage extends Fragment implements Toolbar.OnMenuItemClickList
                                                                                 SendMessage.class);
                                                                         i.putExtra(
                                                                                 SendMessage.EXTRA_NAME,
-                                                                                "/r/" + subreddit);
+                                                                                "/s/" + subreddit);
                                                                         startActivity(i);
                                                                     }
                                                                 })
@@ -1300,7 +1299,7 @@ public class CommentPage extends Fragment implements Toolbar.OnMenuItemClickList
                                         @Override
                                         protected void onPostExecute(Void aVoid) {
                                             new MaterialDialog.Builder(getContext()).title(
-                                                    "Add /r/" + baseSub.getDisplayName() + " to")
+                                                    "Add /s/" + baseSub.getDisplayName() + " to")
                                                     .items(multis.keySet())
                                                     .itemsCallback(
                                                             new MaterialDialog.ListCallback() {

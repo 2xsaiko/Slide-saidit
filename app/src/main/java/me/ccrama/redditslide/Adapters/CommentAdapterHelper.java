@@ -12,7 +12,6 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
@@ -36,24 +35,37 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.*;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.afollestad.materialdialogs.AlertDialogWrapper;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.cocosw.bottomsheet.BottomSheet;
 
-import me.ccrama.redditslide.Toolbox.*;
 import net.dean.jraw.ApiException;
 import net.dean.jraw.http.NetworkException;
 import net.dean.jraw.http.oauth.InvalidScopeException;
 import net.dean.jraw.managers.AccountManager;
 import net.dean.jraw.managers.ModerationManager;
-import net.dean.jraw.models.*;
+import net.dean.jraw.models.Comment;
+import net.dean.jraw.models.CommentNode;
+import net.dean.jraw.models.DistinguishedStatus;
+import net.dean.jraw.models.Ruleset;
+import net.dean.jraw.models.Submission;
+import net.dean.jraw.models.SubredditRule;
+import net.dean.jraw.models.VoteDirection;
 
 import org.apache.commons.text.StringEscapeUtils;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 
 import me.ccrama.redditslide.ActionStates;
 import me.ccrama.redditslide.Activities.Profile;
@@ -66,6 +78,8 @@ import me.ccrama.redditslide.Reddit;
 import me.ccrama.redditslide.SettingValues;
 import me.ccrama.redditslide.SpoilerRobotoTextView;
 import me.ccrama.redditslide.TimeUtils;
+import me.ccrama.redditslide.Toolbox.Toolbox;
+import me.ccrama.redditslide.Toolbox.ToolboxUI;
 import me.ccrama.redditslide.UserSubscriptions;
 import me.ccrama.redditslide.UserTags;
 import me.ccrama.redditslide.Views.CommentOverflow;
@@ -150,7 +164,7 @@ public class CommentAdapterHelper {
                         break;
                     case 23: {
                         //Go to comment permalink
-                        String s = "https://reddit.com"
+                        String s = "https://saidit.net"
                                 + adapter.submission.getPermalink()
                                 + n.getFullName().substring(3, n.getFullName().length())
                                 + "?context=3";
@@ -164,7 +178,7 @@ public class CommentAdapterHelper {
                     case 5: {
                         //Gild comment
                         Intent i = new Intent(mContext, Website.class);
-                        i.putExtra(LinkUtil.EXTRA_URL, "https://reddit.com"
+                        i.putExtra(LinkUtil.EXTRA_URL, "https://saidit.net"
                                 + adapter.submission.getPermalink()
                                 + n.getFullName().substring(3, n.getFullName().length())
                                 + "?context=3&inapp=false");
@@ -312,7 +326,7 @@ public class CommentAdapterHelper {
                         break;
                     case 4:
                         //Share comment
-                        Reddit.defaultShareText(adapter.submission.getTitle(), "https://reddit.com"
+                        Reddit.defaultShareText(adapter.submission.getTitle(), "https://saidit.net"
                                 + adapter.submission.getPermalink()
                                 + n.getFullName().substring(3, n.getFullName().length())
                                 + "?context=3", mContext);

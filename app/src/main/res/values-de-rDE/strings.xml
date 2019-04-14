@@ -537,7 +537,7 @@ Möchten Sie Slide for Reddit unterstützen?</string>
     <string name="settings_filter_selfttext">Selftext Filter</string>
     <string name="settings_filter_title">Titel-Filter</string>
     <string name="settings_filter_hint">Filter-Begriffe eingeben (Komma-separiert)</string>
-    <string name="settings_prefs_reddit">Alle reddit.com Einstellungen einsehen</string>
+    <string name="settings_prefs_reddit">Alle saidit.net Einstellungen einsehen</string>
     <string name="settings_font_post">Beitrags Titel-Schriftart</string>
     <string name="settings_font_comment">Kommentar-Schriftart</string>
     <string name="settings_comment_crop">Hauptbild in Kommentaransicht zuschneiden</string>

@@ -1,19 +1,15 @@
 package me.ccrama.redditslide.Activities;
 
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.Toolbar;
 import android.text.InputType;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +17,6 @@ import com.afollestad.materialdialogs.AlertDialogWrapper;
 import com.afollestad.materialdialogs.MaterialDialog;
 
 import net.dean.jraw.ApiException;
-import net.dean.jraw.managers.CaptchaHelper;
 import net.dean.jraw.managers.InboxManager;
 import net.dean.jraw.models.Captcha;
 import net.dean.jraw.models.PrivateMessage;
@@ -32,11 +27,9 @@ import java.util.Locale;
 import me.ccrama.redditslide.Authentication;
 import me.ccrama.redditslide.DataShare;
 import me.ccrama.redditslide.R;
-import me.ccrama.redditslide.Reddit;
 import me.ccrama.redditslide.UserSubscriptions;
 import me.ccrama.redditslide.Views.DoEditorActions;
 import me.ccrama.redditslide.Visuals.Palette;
-import me.ccrama.redditslide.util.LogUtil;
 
 /**
  * Created by ccrama on 3/5/2015.
@@ -86,7 +79,7 @@ public class SendMessage extends BaseActivity {
                 items.add("/u/" + Authentication.name);
                 if(UserSubscriptions.modOf != null && !UserSubscriptions.modOf.isEmpty())
                 for(String s : UserSubscriptions.modOf){
-                    items.add("/r/" + s);
+                    items.add("/s/" + s);
                 }
                 new MaterialDialog.Builder(SendMessage.this).title("Send message as")
                         .items(items)
@@ -205,7 +198,7 @@ public class SendMessage extends BaseActivity {
                         new InboxManager(Authentication.reddit).compose(totext, subjecttext, bodytext, captcha, captchaAttempt);
                     else {
                         String to = author;
-                        if(to.startsWith("/r/")){
+                        if(to.startsWith("/s/")){
                             to = to.substring(3, to.length());
                             new InboxManager(Authentication.reddit).compose(to, totext, subjecttext,
                                     bodytext);

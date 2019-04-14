@@ -176,8 +176,8 @@ public class MediaFragmentComment extends Fragment {
                                     .setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
-                                            String url = "https://reddit.com"
-                                                    + "/r/"
+                                            String url = "https://saidit.net"
+                                                    + "/s/"
                                                     + c.getSubredditName()
                                                     + "/comments/"
                                                     + c.getDataNode()

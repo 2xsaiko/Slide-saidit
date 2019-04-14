@@ -110,7 +110,7 @@ public class SettingsRedditFragment {
         context.findViewById(R.id.settings_reddit_viewRedditPrefs).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LinkUtil.openUrl("https://www.reddit.com/prefs/", Palette.getDefaultColor(), context);
+                LinkUtil.openUrl("https://www.saidit.net/prefs/", Palette.getDefaultColor(), context);
             }
         });
     }

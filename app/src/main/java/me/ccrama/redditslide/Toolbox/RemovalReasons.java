@@ -23,7 +23,7 @@ public class RemovalReasons {
 
     public String getPmSubject() {
         if (pmSubject.isEmpty()) {
-            return "Your {kind} was removed from /r/{subreddit}";
+            return "Your {kind} was removed from /s/{subreddit}";
         }
         return pmSubject;
     }
@@ -50,7 +50,7 @@ public class RemovalReasons {
 
     public String getLogTitle() {
         if (logTitle.isEmpty()) {
-            return "Removed: {kind} by /u/{author} to /r/{subreddit}";
+            return "Removed: {kind} by /u/{author} to /s/{subreddit}";
         }
         return logTitle;
     }

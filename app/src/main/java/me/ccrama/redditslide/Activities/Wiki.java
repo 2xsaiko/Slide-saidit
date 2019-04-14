@@ -10,7 +10,14 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+
 import com.afollestad.materialdialogs.AlertDialogWrapper;
+
+import net.dean.jraw.managers.WikiManager;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import me.ccrama.redditslide.Authentication;
 import me.ccrama.redditslide.ColorPreferences;
 import me.ccrama.redditslide.Fragments.WikiPage;
@@ -18,10 +25,6 @@ import me.ccrama.redditslide.R;
 import me.ccrama.redditslide.Views.ToggleSwipeViewPager;
 import me.ccrama.redditslide.Visuals.Palette;
 import me.ccrama.redditslide.util.LogUtil;
-import net.dean.jraw.managers.WikiManager;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by ccrama on 9/17/2015.
@@ -48,13 +51,13 @@ public class Wiki extends BaseActivityAnim implements WikiPage.WikiPageListener 
 
         subreddit = getIntent().getExtras().getString(EXTRA_SUBREDDIT, "");
 
-        setShareUrl("https://reddit.com/r/" + subreddit + "/wiki/");
+        setShareUrl("https://saidit.net/s/" + subreddit + "/wiki/");
 
         applyColorTheme(subreddit);
         createCustomCss();
         createCustomJavaScript();
         setContentView(R.layout.activity_slidetabs);
-        setupSubredditAppBar(R.id.toolbar, "/r/" + subreddit + " wiki", true, subreddit);
+        setupSubredditAppBar(R.id.toolbar, "/s/" + subreddit + " wiki", true, subreddit);
 
         if(getIntent().hasExtra(EXTRA_PAGE)) {
             page = getIntent().getExtras().getString(EXTRA_PAGE);

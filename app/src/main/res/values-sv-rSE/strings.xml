@@ -298,7 +298,7 @@
     <string name="settings_filter_selfttext">Selftext filter</string>
     <string name="settings_filter_title">Titelfilter</string>
     <string name="settings_filter_hint">Ange strängar att matcha separerade med kommatecken</string>
-    <string name="settings_prefs_reddit">Visa alla inställningar på reddit.com</string>
+    <string name="settings_prefs_reddit">Visa alla inställningar på saidit.net</string>
     <string name="settings_font_post">Font på trådtitel</string>
     <string name="settings_font_comment">Font på kommentarer</string>
     <string name="settings_comment_crop">Beskär ledande bild i kommentarsvyn</string>

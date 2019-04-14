@@ -59,7 +59,7 @@ public class Gallery extends FullScreenActivity implements SubmissionDisplay {
         subreddit = multireddit == null ? subreddit : ("multi" + multireddit);
 
         if (multireddit == null) {
-            setShareUrl("https://reddit.com/r/" + subreddit);
+            setShareUrl("https://saidit.net/s/" + subreddit);
         }
 
         applyDarkColorTheme(subreddit);

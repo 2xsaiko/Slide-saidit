@@ -59,7 +59,7 @@ public class SettingsSubAdapter extends RecyclerView.Adapter<SettingsSubAdapter.
         convertView.findViewById(R.id.color).setBackgroundResource(R.drawable.circle);
         convertView.findViewById(R.id.color).getBackground().setColorFilter(Palette.getColor(subreddit), PorterDuff.Mode.MULTIPLY);
 
-        final String DELETE_SUB_SETTINGS_TITLE = (subreddit.contains("/m/")) ? subreddit : ("/r/" + subreddit);
+        final String DELETE_SUB_SETTINGS_TITLE = (subreddit.contains("/m/")) ? subreddit : ("/s/" + subreddit);
         convertView.findViewById(R.id.remove).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -197,7 +197,7 @@ public class SettingsSubAdapter extends RecyclerView.Adapter<SettingsSubAdapter.
                     if (sub.contains("/m/")) {
                         titleString += sub + ", ";
                     } else {
-                        titleString += "/r/" + sub + ", ";
+                        titleString += "/s/" + sub + ", ";
                     }
                 }
             }
@@ -209,7 +209,7 @@ public class SettingsSubAdapter extends RecyclerView.Adapter<SettingsSubAdapter.
                 title.setText(subreddit);
             } else {
                 //if the subreddit is the frontpage, don't put "/r/" in front of it
-                title.setText(((subreddit.equals("frontpage")) ? "frontpage" : "/r/" + subreddit));
+                title.setText(((subreddit.equals("frontpage")) ? "frontpage" : "/s/" + subreddit));
             }
         }
 
@@ -336,18 +336,18 @@ public class SettingsSubAdapter extends RecyclerView.Adapter<SettingsSubAdapter.
                             if (sub.equals("frontpage")) {
                                 subTitles += sub + ", ";
                             } else {
-                                subTitles += "/r/" + sub + ", ";
+                                subTitles += "/s/" + sub + ", ";
                             }
                         }
                         subTitles = subTitles.substring(0, subTitles.length() - 2);
                     } else {
                         //if the subreddit is the frontpage, don't put "/r/" in front of it
-                        subTitles = (subreddit.equals("frontpage") ? "frontpage" : "/r/" + subreddit);
+                        subTitles = (subreddit.equals("frontpage") ? "frontpage" : "/s/" + subreddit);
                     }
                     String titleStart = context.getString(R.string.settings_delete_sub_settings, subTitles);
-                    titleStart = titleStart.replace("/r//r/", "/r/");
-                    if (titleStart.contains("/r/frontpage")) {
-                        titleStart = titleStart.replace("/r/frontpage", "frontpage");
+                    titleStart = titleStart.replace("/s//s/", "/s/");
+                    if (titleStart.contains("/s/frontpage")) {
+                        titleStart = titleStart.replace("/s/frontpage", "frontpage");
                     }
                     new AlertDialogWrapper.Builder(context).setTitle(titleStart)
                             .setPositiveButton(R.string.btn_yes, new DialogInterface.OnClickListener() {

@@ -536,7 +536,7 @@
     <string name="settings_filter_selfttext">Selftext フィルター</string>
     <string name="settings_filter_title">タイトル フィルター</string>
     <string name="settings_filter_hint">カンマで区切られた、一致する文字列を入力してください</string>
-    <string name="settings_prefs_reddit">すべての reddit.com 設定を表示</string>
+    <string name="settings_prefs_reddit">すべての saidit.net 設定を表示</string>
     <string name="settings_font_post">投稿タイトルのフォント</string>
     <string name="settings_font_comment">コメントのフォント</string>
     <string name="settings_comment_crop">コメント表示で先頭画像のトリミング</string>

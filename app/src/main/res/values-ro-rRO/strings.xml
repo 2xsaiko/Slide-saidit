@@ -442,7 +442,7 @@
     <string name="settings_filter_selfttext">Filtre selftext</string>
     <string name="settings_filter_title">Filtre pentru titluri</string>
     <string name="settings_filter_hint">Introdu un șir de caractere căutate separate de virgulă</string>
-    <string name="settings_prefs_reddit">Vezi toate preferințele pe reddit.com</string>
+    <string name="settings_prefs_reddit">Vezi toate preferințele pe saidit.net</string>
     <string name="settings_font_post">Fontul titlurilor</string>
     <string name="settings_font_comment">Font comentarii</string>
     <string name="settings_comment_crop">Decupează imaginea principala în perspectiva cu comentarii</string>

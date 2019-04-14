@@ -348,7 +348,7 @@ public class SubredditPosts implements PostLoader {
                 OfflineSubreddit.currentid = currentid;
 
                 if (c instanceof BaseActivity) {
-                    ((BaseActivity) c).setShareUrl("https://reddit.com/r/" + subreddit);
+                    ((BaseActivity) c).setShareUrl("https://saidit.net/s/" + subreddit);
                 }
 
                 if (subreddit.equals("random") || subreddit.equals("myrandom") || subreddit.equals(

@@ -31,7 +31,6 @@ import com.afollestad.materialdialogs.AlertDialogWrapper;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 
-import me.ccrama.redditslide.Views.ImageInsertEditText;
 import net.dean.jraw.ApiException;
 import net.dean.jraw.managers.AccountManager;
 import net.dean.jraw.models.Submission;
@@ -62,6 +61,7 @@ import me.ccrama.redditslide.SpoilerRobotoTextView;
 import me.ccrama.redditslide.UserSubscriptions;
 import me.ccrama.redditslide.Views.CommentOverflow;
 import me.ccrama.redditslide.Views.DoEditorActions;
+import me.ccrama.redditslide.Views.ImageInsertEditText;
 import me.ccrama.redditslide.util.LogUtil;
 import me.ccrama.redditslide.util.SubmissionParser;
 import me.ccrama.redditslide.util.TitleExtractor;
@@ -436,7 +436,7 @@ public class Submit extends BaseActivity {
                         new AccountManager(Authentication.reddit).sendRepliesToInbox(s,
                                 inboxReplies.isChecked());
                         new OpenRedditLink(Submit.this,
-                                "reddit.com/r/" + ((AutoCompleteTextView) findViewById(
+                                "saidit.net/s/" + ((AutoCompleteTextView) findViewById(
                                         R.id.subreddittext)).getText().toString() + "/comments/" + s
                                         .getFullName()
                                         .substring(3, s.getFullName().length()));
@@ -468,7 +468,7 @@ public class Submit extends BaseActivity {
                         new AccountManager(Authentication.reddit).sendRepliesToInbox(s,
                                 inboxReplies.isChecked());
                         new OpenRedditLink(Submit.this,
-                                "reddit.com/r/" + ((AutoCompleteTextView) findViewById(
+                                "saidit.net/s/" + ((AutoCompleteTextView) findViewById(
                                         R.id.subreddittext)).getText().toString() + "/comments/" + s
                                         .getFullName()
                                         .substring(3, s.getFullName().length()));
@@ -507,7 +507,7 @@ public class Submit extends BaseActivity {
                         new AccountManager(Authentication.reddit).sendRepliesToInbox(s,
                                 inboxReplies.isChecked());
                         new OpenRedditLink(Submit.this,
-                                "reddit.com/r/" + ((AutoCompleteTextView) findViewById(
+                                "saidit.net/s/" + ((AutoCompleteTextView) findViewById(
                                         R.id.subreddittext)).getText().toString() + "/comments/" + s
                                         .getFullName()
                                         .substring(3, s.getFullName().length()));

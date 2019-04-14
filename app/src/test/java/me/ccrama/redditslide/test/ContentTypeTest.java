@@ -94,15 +94,15 @@ public class ContentTypeTest {
 
     @Test
     public void detectsReddit() {
-        assertThat(ContentType.getContentType("https://www.reddit.com/r/todayilearned/comments/42wgbg/til_the_tshirt_was_invented_in_1904_and_marketed/"), is(Type.REDDIT));
-        assertThat(ContentType.getContentType("https://www.reddit.com/42wgbg/"), is(Type.REDDIT));
-        assertThat(ContentType.getContentType("https://www.reddit.com/r/live/"), is(Type.REDDIT));
-        assertThat(ContentType.getContentType("https://www.reddit.com"), is(Type.REDDIT));
-        assertThat(ContentType.getContentType("redd.it/eorhm"), is(Type.REDDIT));
-        assertThat(ContentType.getContentType("/r/Android"), is(Type.REDDIT));
-        assertThat(ContentType.getContentType("https://www.reddit.com/r/Android/wiki/index"), is(Type.REDDIT));
-        assertThat(ContentType.getContentType("https://www.reddit.com/r/Android/help"), is(Type.REDDIT));
-        assertThat(ContentType.getContentType("https://www.reddit.com/live/wbjbjba8zrl6"), is(Type.REDDIT));
+        assertThat(ContentType.getContentType("https://www.saidit.net/s/todayilearned/comments/42wgbg/til_the_tshirt_was_invented_in_1904_and_marketed/"), is(Type.REDDIT));
+        assertThat(ContentType.getContentType("https://www.saidit.net/42wgbg/"), is(Type.REDDIT));
+        assertThat(ContentType.getContentType("https://www.saidit.net/s/live/"), is(Type.REDDIT));
+        assertThat(ContentType.getContentType("https://www.saidit.net"), is(Type.REDDIT));
+        // assertThat(ContentType.getContentType("redd.it/eorhm"), is(Type.REDDIT));
+        assertThat(ContentType.getContentType("/s/Android"), is(Type.REDDIT));
+        assertThat(ContentType.getContentType("https://www.saidit.net/s/Android/wiki/index"), is(Type.REDDIT));
+        assertThat(ContentType.getContentType("https://www.saidit.net/s/Android/help"), is(Type.REDDIT));
+        // assertThat(ContentType.getContentType("https://www.saidit.net/live/wbjbjba8zrl6"), is(Type.REDDIT));
     }
 
     @Test

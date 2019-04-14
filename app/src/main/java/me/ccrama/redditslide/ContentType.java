@@ -148,7 +148,7 @@ public class ContentType {
         }
 
         if (url.startsWith("//")) url = "https:" + url;
-        if (url.startsWith("/")) url = "reddit.com" + url;
+        if (url.startsWith("/")) url = "saidit.net" + url;
         if (!url.contains("://")) url = "http://" + url;
 
         try {
@@ -192,7 +192,7 @@ public class ContentType {
             if (hostContains(host, "tumblr.com") && uri.getPath().contains("post")) {
                 return Type.TUMBLR;
             }
-            if (hostContains(host, "reddit.com", "redd.it")) {
+            if (hostContains(host, "saidit.net" /* , "redd.it" */)) {
                 return Type.REDDIT;
             }
             if (hostContains(host, "vid.me")) {

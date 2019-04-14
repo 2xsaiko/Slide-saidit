@@ -549,7 +549,7 @@
     <string name="settings_filter_selfttext">帖文过滤</string>
     <string name="settings_filter_title">标题过滤</string>
     <string name="settings_filter_hint">输入要匹配的内容，以逗号分隔</string>
-    <string name="settings_prefs_reddit">查看所有 reddit.com 首选项</string>
+    <string name="settings_prefs_reddit">查看所有 saidit.net 首选项</string>
     <string name="settings_font_post">帖子标题字体</string>
     <string name="settings_font_comment">评论字体</string>
     <string name="settings_comment_crop">在评论视图中裁剪主图片</string>

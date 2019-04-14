@@ -525,7 +525,7 @@
     <string name="settings_filter_selfttext">Filtry tekstu</string>
     <string name="settings_filter_title">Filtry tytułów</string>
     <string name="settings_filter_hint">Wpisz nazwy do filtrowania, oddzielane przecinkami</string>
-    <string name="settings_prefs_reddit">Zobacz wszystkie preferencje reddit.com</string>
+    <string name="settings_prefs_reddit">Zobacz wszystkie preferencje saidit.net</string>
     <string name="settings_font_post">Czcionka tytułu postu</string>
     <string name="settings_font_comment">Czcionka komentarzy</string>
     <string name="settings_comment_crop">Kadruj obraz w widoku komentarzy</string>

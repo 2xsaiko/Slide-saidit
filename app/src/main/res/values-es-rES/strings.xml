@@ -526,7 +526,7 @@
     <string name="settings_filter_selfttext">Filtros para posts de texto</string>
     <string name="settings_filter_title">Filtros para títulos</string>
     <string name="settings_filter_hint">Introducir el texto a coincidir, separado por comas</string>
-    <string name="settings_prefs_reddit">Ver todas las preferencias de reddit.com</string>
+    <string name="settings_prefs_reddit">Ver todas las preferencias de saidit.net</string>
     <string name="settings_font_post">Fuente del titulo</string>
     <string name="settings_font_comment">Fuente de los comentarios</string>
     <string name="settings_comment_crop">Recorta la imagen principal en la vista de comentarios</string>

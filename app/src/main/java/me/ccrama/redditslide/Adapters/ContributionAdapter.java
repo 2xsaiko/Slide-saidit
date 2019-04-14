@@ -212,7 +212,7 @@ public class ContributionAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                     title.setText(Html.fromHtml(submission.getTitle()));
 
                     ((TextView) dialoglayout.findViewById(R.id.userpopup)).setText("/u/" + submission.getAuthor());
-                    ((TextView) dialoglayout.findViewById(R.id.subpopup)).setText("/r/" + submission.getSubredditName());
+                    ((TextView) dialoglayout.findViewById(R.id.subpopup)).setText("/s/" + submission.getSubredditName());
                     dialoglayout.findViewById(R.id.sidebar).setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -252,7 +252,7 @@ public class ContributionAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                     dialoglayout.findViewById(R.id.gild).setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            String urlString = "https://reddit.com" + submission.getPermalink();
+                            String urlString = "https://saidit.net" + submission.getPermalink();
                             Intent i = new Intent(mContext, Website.class);
                             i.putExtra(LinkUtil.EXTRA_URL, urlString);
                             mContext.startActivity(i);
@@ -262,11 +262,11 @@ public class ContributionAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                         @Override
                         public void onClick(View v) {
                             if (submission.isSelfPost()){
-                                if(SettingValues.shareLongLink){
-                                    Reddit.defaultShareText("", "https://reddit.com" + submission.getPermalink(), mContext);
-                                } else {
-                                    Reddit.defaultShareText("", "https://redd.it/" + submission.getId(), mContext);
-                                }
+                                // if(SettingValues.shareLongLink){
+                                Reddit.defaultShareText("", "https://saidit.net" + submission.getPermalink(), mContext);
+                                // } else {
+                                //     Reddit.defaultShareText("", "https://redd.it/" + submission.getId(), mContext);
+                                // }
                             }
                             else {
                                 new BottomSheet.Builder(mContext)
@@ -278,11 +278,11 @@ public class ContributionAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
                                             public void onClick(DialogInterface dialog, int which) {
                                                 switch (which) {
                                                     case R.id.reddit_url:
-                                                        if(SettingValues.shareLongLink){
-                                                            Reddit.defaultShareText(submission.getTitle(), "https://reddit.com" + submission.getPermalink(), mContext);
-                                                        } else {
-                                                            Reddit.defaultShareText(submission.getTitle(), "https://redd.it/" + submission.getId(), mContext);
-                                                        }
+                                                        // if(SettingValues.shareLongLink){
+                                                        Reddit.defaultShareText(submission.getTitle(), "https://saidit.net" + submission.getPermalink(), mContext);
+                                                        // } else {
+                                                        //     Reddit.defaultShareText(submission.getTitle(), "https://redd.it/" + submission.getId(), mContext);
+                                                        // }
                                                         break;
                                                     case R.id.link_url:
                                                         Reddit.defaultShareText(submission.getTitle(), submission.getUrl(), mContext);
@@ -353,7 +353,7 @@ public class ContributionAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String url = "www.reddit.com" + submission.getPermalink();
+                    String url = "www.saidit.net" + submission.getPermalink();
                     url = url.replace("?ref=search_posts", "");
                     new OpenRedditLink(mContext, url);
                     if (SettingValues.storeHistory) {
@@ -408,7 +408,7 @@ public class ContributionAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
             if (comment.getSubredditName() != null) {
                 String subname = comment.getSubredditName();
-                SpannableStringBuilder subreddit = new SpannableStringBuilder("/r/" + subname);
+                SpannableStringBuilder subreddit = new SpannableStringBuilder("/s/" + subname);
                 if ((SettingValues.colorSubName && Palette.getColor(subname) != Palette.getDefaultColor())) {
                     subreddit.setSpan(new ForegroundColorSpan(Palette.getColor(subname)), 0, subreddit.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                     subreddit.setSpan(new StyleSpan(Typeface.BOLD), 0, subreddit.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);

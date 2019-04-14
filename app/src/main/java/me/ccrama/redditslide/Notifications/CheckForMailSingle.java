@@ -149,7 +149,7 @@ public class CheckForMailSingle extends BroadcastReceiver {
                         openPIBase = new Intent(c, OpenContent.class);
                         String context = message.getDataNode().get("context").asText();
                         openPIBase.putExtra(OpenContent.EXTRA_URL,
-                                "https://reddit.com" + context.substring(0,
+                                "https://saidit.net" + context.substring(0,
                                         context.lastIndexOf("/")));
                         openPIBase.setAction(message.getSubject());
                     } else {

@@ -556,7 +556,7 @@
     <string name="settings_filter_selfttext">Filtra text</string>
     <string name="settings_filter_title">Filtra per títols</string>
     <string name="settings_filter_hint">Introduïu els valors corresponents separats per comes</string>
-    <string name="settings_prefs_reddit">Veure totes les preferències de reddit.com</string>
+    <string name="settings_prefs_reddit">Veure totes les preferències de saidit.net</string>
     <string name="settings_font_post">Font del títol de la publicació</string>
     <string name="settings_font_comment">Font de comentari</string>
     <string name="settings_comment_crop">Retallar la imatge principal quan siguis als comentaris</string>

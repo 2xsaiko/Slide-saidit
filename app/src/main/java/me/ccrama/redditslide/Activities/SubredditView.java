@@ -720,7 +720,7 @@ public class SubredditView extends BaseActivity {
                                                 @NonNull DialogAction which) {
                                             Intent i = new Intent(SubredditView.this,
                                                     SendMessage.class);
-                                            i.putExtra(SendMessage.EXTRA_NAME, "/r/" + subOverride);
+                                            i.putExtra(SendMessage.EXTRA_NAME, "/s/" + subOverride);
                                             startActivity(i);
                                         }
                                     })
@@ -1029,7 +1029,7 @@ public class SubredditView extends BaseActivity {
 
         final String FILTER_TITLE =
                 (subreddit.equals("frontpage")) ? (getString(R.string.content_to_hide, "frontpage"))
-                        : (getString(R.string.content_to_hide, "/r/" + subreddit));
+                        : (getString(R.string.content_to_hide, "/s/" + subreddit));
 
         new AlertDialogWrapper.Builder(this).setTitle(FILTER_TITLE)
                 .alwaysCallMultiChoiceCallback()
@@ -1315,7 +1315,7 @@ public class SubredditView extends BaseActivity {
                             @Override
                             protected void onPostExecute(Void aVoid) {
                                 new MaterialDialog.Builder(SubredditView.this).title(
-                                        "Add /r/" + subreddit.getDisplayName() + " to")
+                                        "Add /s/" + subreddit.getDisplayName() + " to")
                                         .items(multis.keySet())
                                         .itemsCallback(new MaterialDialog.ListCallback() {
                                             @Override

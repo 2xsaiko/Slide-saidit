@@ -526,7 +526,7 @@
     <string name="settings_filter_selfttext">Filtros de texto</string>
     <string name="settings_filter_title">Filtros de título</string>
     <string name="settings_filter_hint">Escreva as palavras a serem filtradas separadas por vírgulas</string>
-    <string name="settings_prefs_reddit">Ver todas as preferências de reddit.com</string>
+    <string name="settings_prefs_reddit">Ver todas as preferências de saidit.net</string>
     <string name="settings_font_post">Fonte do título da publicação</string>
     <string name="settings_font_comment">Fonte do comentário</string>
     <string name="settings_comment_crop">Cortar imagem na visualização do comentário</string>

@@ -528,7 +528,7 @@
     <string name="settings_filter_selfttext">Filtri selftext</string>
     <string name="settings_filter_title">Filtri titolo</string>
     <string name="settings_filter_hint">Inserisci le stringhe da filtrare separate da virgole</string>
-    <string name="settings_prefs_reddit">Vedi tutte le preferenze di reddit.com</string>
+    <string name="settings_prefs_reddit">Vedi tutte le preferenze di saidit.net</string>
     <string name="settings_font_post">Carattere dei titoli dei post</string>
     <string name="settings_font_comment">Carattere dei commenti</string>
     <string name="settings_comment_crop">Taglia immagine troppo grande nella vista commenti</string>

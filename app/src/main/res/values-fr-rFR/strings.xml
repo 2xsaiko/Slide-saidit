@@ -556,7 +556,7 @@
     <string name="settings_filter_selfttext">Filtres Selftext</string>
     <string name="settings_filter_title">Filtres de titre</string>
     <string name="settings_filter_hint">Entrer les mots à filtrer en les séparant par des virgules</string>
-    <string name="settings_prefs_reddit">Voir toutes les préférences reddit.com</string>
+    <string name="settings_prefs_reddit">Voir toutes les préférences saidit.net</string>
     <string name="settings_font_post">Police de titre de poste</string>
     <string name="settings_font_comment">Polices de commentaire</string>
     <string name="settings_comment_crop">Rogner l\'image principale en vue de commentaire</string>

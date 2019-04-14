@@ -472,7 +472,7 @@
     <string name="settings_filter_selfttext">Önálló szöveg szűrők</string>
     <string name="settings_filter_title">Címek szűrése</string>
     <string name="settings_filter_hint">Írj be mondatokat vesszőkkel elválasztva</string>
-    <string name="settings_prefs_reddit">Összes reddit.com beállítás megtekintése</string>
+    <string name="settings_prefs_reddit">Összes saidit.net beállítás megtekintése</string>
     <string name="settings_font_post">Bejegyzéscím betűtípusa</string>
     <string name="settings_font_comment">Hozzászólás betűtípusa</string>
     <string name="settings_comment_crop">Kép levágása a hozzászólásoknál</string>

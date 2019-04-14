@@ -33,9 +33,6 @@ import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import me.ccrama.redditslide.Activities.CommentsScreenSingle;
-import me.ccrama.redditslide.Autocache.AutoCacheScheduler;
-import me.ccrama.redditslide.Notifications.NotificationJobScheduler;
 import me.ccrama.redditslide.util.GifUtils;
 import me.ccrama.redditslide.util.LogUtil;
 import me.ccrama.redditslide.util.NetworkUtil;
@@ -319,7 +316,7 @@ public class CommentCacheAsync extends AsyncTask {
                     mBuilder.setChannelId(Reddit.CHANNEL_COMMENT_CACHE);
                     mBuilder.setContentTitle(context.getString(R.string.offline_caching_title,
                             sub.equalsIgnoreCase("frontpage") ? name
-                                    : (name.contains("/m/") ? name : "/r/" + name)))
+                                    : (name.contains("/m/") ? name : "/s/" + name)))
                             .setSmallIcon(R.drawable.save_png);
                 }
                 List<Submission> submissions = new ArrayList<>();

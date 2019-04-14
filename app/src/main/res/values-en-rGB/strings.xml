@@ -526,7 +526,7 @@
     <string name="settings_filter_selfttext">Selftext filters</string>
     <string name="settings_filter_title">Title filters</string>
     <string name="settings_filter_hint">Enter strings to match separated by commas</string>
-    <string name="settings_prefs_reddit">View all reddit.com preferences</string>
+    <string name="settings_prefs_reddit">View all saidit.net preferences</string>
     <string name="settings_font_post">Post title font</string>
     <string name="settings_font_comment">Comment font</string>
     <string name="settings_comment_crop">Crop lead image in comment view</string>

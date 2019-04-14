@@ -15,7 +15,6 @@ import android.os.AsyncTask;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.text.Html;
-import android.text.InputType;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
@@ -23,7 +22,12 @@ import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.*;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -32,7 +36,13 @@ import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
 import net.dean.jraw.ApiException;
 import net.dean.jraw.managers.AccountManager;
-import net.dean.jraw.models.*;
+import net.dean.jraw.models.Comment;
+import net.dean.jraw.models.CommentNode;
+import net.dean.jraw.models.DistinguishedStatus;
+import net.dean.jraw.models.Ruleset;
+import net.dean.jraw.models.Submission;
+import net.dean.jraw.models.SubredditRule;
+import net.dean.jraw.models.VoteDirection;
 
 import java.util.Locale;
 
@@ -71,7 +81,7 @@ public class PopulateShadowboxInfo {
             String spacer = c.getString(R.string.submission_properties_seperator);
             SpannableStringBuilder titleString = new SpannableStringBuilder();
 
-            SpannableStringBuilder subreddit = new SpannableStringBuilder(" /r/" + s.getSubredditName() + " ");
+            SpannableStringBuilder subreddit = new SpannableStringBuilder(" /s/" + s.getSubredditName() + " ");
 
             String subname = s.getSubredditName().toLowerCase(Locale.ENGLISH);
             if ((SettingValues.colorSubName && Palette.getColor(subname) != Palette.getDefaultColor())) {
@@ -505,7 +515,7 @@ public class PopulateShadowboxInfo {
 
         if (Authentication.didOnline) {
             b.sheet(1, profile, "/u/" + submission.getAuthor())
-                    .sheet(2, sub, "/r/" + submission.getSubredditName());
+                    .sheet(2, sub, "/s/" + submission.getSubredditName());
             if (Authentication.isLoggedIn) {
                 b.sheet(12, report, mContext.getString(R.string.btn_report));
             }
@@ -618,11 +628,11 @@ public class PopulateShadowboxInfo {
                                 reportDialog.show();
                                 break;
                             case 8:
-                                if(SettingValues.shareLongLink){
-                                    Reddit.defaultShareText(submission.getTitle(), "https://reddit.com" + submission.getPermalink(), mContext);
-                                } else {
-                                    Reddit.defaultShareText(submission.getTitle(), "https://redd.it/" + submission.getId(), mContext);
-                                }
+                                // if(SettingValues.shareLongLink){
+                                Reddit.defaultShareText(submission.getTitle(), "https://saidit.net" + submission.getPermalink(), mContext);
+                                // } else {
+                                //     Reddit.defaultShareText(submission.getTitle(), "https://redd.it/" + submission.getId(), mContext);
+                                // }
                                 break;
                             case 6: {
                                 ClipboardManager clipboard = (ClipboardManager) mContext.getSystemService(Context.CLIPBOARD_SERVICE);

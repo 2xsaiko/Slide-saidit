@@ -83,10 +83,10 @@ public class Usernote {
         }
 
         if (getLinkType() == UsernoteLinkType.MODMAIL) {
-            return "https://www.reddit.com/message/messages/" + link.substring(3);
+            return "https://www.saidit.net/message/messages/" + link.substring(3);
         } else {
             String[] split = link.split(",");
-            return "https://www.reddit.com/r/" + subreddit + "/comments/" + split[1]
+            return "https://www.saidit.net/s/" + subreddit + "/comments/" + split[1]
                     + (getLinkType() == UsernoteLinkType.COMMENT ? "/_/" + split[2] : "");
         }
     }

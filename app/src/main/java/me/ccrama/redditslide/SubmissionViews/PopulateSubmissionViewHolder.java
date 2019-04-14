@@ -31,7 +31,13 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.*;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.afollestad.materialdialogs.AlertDialogWrapper;
 import com.afollestad.materialdialogs.DialogAction;
@@ -39,7 +45,6 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.cocosw.bottomsheet.BottomSheet;
 import com.devspark.robototextview.RobotoTypefaces;
 
-import me.ccrama.redditslide.Toolbox.ToolboxUI;
 import net.dean.jraw.ApiException;
 import net.dean.jraw.fluent.FlairReference;
 import net.dean.jraw.fluent.FluentRedditClient;
@@ -47,7 +52,14 @@ import net.dean.jraw.http.NetworkException;
 import net.dean.jraw.http.oauth.InvalidScopeException;
 import net.dean.jraw.managers.AccountManager;
 import net.dean.jraw.managers.ModerationManager;
-import net.dean.jraw.models.*;
+import net.dean.jraw.models.Contribution;
+import net.dean.jraw.models.DistinguishedStatus;
+import net.dean.jraw.models.FlairTemplate;
+import net.dean.jraw.models.Ruleset;
+import net.dean.jraw.models.Submission;
+import net.dean.jraw.models.SubredditRule;
+import net.dean.jraw.models.Thing;
+import net.dean.jraw.models.VoteDirection;
 
 import org.apache.commons.text.StringEscapeUtils;
 
@@ -91,6 +103,7 @@ import me.ccrama.redditslide.ReadLater;
 import me.ccrama.redditslide.Reddit;
 import me.ccrama.redditslide.SettingValues;
 import me.ccrama.redditslide.SubmissionCache;
+import me.ccrama.redditslide.Toolbox.ToolboxUI;
 import me.ccrama.redditslide.UserSubscriptions;
 import me.ccrama.redditslide.Views.AnimateHelper;
 import me.ccrama.redditslide.Views.CreateCardView;
@@ -1003,11 +1016,11 @@ public class PopulateSubmissionViewHolder {
                         reportDialog.show();
                         break;
                     case 8:
-                        if(SettingValues.shareLongLink){
-                            Reddit.defaultShareText(submission.getTitle(), "https://reddit.com" + submission.getPermalink(), mContext);
-                        } else {
-                            Reddit.defaultShareText(submission.getTitle(), "https://redd.it/" + submission.getId(), mContext);
-                        }
+                        // if(SettingValues.shareLongLink){
+                            Reddit.defaultShareText(submission.getTitle(), "https://saidit.net" + submission.getPermalink(), mContext);
+                        // } else {
+                        //     Reddit.defaultShareText(submission.getTitle(), "https://redd.it/" + submission.getId(), mContext);
+                        // }
                         break;
                     case 6: {
                         ClipboardManager clipboard = (ClipboardManager) mContext.getSystemService(
@@ -1486,12 +1499,12 @@ public class PopulateSubmissionViewHolder {
             b.sheet(3, nsfw, res.getString(R.string.mod_btn_mark_nsfw));
         }
 
-        final boolean isSpoiler = submission.getDataNode().get("spoiler").asBoolean();
-        if (isSpoiler) {
-            b.sheet(12, nsfw, res.getString(R.string.mod_btn_unmark_spoiler));
-        } else {
-            b.sheet(12, nsfw, res.getString(R.string.mod_btn_mark_spoiler));
-        }
+        // final boolean isSpoiler = submission.getDataNode().get("spoiler").asBoolean();
+        // if (isSpoiler) {
+        //     b.sheet(12, nsfw, res.getString(R.string.mod_btn_unmark_spoiler));
+        // } else {
+        //     b.sheet(12, nsfw, res.getString(R.string.mod_btn_mark_spoiler));
+        // }
 
         final boolean locked = submission.isLocked();
         if (locked) {
@@ -1582,13 +1595,13 @@ public class PopulateSubmissionViewHolder {
                             setPostNsfw(mContext, submission, holder);
                         }
                         break;
-                    case 12:
-                        if (isSpoiler) {
-                            unSpoiler(mContext, submission, holder);
-                        } else {
-                            setSpoiler(mContext, submission, holder);
-                        }
-                        break;
+//                    case 12:
+//                        if (isSpoiler) {
+//                            unSpoiler(mContext, submission, holder);
+//                        } else {
+//                            setSpoiler(mContext, submission, holder);
+//                        }
+//                        break;
                     case 9:
                         if (locked) {
                             unLockSubmission(mContext, submission, holder);
@@ -2289,78 +2302,78 @@ public class PopulateSubmissionViewHolder {
         }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
-    private void setSpoiler(final Activity mContext, final Submission submission,
-            final SubmissionViewHolder holder) {
-        new AsyncTask<Void, Void, Boolean>() {
-
-            @Override
-            public void onPostExecute(Boolean b) {
-                if (b) {
-                    Snackbar s = Snackbar.make(holder.itemView, "Spoiler status set",
-                            Snackbar.LENGTH_LONG);
-                    View view = s.getView();
-                    TextView tv = view.findViewById(android.support.design.R.id.snackbar_text);
-                    tv.setTextColor(Color.WHITE);
-                    s.show();
-
-                } else {
-                    new AlertDialogWrapper.Builder(mContext).setTitle(R.string.err_general)
-                            .setMessage(R.string.err_retry_later)
-                            .show();
-                }
-
-            }
-
-            @Override
-            protected Boolean doInBackground(Void... params) {
-                try {
-                    new ModerationManager(Authentication.reddit).setSpoiler(submission, true);
-                } catch (ApiException e) {
-                    e.printStackTrace();
-                    return false;
-
-                }
-                return true;
-            }
-        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-    }
-
-    private void unSpoiler(final Context mContext, final Submission submission,
-            final SubmissionViewHolder holder) {
-        //todo update view with NSFW tag
-        new AsyncTask<Void, Void, Boolean>() {
-
-            @Override
-            public void onPostExecute(Boolean b) {
-                if (b) {
-                    Snackbar s = Snackbar.make(holder.itemView, "Spoiler status removed",
-                            Snackbar.LENGTH_LONG);
-                    View view = s.getView();
-                    TextView tv = view.findViewById(android.support.design.R.id.snackbar_text);
-                    tv.setTextColor(Color.WHITE);
-                    s.show();
-
-                } else {
-                    new AlertDialogWrapper.Builder(mContext).setTitle(R.string.err_general)
-                            .setMessage(R.string.err_retry_later)
-                            .show();
-                }
-
-            }
-
-            @Override
-            protected Boolean doInBackground(Void... params) {
-                try {
-                    new ModerationManager(Authentication.reddit).setSpoiler(submission, false);
-                } catch (ApiException e) {
-                    e.printStackTrace();
-                    return false;
-
-                }
-                return true;
-            }
-        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-    }
+//    private void setSpoiler(final Activity mContext, final Submission submission,
+//            final SubmissionViewHolder holder) {
+//        new AsyncTask<Void, Void, Boolean>() {
+//
+//            @Override
+//            public void onPostExecute(Boolean b) {
+//                if (b) {
+//                    Snackbar s = Snackbar.make(holder.itemView, "Spoiler status set",
+//                            Snackbar.LENGTH_LONG);
+//                    View view = s.getView();
+//                    TextView tv = view.findViewById(android.support.design.R.id.snackbar_text);
+//                    tv.setTextColor(Color.WHITE);
+//                    s.show();
+//
+//                } else {
+//                    new AlertDialogWrapper.Builder(mContext).setTitle(R.string.err_general)
+//                            .setMessage(R.string.err_retry_later)
+//                            .show();
+//                }
+//
+//            }
+//
+//            @Override
+//            protected Boolean doInBackground(Void... params) {
+//                try {
+//                    new ModerationManager(Authentication.reddit).setSpoiler(submission, true);
+//                } catch (ApiException e) {
+//                    e.printStackTrace();
+//                    return false;
+//
+//                }
+//                return true;
+//            }
+//        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+//    }
+//
+//    private void unSpoiler(final Context mContext, final Submission submission,
+//            final SubmissionViewHolder holder) {
+//        //todo update view with NSFW tag
+//        new AsyncTask<Void, Void, Boolean>() {
+//
+//            @Override
+//            public void onPostExecute(Boolean b) {
+//                if (b) {
+//                    Snackbar s = Snackbar.make(holder.itemView, "Spoiler status removed",
+//                            Snackbar.LENGTH_LONG);
+//                    View view = s.getView();
+//                    TextView tv = view.findViewById(android.support.design.R.id.snackbar_text);
+//                    tv.setTextColor(Color.WHITE);
+//                    s.show();
+//
+//                } else {
+//                    new AlertDialogWrapper.Builder(mContext).setTitle(R.string.err_general)
+//                            .setMessage(R.string.err_retry_later)
+//                            .show();
+//                }
+//
+//            }
+//
+//            @Override
+//            protected Boolean doInBackground(Void... params) {
+//                try {
+//                    new ModerationManager(Authentication.reddit).setSpoiler(submission, false);
+//                } catch (ApiException e) {
+//                    e.printStackTrace();
+//                    return false;
+//
+//                }
+//                return true;
+//            }
+//        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+//    }
 
     private <T extends Thing> void approveSubmission(final Context mContext, final List<T> posts,
             final Submission submission, final RecyclerView recyclerview,
@@ -3522,13 +3535,13 @@ public class PopulateSubmissionViewHolder {
                                                 setPostNsfw(mContext, submission, holder);
                                             }
                                             break;
-                                        case 5:
-                                            if (submission.getDataNode().get("spoiler").asBoolean()) {
-                                                unSpoiler(mContext, submission, holder);
-                                            } else {
-                                                setSpoiler(mContext, submission, holder);
-                                            }
-                                            break;
+//                                        case 5:
+//                                            if (submission.getDataNode().get("spoiler").asBoolean()) {
+//                                                unSpoiler(mContext, submission, holder);
+//                                            } else {
+//                                                setSpoiler(mContext, submission, holder);
+//                                            }
+//                                            break;
                                     }
                                 }
                             }).show();

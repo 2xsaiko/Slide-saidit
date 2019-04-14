@@ -12,7 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import me.ccrama.redditslide.BuildConfig;
-import me.ccrama.redditslide.OpenRedditLink;
 import me.ccrama.redditslide.R;
 import me.ccrama.redditslide.util.LinkUtil;
 
@@ -75,7 +74,8 @@ public class SettingsAbout extends BaseActivityAnim {
         findViewById(R.id.sub).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new OpenRedditLink(SettingsAbout.this, "https://reddit.com/r/slideforreddit");
+                // new OpenRedditLink(SettingsAbout.this, "https://reddit.com/r/slideforreddit");
+                LinkUtil.openExternally("https://reddit.com/r/slideforreddit");
             }
         });
         findViewById(R.id.rate).setOnClickListener(new View.OnClickListener() {

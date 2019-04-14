@@ -272,7 +272,7 @@ public class SettingsFilter extends BaseActivityAnim {
                 SpannableStringBuilder b = new SpannableStringBuilder();
 
                 String subname = s.split(":")[0];
-                SpannableStringBuilder subreddit = new SpannableStringBuilder(" /r/" + subname + " ");
+                SpannableStringBuilder subreddit = new SpannableStringBuilder(" /s/" + subname + " ");
 
                 if ((SettingValues.colorSubName && Palette.getColor(subname) != Palette.getDefaultColor())) {
                     subreddit.setSpan(new ForegroundColorSpan(Palette.getColor(subname)), 0, subreddit.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);

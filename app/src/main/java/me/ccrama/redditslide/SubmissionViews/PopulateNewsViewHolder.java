@@ -19,13 +19,17 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
-import android.text.InputType;
 import android.text.SpannableStringBuilder;
 import android.text.style.AbsoluteSizeSpan;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.*;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.afollestad.materialdialogs.AlertDialogWrapper;
 import com.afollestad.materialdialogs.DialogAction;
@@ -37,8 +41,8 @@ import net.dean.jraw.managers.AccountManager;
 import net.dean.jraw.models.Contribution;
 import net.dean.jraw.models.Ruleset;
 import net.dean.jraw.models.Submission;
-
 import net.dean.jraw.models.SubredditRule;
+
 import org.apache.commons.text.StringEscapeUtils;
 
 import java.util.ArrayList;
@@ -471,7 +475,7 @@ public class PopulateNewsViewHolder {
         final boolean isAddedToReadLaterList = ReadLater.isToBeReadLater(submission);
         if (Authentication.didOnline) {
             b.sheet(1, profile, "/u/" + submission.getAuthor())
-                    .sheet(2, sub, "/r/" + submission.getSubredditName());
+                    .sheet(2, sub, "/s/" + submission.getSubredditName());
             String save = mContext.getString(R.string.btn_save);
             if (ActionStates.isSaved(submission)) {
                 save = mContext.getString(R.string.comment_unsave);
@@ -941,7 +945,7 @@ public class PopulateNewsViewHolder {
                         break;
                     case 8:
                         Reddit.defaultShareText(Html.fromHtml(submission.getTitle()).toString(),
-                                "https://reddit.com" + submission.getPermalink(), mContext);
+                                "https://saidit.net" + submission.getPermalink(), mContext);
                         break;
                     case 6: {
                         ClipboardManager clipboard = (ClipboardManager) mContext.getSystemService(

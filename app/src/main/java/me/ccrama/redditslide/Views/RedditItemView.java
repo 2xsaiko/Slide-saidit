@@ -98,10 +98,6 @@ public class RedditItemView extends RelativeLayout {
                 new AsyncLoadSubmission(parts[1]).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                 break;
             }
-            case LIVE: {
-                v.doLoadLink(url);
-            }
-            break;
             case WIKI: {
                 v.doLoadLink(url);
                 break;
@@ -392,7 +388,7 @@ public class RedditItemView extends RelativeLayout {
 
         if (comment.getSubredditName() != null) {
             String subname = comment.getSubredditName();
-            SpannableStringBuilder subreddit = new SpannableStringBuilder("/r/" + subname);
+            SpannableStringBuilder subreddit = new SpannableStringBuilder("/s/" + subname);
             if ((SettingValues.colorSubName
                     && Palette.getColor(subname) != Palette.getDefaultColor())) {
                 subreddit.setSpan(new ForegroundColorSpan(Palette.getColor(subname)), 0,

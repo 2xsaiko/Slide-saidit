@@ -485,7 +485,7 @@
     <string name="settings_filter_selfttext">Filteri selftext-a</string>
     <string name="settings_filter_title">Naslovni filteri</string>
     <string name="settings_filter_hint">Unesi odgovarajući tekst odvojen zarezima</string>
-    <string name="settings_prefs_reddit">Pregledaj sve reddit.com postavke</string>
+    <string name="settings_prefs_reddit">Pregledaj sve saidit.net postavke</string>
     <string name="settings_font_post">Font naslovnog posta</string>
     <string name="settings_font_comment">Font komentara</string>
     <string name="settings_comment_crop">Sakrij glavnu sliku u komentarima</string>

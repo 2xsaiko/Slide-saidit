@@ -364,7 +364,7 @@
     <string name="settings_filter_selfttext">Selvtekst-filtre</string>
     <string name="settings_filter_title">Tittel-filtre</string>
     <string name="settings_filter_hint">Angi tekst å matche, atskilt med komma</string>
-    <string name="settings_prefs_reddit">Vis alle reddit.com-innstillinger</string>
+    <string name="settings_prefs_reddit">Vis alle saidit.net-innstillinger</string>
     <string name="settings_font_post">Innleggstittel-font</string>
     <string name="settings_font_comment">Kommentarfont</string>
     <string name="settings_comment_crop">Beskjær hovedbildet i kommentar-visning</string>

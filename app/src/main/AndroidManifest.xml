@@ -455,31 +455,31 @@
 
                 <data android:scheme="http"/>
                 <data
-                        android:host="*reddit.com"
+                        android:host="*saidit.net"
                         android:pathPattern=".*"
                         android:scheme="https"/>
                 <data
-                        android:host="amp.reddit.com"
+                        android:host="amp.saidit.net"
                         android:pathPattern=".*"
                         android:scheme="https"/>
                 <data
-                        android:host="*reddit.com"
+                        android:host="*saidit.net"
                         android:pathPattern=".*"
                         android:scheme="http"/>
-                <data
-                        android:host="redd.it"
-                        android:pathPattern=".*"
-                        android:scheme="https"/>
+                <!--<data-->
+                        <!--android:host="redd.it"-->
+                        <!--android:pathPattern=".*"-->
+                        <!--android:scheme="https"/>-->
 
 
-                <data
-                        android:host="redd.it"
-                        android:pathPattern=".*"
-                        android:scheme="http"/>
+                <!--<data-->
+                        <!--android:host="redd.it"-->
+                        <!--android:pathPattern=".*"-->
+                        <!--android:scheme="http"/>-->
                 <data android:scheme="https"/>
-                <data android:host="*reddit.com"/>
+                <data android:host="*saidit.net"/>
                 <data android:host="redd.it"/>
-                <data android:host="amp.reddit.com"/>
+                <data android:host="amp.saidit.net"/>
 
             </intent-filter>
             <intent-filter>
@@ -492,7 +492,7 @@
 
                 <data
                         android:host="www.google.com"
-                        android:pathPrefix="/amp/s/amp.reddit.com"
+                        android:pathPrefix="/amp/s/amp.saidit.net"
                         android:scheme="https"/>
 
             </intent-filter>
@@ -646,11 +646,6 @@
                 android:theme="@style/swipeable"/>
         <activity
                 android:name=".Activities.SettingsModeration"
-                android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
-                android:theme="@style/swipeable"/>
-        <activity
-                android:name=".Activities.LiveThread"
-                android:alwaysRetainTaskState="true"
                 android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
                 android:theme="@style/swipeable"/>
         <activity

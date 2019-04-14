@@ -15,14 +15,18 @@ import android.text.style.RelativeSizeSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.*;
+import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
+import android.widget.TextView;
+
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
-import me.ccrama.redditslide.Activities.Reauthenticate;
-import me.ccrama.redditslide.Authentication;
-import me.ccrama.redditslide.OpenRedditLink;
-import me.ccrama.redditslide.R;
-import me.ccrama.redditslide.SettingValues;
+
 import net.dean.jraw.ApiException;
 import net.dean.jraw.http.NetworkException;
 import net.dean.jraw.http.oauth.InvalidScopeException;
@@ -42,6 +46,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+
+import me.ccrama.redditslide.Activities.Reauthenticate;
+import me.ccrama.redditslide.Authentication;
+import me.ccrama.redditslide.OpenRedditLink;
+import me.ccrama.redditslide.R;
+import me.ccrama.redditslide.SettingValues;
 
 /**
  * Misc UI stuff for toolbox - usernote display, removal display, etc.
@@ -218,7 +228,7 @@ public class ToolboxUI {
                     .replace("{kind}", "comment")
                     .replace("{mod}", Authentication.name)
                     .replace("{title}", "")
-                    .replace("{url}", "https://www.reddit.com"
+                    .replace("{url}", "https://www.saidit.net"
                             + thing.getDataNode().get("permalink").asText())
                     .replace("{domain}", "")
                     .replace("{link}", "undefined");
@@ -229,7 +239,7 @@ public class ToolboxUI {
                     .replace("{kind}", "submission")
                     .replace("{mod}", Authentication.name)
                     .replace("{title}", thing.getTitle())
-                    .replace("{url}", "https://www.reddit.com"
+                    .replace("{url}", "https://www.saidit.net"
                             + thing.getDataNode().get("permalink").asText())
                     .replace("{domain}", thing.getDomain())
                     .replace("{link}", thing.getUrl());
@@ -495,10 +505,10 @@ public class ToolboxUI {
             String logResult = "";
             if (log) {
                 // Log the removal
-                Submission s = logRemoval(logSub, logTitle, "https://www.reddit.com"
+                Submission s = logRemoval(logSub, logTitle, "https://www.saidit.net"
                         + thing.getDataNode().get("permalink").asText());
                 if (s != null) {
-                    logResult = "https://www.reddit.com" + s.getDataNode().get("permalink").asText();
+                    logResult = "https://www.saidit.net" + s.getDataNode().get("permalink").asText();
                 } else {
                     success = false;
                 }

@@ -53,7 +53,12 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.ViewDragHelper;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.view.ContextThemeWrapper;
-import android.support.v7.widget.*;
+import android.support.v7.widget.AppCompatCheckBox;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.PopupMenu;
+import android.support.v7.widget.SwitchCompat;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.Spannable;
 import android.text.TextWatcher;
@@ -3092,7 +3097,7 @@ public class MainActivity extends BaseActivity
                                                 @NonNull DialogAction which) {
                                             Intent i = new Intent(MainActivity.this,
                                                     SendMessage.class);
-                                            i.putExtra(SendMessage.EXTRA_NAME, "/r/" + subreddit);
+                                            i.putExtra(SendMessage.EXTRA_NAME, "/s/" + subreddit);
                                             startActivity(i);
                                         }
                                     })
@@ -3546,7 +3551,7 @@ public class MainActivity extends BaseActivity
             if (currentSubredditName.equals("frontpage")) {
                 filterTitle = getString(R.string.content_to_hide, "frontpage");
             } else {
-                filterTitle = getString(R.string.content_to_hide, "/r/" + currentSubredditName);
+                filterTitle = getString(R.string.content_to_hide, "/s/" + currentSubredditName);
             }
         }
 
@@ -4187,8 +4192,8 @@ public class MainActivity extends BaseActivity
                                 SubredditView.class);
                         sub.putExtra(SubredditView.EXTRA_SUBREDDIT, s);
                         shortcuts.add(new ShortcutInfo.Builder(this, "sub" + s).setShortLabel(
-                                (s.equalsIgnoreCase("frontpage") ? "" : "/r/") + s)
-                                .setLongLabel((s.equalsIgnoreCase("frontpage") ? "" : "/r/") + s)
+                                (s.equalsIgnoreCase("frontpage") ? "" : "/s/") + s)
+                                .setLongLabel((s.equalsIgnoreCase("frontpage") ? "" : "/s/") + s)
                                 .setIcon(getIcon(s, R.drawable.sub))
                                 .setIntent(sub)
                                 .build());
@@ -4213,8 +4218,8 @@ public class MainActivity extends BaseActivity
                                 SubredditView.class);
                         sub.putExtra(SubredditView.EXTRA_SUBREDDIT, s);
                         new ShortcutInfo.Builder(this, "sub" + s).setShortLabel(
-                                (s.equalsIgnoreCase("frontpage") ? "" : "/r/") + s)
-                                .setLongLabel((s.equalsIgnoreCase("frontpage") ? "" : "/r/") + s)
+                                (s.equalsIgnoreCase("frontpage") ? "" : "/s/") + s)
+                                .setLongLabel((s.equalsIgnoreCase("frontpage") ? "" : "/s/") + s)
                                 .setIcon(getIcon(s, R.drawable.sub))
                                 .setIntent(sub)
                                 .build();

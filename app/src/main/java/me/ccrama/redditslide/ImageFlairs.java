@@ -61,7 +61,7 @@ public class ImageFlairs {
                 } else {
                     AlertDialogWrapper.Builder b = new AlertDialogWrapper.Builder(context).setTitle(
                             "Error syncing subreddit flairs")
-                            .setMessage("Slide could not find any subreddit flairs to sync from /r/"
+                            .setMessage("Slide could not find any subreddit flairs to sync from /s/"
                                     + subreddit
                                     + "'s stylesheet.")
                             .setPositiveButton(R.string.btn_ok, null);
@@ -72,7 +72,7 @@ public class ImageFlairs {
                                 Toast.makeText(context, "Not all subreddits can be parsed, but send a message to SlideBot and hopefully we can add support for this subreddit :)\n\nPlease, only send one report.", Toast.LENGTH_LONG);
                                 Intent i = new Intent(context, SendMessage.class);
                                 i.putExtra(SendMessage.EXTRA_NAME, "slidebot");
-                                i.putExtra(SendMessage.EXTRA_MESSAGE, "/r/" + subreddit);
+                                i.putExtra(SendMessage.EXTRA_MESSAGE, "/s/" + subreddit);
                                 i.putExtra(SendMessage.EXTRA_REPLY, "Subreddit flair");
                                 context.startActivity(i);
                             }
@@ -109,8 +109,8 @@ public class ImageFlairs {
         @Override
         protected FlairStylesheet doInBackground(Void... params) {
             try {
-                HttpRequest r = new HttpRequest.Builder().host("reddit.com")
-                        .path("/r/" + subreddit + "/stylesheet")
+                HttpRequest r = new HttpRequest.Builder().host("saidit.net")
+                        .path("/s/" + subreddit + "/stylesheet")
                         .expected(MediaTypes.CSS.type())
                         .build();
                 RestResponse response = Authentication.reddit.execute(r);

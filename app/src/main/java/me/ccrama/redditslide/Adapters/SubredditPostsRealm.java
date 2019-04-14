@@ -26,7 +26,6 @@ import java.util.List;
 import java.util.Locale;
 
 import me.ccrama.redditslide.Activities.BaseActivity;
-import me.ccrama.redditslide.Activities.MainActivity;
 import me.ccrama.redditslide.Activities.NewsActivity;
 import me.ccrama.redditslide.Activities.SubredditView;
 import me.ccrama.redditslide.Authentication;
@@ -340,7 +339,7 @@ public class SubredditPostsRealm implements PostLoader {
                 OfflineSubreddit.currentid = currentid;
 
                 if (c instanceof BaseActivity) {
-                    ((BaseActivity) c).setShareUrl("https://reddit.com/r/" + subreddit);
+                    ((BaseActivity) c).setShareUrl("https://saidit.net/s/" + subreddit);
                 }
 
                 if (subreddit.equals("random") || subreddit.equals("myrandom") || subreddit.equals(

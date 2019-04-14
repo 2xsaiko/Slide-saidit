@@ -123,7 +123,7 @@ public class Profile extends BaseActivityAnim {
 
         name = getIntent().getExtras().getString(EXTRA_PROFILE, "");
 
-        setShareUrl("https://reddit.com/u/" + name);
+        setShareUrl("https://saidit.net/u/" + name);
 
         applyColorTheme();
         setContentView(R.layout.activity_profile);
@@ -588,7 +588,7 @@ public class Profile extends BaseActivityAnim {
                         @Override
                         public void onClick(View v) {
                             Reddit.defaultShareText(getString(R.string.profile_share, name),
-                                    "https://www.reddit.com/u/" + name, Profile.this);
+                                    "https://www.saidit.net/u/" + name, Profile.this);
                         }
                     });
 

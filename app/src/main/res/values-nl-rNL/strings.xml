@@ -474,7 +474,7 @@
     <string name="settings_filter_selfttext">Zelftekstfilter</string>
     <string name="settings_filter_title">Titelfilters</string>
     <string name="settings_filter_hint">Voeg woorden of zinsdelen toe gescheiden door komma\'s</string>
-    <string name="settings_prefs_reddit">Bekijk alle reddit.com-voorkeuren</string>
+    <string name="settings_prefs_reddit">Bekijk alle saidit.net-voorkeuren</string>
     <string name="settings_font_post">Lettertype berichttitel</string>
     <string name="settings_font_comment">Lettertype reactie</string>
     <string name="settings_comment_crop">Hoofdafbeelding bijsnijden in reactieweergave</string>

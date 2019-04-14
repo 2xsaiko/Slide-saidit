@@ -10,7 +10,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Resources;
-import android.graphics.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Handler;
@@ -208,7 +212,7 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             mPage.resetScroll(true);
         }
         if (mContext instanceof BaseActivity) {
-            ((BaseActivity) mContext).setShareUrl("https://reddit.com" + submission.getPermalink());
+            ((BaseActivity) mContext).setShareUrl("https://saidit.net" + submission.getPermalink());
         }
     }
 
@@ -627,7 +631,7 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 @Override
                 public void onSingleClick(View v) {
                     if (baseNode.children.getChildrenIds().isEmpty()) {
-                        String toGoTo = "https://reddit.com"
+                        String toGoTo = "https://saidit.net"
                                 + submission.getPermalink()
                                 + baseNode.comment.getComment().getId()
                                 + "?context=0";
@@ -1071,7 +1075,7 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         }
 
         if (mContext instanceof BaseActivity) {
-            ((BaseActivity) mContext).setShareUrl("https://reddit.com"
+            ((BaseActivity) mContext).setShareUrl("https://saidit.net"
                     + submission.getPermalink()
                     + n.getFullName()
                     + "?context=3");
@@ -1685,7 +1689,7 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                             }
                             if (mContext instanceof BaseActivity) {
                                 ((BaseActivity) mContext).setShareUrl(
-                                        "https://reddit.com" + submission.getPermalink());
+                                        "https://saidit.net" + submission.getPermalink());
                             }
 
                             setCommentStateUnhighlighted(holder, comment, baseNode, true);
@@ -1697,7 +1701,7 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         } else {
             if (mContext instanceof BaseActivity) {
                 ((BaseActivity) mContext).setShareUrl(
-                        "https://freddit.com" + submission.getPermalink());
+                        "https://saidit.net" + submission.getPermalink());
             }
             currentlySelected = null;
             currentSelectedItem = "";
