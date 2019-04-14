@@ -1,7 +1,6 @@
 package me.ccrama.redditslide;
 
 import android.content.Context;
-import android.os.AsyncTask;
 import android.os.Environment;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -222,7 +221,7 @@ public class OfflineSubreddit {
                 ObjectReader reader = mapperBase.reader();
 
                 for (String s : split) {
-                    if (!s.contains("_")) s = "t3_" + s;
+                    if (!s.contains("_")) s = "t5_" + s;
                     if (!s.isEmpty()) {
                         try {
                             Submission sub = getSubmissionFromStorage(s, c, offline, reader);

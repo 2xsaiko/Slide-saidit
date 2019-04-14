@@ -289,7 +289,7 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                         && (!submission.isNsfw() || SettingValues.storeNSFWHistory))) {
             lastSeen = HasSeen.getSeenTime(submission);
             String fullname = submission.getFullName();
-            if (fullname.contains("t3_")) {
+            if (fullname.contains("t5_")) {
                 fullname = fullname.substring(3, fullname.length());
             }
             HasSeen.seenTimes.put(fullname, System.currentTimeMillis());

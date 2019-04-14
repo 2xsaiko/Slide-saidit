@@ -36,7 +36,7 @@ public class HasSeen {
         for (Contribution s : submissions) {
             if (s instanceof Submission) {
                 String fullname = s.getFullName();
-                if (fullname.contains("t3_")) {
+                if (fullname.contains("t5_")) {
                     fullname = fullname.substring(3, fullname.length());
                 }
 
@@ -68,7 +68,7 @@ public class HasSeen {
         KVManger m = KVStore.getInstance();
         for (Contribution s : submissions) {
             String fullname = s.getFullName();
-            if (fullname.contains("t3_")) {
+            if (fullname.contains("t5_")) {
                 fullname = fullname.substring(3, fullname.length());
             }
             // Check if KVStore has a key containing the fullname
@@ -96,7 +96,7 @@ public class HasSeen {
         }
 
         String fullname = s.getFullName();
-        if (fullname.contains("t3_")) {
+        if (fullname.contains("t5_")) {
             fullname = fullname.substring(3, fullname.length());
         }
         return (hasSeen.contains(fullname)
@@ -139,7 +139,7 @@ public class HasSeen {
                 break;
             }
         }
-        if (fullname.contains("t3_")) {
+        if (fullname.contains("t5_")) {
             fullname = fullname.substring(3, fullname.length());
         }
         hasSeen.add(fullname);
@@ -152,7 +152,7 @@ public class HasSeen {
             seenTimes = new HashMap<>();
         }
         String fullname = s.getFullName();
-        if (fullname.contains("t3_")) {
+        if (fullname.contains("t5_")) {
             fullname = fullname.substring(3, fullname.length());
         }
         if (seenTimes.containsKey(fullname)) {
@@ -174,7 +174,7 @@ public class HasSeen {
             seenTimes = new HashMap<>();
         }
 
-        if (fullname.contains("t3_")) {
+        if (fullname.contains("t5_")) {
             fullname = fullname.substring(3, fullname.length());
         }
 
@@ -196,7 +196,7 @@ public class HasSeen {
             seenTimes = new HashMap<>();
         }
 
-        if (fullname.contains("t3_")) {
+        if (fullname.contains("t5_")) {
             fullname = fullname.substring(3, fullname.length());
         }
 

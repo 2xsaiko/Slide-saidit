@@ -1808,7 +1808,7 @@ public class CommentPage extends Fragment implements Toolbar.OnMenuItemClickList
             Submission s = null;
             try {
                 s = OfflineSubreddit.getSubmissionFromStorage(
-                        fullname.contains("_") ? fullname : "t3_" + fullname, getContext(),
+                        fullname.contains("_") ? fullname : "t5_" + fullname, getContext(),
                         !NetworkUtil.isConnected(getActivity()), new ObjectMapper().reader());
             } catch (IOException e) {
                 e.printStackTrace();

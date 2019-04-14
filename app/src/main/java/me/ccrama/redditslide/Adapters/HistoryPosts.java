@@ -18,7 +18,6 @@ import java.util.TreeMap;
 
 import me.ccrama.redditslide.Authentication;
 import me.ccrama.redditslide.PostMatch;
-import me.ccrama.redditslide.util.LogUtil;
 
 /**
  * Created by ccrama on 9/17/2015.
@@ -131,19 +130,19 @@ public class HistoryPosts extends GeneralPosts {
                         if (prefix.isEmpty()) {
                             if (!entry.getKey().contains("readLater")) {
                                 if (entry.getKey().length() == 6 && done instanceof Boolean) {
-                                    ids.add("t3_" + entry.getKey());
+                                    ids.add("t5_" + entry.getKey());
                                 } else if (done instanceof Long) {
                                     if (entry.getKey().contains("_")) {
                                         idsSorted.put((Long) done, entry.getKey());
                                     } else {
-                                        idsSorted.put((Long) done, "t3_" + entry.getKey());
+                                        idsSorted.put((Long) done, "t5_" + entry.getKey());
                                     }
                                 }
                             }
                         } else {
                             String key = entry.getKey();
                             if(!key.contains("_")){
-                                key = "t3_" + key;
+                                key = "t5_" + key;
                             }
                             idsSorted.put((Long) done, key.replace(prefix, ""));
                         }
