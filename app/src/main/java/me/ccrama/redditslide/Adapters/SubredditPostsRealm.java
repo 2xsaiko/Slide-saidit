@@ -42,7 +42,6 @@ import me.ccrama.redditslide.R;
 import me.ccrama.redditslide.Reddit;
 import me.ccrama.redditslide.SettingValues;
 import me.ccrama.redditslide.SubmissionCache;
-import me.ccrama.redditslide.Synccit.MySynccitReadTask;
 import me.ccrama.redditslide.TimeUtils;
 import me.ccrama.redditslide.util.LogUtil;
 import me.ccrama.redditslide.util.NetworkUtil;
@@ -352,9 +351,6 @@ public class SubredditPostsRealm implements PostLoader {
                         || subreddit.equals("randnsfw"))) {
                     ((SubredditView) context).subreddit = subredditRandom;
                     ((SubredditView) context).executeAsyncSubreddit(subredditRandom);
-                }
-                if (!SettingValues.synccitName.isEmpty() && !offline) {
-                    new MySynccitReadTask(displayer).execute(ids);
                 }
 
             } else if (submissions != null) {

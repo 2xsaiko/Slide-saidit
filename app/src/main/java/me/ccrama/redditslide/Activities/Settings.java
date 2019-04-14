@@ -40,12 +40,21 @@ import java.util.List;
 import me.ccrama.redditslide.Authentication;
 import me.ccrama.redditslide.DragSort.ReorderSubreddits;
 import me.ccrama.redditslide.FDroid;
-import me.ccrama.redditslide.Fragments.*;
+import me.ccrama.redditslide.Fragments.FolderChooserDialogCreate;
+import me.ccrama.redditslide.Fragments.ManageOfflineContentFragment;
+import me.ccrama.redditslide.Fragments.SettingsCommentsFragment;
+import me.ccrama.redditslide.Fragments.SettingsDataFragment;
+import me.ccrama.redditslide.Fragments.SettingsFontFragment;
+import me.ccrama.redditslide.Fragments.SettingsFragment;
+import me.ccrama.redditslide.Fragments.SettingsGeneralFragment;
+import me.ccrama.redditslide.Fragments.SettingsHandlingFragment;
+import me.ccrama.redditslide.Fragments.SettingsHistoryFragment;
+import me.ccrama.redditslide.Fragments.SettingsRedditFragment;
+import me.ccrama.redditslide.Fragments.SettingsThemeFragment;
 import me.ccrama.redditslide.R;
 import me.ccrama.redditslide.Reddit;
 import me.ccrama.redditslide.SettingValues;
 import me.ccrama.redditslide.Visuals.Palette;
-import me.ccrama.redditslide.util.LogUtil;
 import me.ccrama.redditslide.util.NetworkUtil;
 import me.ccrama.redditslide.util.OnSingleClickListener;
 
@@ -424,15 +433,6 @@ public class Settings extends BaseActivity
             public void onSingleClick(View v) {
 
                 Intent i = new Intent(Settings.this, SettingsFilter.class);
-                startActivity(i);
-            }
-        });
-
-        findViewById(R.id.settings_child_synccit).setOnClickListener(new OnSingleClickListener() {
-            @Override
-            public void onSingleClick(View v) {
-
-                Intent i = new Intent(Settings.this, SettingsSynccit.class);
                 startActivity(i);
             }
         });

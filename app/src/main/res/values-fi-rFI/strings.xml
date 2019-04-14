@@ -328,8 +328,6 @@
     <string name="settings_section_data_saving_mode">Virransäästötila</string>
     <string name="settings_section_image_quality">Kuvan laatu</string>
     <string name="settings_section_hide_images">Piilota kuvat</string>
-    <string name="settings_synccit_username">Käyttäjänimi</string>
-    <string name="settings_synccit_connected">Yhdistetty onnistuneesti!</string>
     <string name="settings_font_system">Järjestelmä</string>
     <string name="settings_manage_subscriptions">Hallinnoi tilauksiasi</string>
     <string name="settings_redditprefs_over18">Olen yli 18-vuotias ja tahdon nähdä NSFW-sisällön</string>

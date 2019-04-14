@@ -11,7 +11,6 @@ import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -34,8 +33,6 @@ import android.view.animation.LinearInterpolator;
 
 import com.afollestad.materialdialogs.AlertDialogWrapper;
 
-import net.dean.jraw.managers.AccountManager;
-
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -43,15 +40,12 @@ import java.util.List;
 import java.util.Map;
 
 import me.ccrama.redditslide.Adapters.SubredditPostsRealm;
-import me.ccrama.redditslide.Authentication;
 import me.ccrama.redditslide.CaseInsensitiveArrayList;
 import me.ccrama.redditslide.ColorPreferences;
 import me.ccrama.redditslide.Fragments.NewsView;
 import me.ccrama.redditslide.R;
 import me.ccrama.redditslide.Reddit;
 import me.ccrama.redditslide.SettingValues;
-import me.ccrama.redditslide.Synccit.MySynccitUpdateTask;
-import me.ccrama.redditslide.Synccit.SynccitRead;
 import me.ccrama.redditslide.UserSubscriptions;
 import me.ccrama.redditslide.Views.CatchStaggeredGridLayoutManager;
 import me.ccrama.redditslide.Views.PreCachingLayoutManager;
@@ -95,36 +89,6 @@ public class NewsActivity extends BaseActivity
     public void onPause() {
         super.onPause();
         changed = false;
-        if (!SettingValues.synccitName.isEmpty()) {
-            new MySynccitUpdateTask().execute(
-                    SynccitRead.newVisited.toArray(new String[SynccitRead.newVisited.size()]));
-        }
-        if (Authentication.isLoggedIn
-                && Authentication.me != null
-                && Authentication.me.hasGold()
-                && !SynccitRead.newVisited.isEmpty()) {
-            new AsyncTask<Void, Void, Void>() {
-                @Override
-                protected Void doInBackground(Void... params) {
-                    try {
-                        String[] returned = new String[SynccitRead.newVisited.size()];
-                        int i = 0;
-                        for (String s : SynccitRead.newVisited) {
-                            if (!s.contains("t3_")) {
-                                s = "t3_" + s;
-                            }
-                            returned[i] = s;
-                            i++;
-                        }
-                        new AccountManager(Authentication.reddit).storeVisits(returned);
-                        SynccitRead.newVisited = new ArrayList<>();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    return null;
-                }
-            }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-        }
 
         //Upon leaving MainActivity--hide the toolbar search if it is visible
         if (findViewById(R.id.toolbar_search).getVisibility() == View.VISIBLE) {

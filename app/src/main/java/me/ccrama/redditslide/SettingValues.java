@@ -2,16 +2,18 @@ package me.ccrama.redditslide;
 
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import me.ccrama.redditslide.Fragments.SettingsHandlingFragment;
-import me.ccrama.redditslide.Views.CreateCardView;
-import me.ccrama.redditslide.Visuals.Palette;
-import me.ccrama.redditslide.util.SortingUtil;
+
 import net.dean.jraw.models.CommentSort;
 import net.dean.jraw.paginators.Sorting;
 import net.dean.jraw.paginators.TimePeriod;
 
 import java.util.Calendar;
 import java.util.Locale;
+
+import me.ccrama.redditslide.Fragments.SettingsHandlingFragment;
+import me.ccrama.redditslide.Views.CreateCardView;
+import me.ccrama.redditslide.Visuals.Palette;
+import me.ccrama.redditslide.util.SortingUtil;
 
 /**
  * Created by ccrama on 9/19/2015.
@@ -103,8 +105,6 @@ public class SettingValues {
     public static final String PREF_SAVE_BUTTON            = "saveButton";
     public static final String PREF_IMAGE                  = "image";
     public static final String PREF_SELFTEXT_IMAGE_COMMENT = "selftextImageComment";
-    public static final String SYNCCIT_AUTH                = "SYNCCIT_AUTH";
-    public static final String SYNCCIT_NAME                = "SYNCCIT_NAME";
     public static final String PREF_BLUR                   = "blur";
     public static final String PREF_ALBUM_SWIPE            = "albumswipe";
     public static final String PREF_COMMENT_NAV            = "commentVolumeNav";
@@ -194,9 +194,6 @@ public class SettingValues {
     public static int     linkHandlingMode;
 
     public static int previews;
-
-    public static String synccitName;
-    public static String synccitAuth;
 
     public static String  titleFilters;
     public static String  textFilters;
@@ -361,8 +358,6 @@ public class SettingValues {
         upvotePercentage = prefs.getBoolean(PREF_UPVOTE_PERCENTAGE, false);
         storeNSFWHistory = prefs.getBoolean(PREF_STORE_NSFW_HISTORY, false);
         scrollSeen = prefs.getBoolean(PREF_SCROLL_SEEN, false);
-        synccitName = prefs.getString(SYNCCIT_NAME, "");
-        synccitAuth = prefs.getString(SYNCCIT_AUTH, "");
         notifSound = prefs.getBoolean(PREF_SOUND_NOTIFS, false);
         cookies = prefs.getBoolean(PREF_COOKIES, true);
         linkHandlingMode = prefs.getInt(PREF_LINK_HANDLING_MODE,

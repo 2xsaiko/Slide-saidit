@@ -164,8 +164,6 @@ import me.ccrama.redditslide.R;
 import me.ccrama.redditslide.Reddit;
 import me.ccrama.redditslide.SettingValues;
 import me.ccrama.redditslide.SpoilerRobotoTextView;
-import me.ccrama.redditslide.Synccit.MySynccitUpdateTask;
-import me.ccrama.redditslide.Synccit.SynccitRead;
 import me.ccrama.redditslide.TimeUtils;
 import me.ccrama.redditslide.UserSubscriptions;
 import me.ccrama.redditslide.Views.CatchStaggeredGridLayoutManager;
@@ -369,36 +367,6 @@ public class MainActivity extends BaseActivity
     public void onPause() {
         super.onPause();
         changed = false;
-        if (!SettingValues.synccitName.isEmpty()) {
-            new MySynccitUpdateTask().execute(
-                    SynccitRead.newVisited.toArray(new String[SynccitRead.newVisited.size()]));
-        }
-        if (Authentication.isLoggedIn
-                && Authentication.me != null
-                && Authentication.me.hasGold()
-                && !SynccitRead.newVisited.isEmpty()) {
-            new AsyncTask<Void, Void, Void>() {
-                @Override
-                protected Void doInBackground(Void... params) {
-                    try {
-                        String[] returned = new String[SynccitRead.newVisited.size()];
-                        int i = 0;
-                        for (String s : SynccitRead.newVisited) {
-                            if (!s.contains("t3_")) {
-                                s = "t3_" + s;
-                            }
-                            returned[i] = s;
-                            i++;
-                        }
-                        new AccountManager(Authentication.reddit).storeVisits(returned);
-                        SynccitRead.newVisited = new ArrayList<>();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    return null;
-                }
-            }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-        }
 
         //Upon leaving MainActivity--hide the toolbar search if it is visible
         if (findViewById(R.id.toolbar_search).getVisibility() == View.VISIBLE) {

@@ -1,10 +1,11 @@
 package me.ccrama.redditslide;
 
 import android.database.Cursor;
+
 import com.lusfold.androidkeyvaluestore.KVStore;
 import com.lusfold.androidkeyvaluestore.core.KVManger;
 import com.lusfold.androidkeyvaluestore.utils.CursorUtils;
-import me.ccrama.redditslide.Synccit.SynccitRead;
+
 import net.dean.jraw.models.Contribution;
 import net.dean.jraw.models.Submission;
 import net.dean.jraw.models.VoteDirection;
@@ -99,7 +100,6 @@ public class HasSeen {
             fullname = fullname.substring(3, fullname.length());
         }
         return (hasSeen.contains(fullname)
-                || SynccitRead.visitedIds.contains(fullname)
                 || s.getDataNode().has("visited") && s.getDataNode().get("visited").asBoolean()
                 || s.getVote() != VoteDirection.NO_VOTE);
     }
@@ -143,7 +143,7 @@ public class HasSeen {
             fullname = fullname.substring(3, fullname.length());
         }
         hasSeen.add(fullname);
-        return (hasSeen.contains(fullname) || SynccitRead.visitedIds.contains(fullname));
+        return (hasSeen.contains(fullname));
     }
 
     public static long getSeenTime(Submission s) {
@@ -186,11 +186,6 @@ public class HasSeen {
         if (result == -1) {
             KVStore.getInstance().update(fullname, String.valueOf(System.currentTimeMillis()));
         }
-
-        if (!fullname.contains("t1_")) {
-            SynccitRead.newVisited.add(fullname);
-            SynccitRead.visitedIds.add(fullname);
-        }
     }
 
     public static void addSeenScrolling(String fullname) {
@@ -209,10 +204,5 @@ public class HasSeen {
         seenTimes.put(fullname, System.currentTimeMillis());
 
         KVStore.getInstance().insert(fullname, String.valueOf(System.currentTimeMillis()));
-
-        if (!fullname.contains("t1_")) {
-            SynccitRead.newVisited.add(fullname);
-            SynccitRead.visitedIds.add(fullname);
-        }
     }
 }

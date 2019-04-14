@@ -29,7 +29,6 @@ import me.ccrama.redditslide.PostMatch;
 import me.ccrama.redditslide.Reddit;
 import me.ccrama.redditslide.SettingValues;
 import me.ccrama.redditslide.SubmissionCache;
-import me.ccrama.redditslide.Synccit.MySynccitReadTask;
 import me.ccrama.redditslide.UserSubscriptions;
 import me.ccrama.redditslide.util.LogUtil;
 import me.ccrama.redditslide.util.NetworkUtil;
@@ -303,9 +302,6 @@ public class MultiredditPosts implements PostLoader {
                 for (Submission s : submissions) {
                     ids[i] = s.getId();
                     i++;
-                }
-                if (!SettingValues.synccitName.isEmpty() && !offline) {
-                    new MySynccitReadTask().execute(ids);
                 }
                 final int finalStart = start;
 

@@ -565,16 +565,6 @@
     <string name="settings_section_hide_images">Ocultar imagens</string>
     <string name="settings_comment_color">Indicadores coloridos para profundidade dos comentários</string>
     <string name="settings_volume_nav_comments">Navegar pelos comentários usando os botões de volume</string>
-    <string name="settings_synccit_remove">DESCONECTAR DO SYNCCIT</string>
-    <string name="settings_synccit_auth">Código de autenticação</string>
-    <string name="settings_synccit_username">Nome de usuário</string>
-    <string name="settings_synccit_delete">Você realmente quer excluir a conta do Synccit?</string>
-    <string name="settings_synccit_authenticate">Autenticando com o Synccit</string>
-    <string name="settings_synccit_connected">Conectado com sucesso!</string>
-    <string name="settings_synccit_active">Synccit agora está ativo para este dispositivo</string>
-    <string name="settings_synccit_failed">Não foi possível autenticar</string>
-    <string name="settings_synccit_failed_msg">Verifique se o seu nome de usuário e chave de autenticação estão corretos!</string>
-    <string name="settings_synccit">Integração com o Synccit</string>
     <string name="settings_commentnav_description">Habilita barra inferior com setas para navegação</string>
     <string name="settings_comment_collapse">Retrair comentários completamente</string>
     <string name="settings_comment_collapse_description">Também desativa animações de comentários</string>
@@ -612,7 +602,6 @@
     <string name="settings_general_comment_last_visit">Mostrar a contagem de comentários desde a última visita</string>
     <string name="settings_fab_create">Mostrar \"criar comentário\" FAB</string>
     <string name="settings_right_handed_comment_menu">Opções da barra de resposta invertidas</string>
-    <string name="settings_description_synccit">Synccit permite que você sincronize o seu histórico de submissão entre os dispositivos e seu navegador</string>
     <string name="settings_description_view_type">Modos de visualização afetam tanto a visualização principal quanto a visualização de um único subreddit.\n\nGuias de subreddit: deslize lateralmente entre seus subreddits\n\nSem guias de subreddit: não permite deslizar entre seus subreddits\n\nPainel de comentários: comentários deslizam próximo aos posts e o estado da página de comentários é salvo após o deslizar para voltar (para que você não perca o lugar que estava)</string>
     <string name="settings_comment_hide_selftext_image">Ocultar imagem principal em postagens de texto</string>
     <string name="settings_reddit_syncing">Sincronizando com o Reddit</string>

@@ -578,16 +578,6 @@
     <string name="settings_section_hide_images">Скрыть изображения</string>
     <string name="settings_comment_color">Цветные индикаторы глубины комментариев</string>
     <string name="settings_volume_nav_comments">Перемещаться между комментариями используя кнопки громкости</string>
-    <string name="settings_synccit_remove">ОТКЛЮЧИТЬ SYNCCIT</string>
-    <string name="settings_synccit_auth">Код авторизации</string>
-    <string name="settings_synccit_username">Имя пользователя</string>
-    <string name="settings_synccit_delete">Вы действительно хотите удалить аккаунт Synccit?</string>
-    <string name="settings_synccit_authenticate">Вход в Synccit</string>
-    <string name="settings_synccit_connected">Соединение завершено!</string>
-    <string name="settings_synccit_active">Synccit теперь активен на этом устройстве</string>
-    <string name="settings_synccit_failed">Не удалось авторизоваться</string>
-    <string name="settings_synccit_failed_msg">Удостоверьтесь, что имя пользователя и ключ авторизации указаны правильно!</string>
-    <string name="settings_synccit">Интеграция с Synccit</string>
     <string name="settings_commentnav_description">Включает внизу панель со стрелками навигации</string>
     <string name="settings_comment_collapse">Сворачивать комментарии полностью</string>
     <string name="settings_comment_collapse_description">Также отключает анимацию комментариев</string>
@@ -623,7 +613,6 @@
     <string name="settings_general_swipeanywhere_description">Смахните в любом месте просмотра, чтобы выйти</string>
     <string name="settings_general_comment_last_visit">Показывать кол-во новых комментариев с последнего посещения</string>
     <string name="settings_right_handed_comment_menu">Меню ответа на коментарии для правшей</string>
-    <string name="settings_description_synccit">Synccit позволяет синхронизовать историю публикаций между устройствами и вашим браузером</string>
     <string name="settings_comment_hide_selftext_image">Скрывать изображение в текстовых записях</string>
     <string name="settings_reddit_syncing">Синхронизация с Reddit</string>
     <string name="settings_filter_flair">Фильтры пометок</string>

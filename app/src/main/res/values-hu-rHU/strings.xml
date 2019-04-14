@@ -506,16 +506,6 @@
     <string name="settings_section_clear_history">Előzmények törlése</string>
     <string name="settings_comment_color">Hozzászólásszálak jelölése színekkel</string>
     <string name="settings_volume_nav_comments">Navigálás a hozzászólások között a hangerőgombokkal</string>
-    <string name="settings_synccit_remove">SYNCCIT LECSATLAKOZTATÁSA</string>
-    <string name="settings_synccit_auth">Hitelesítő kód</string>
-    <string name="settings_synccit_username">Felhasználónév</string>
-    <string name="settings_synccit_delete">Tényleg törlöd a Synccit fiókot?</string>
-    <string name="settings_synccit_authenticate">Hitelesítés a Synccittel</string>
-    <string name="settings_synccit_connected">Sikeres csatlakozás!</string>
-    <string name="settings_synccit_active">A Synccit most már aktív ezen a készüléken</string>
-    <string name="settings_synccit_failed">Nem sikerült a hitelesítés</string>
-    <string name="settings_synccit_failed_msg">Győzödj meg róla, hogy a felhasználónév és a hitelesítő kód helyes!</string>
-    <string name="settings_synccit">Synccit integráció</string>
     <string name="settings_font_system">Rendszer</string>
     <string name="settings_redditprefs_over18">Elmúltam 18 éves, és látni akarom a kifogásolható tartalmakat</string>
     <string name="settings_data_lowqaul_desc">Máskülönben mindig a magas minőségű képek legyenek megnyitva</string>
@@ -529,7 +519,6 @@
     <string name="settings_links_force_external">Külső böngésző erőltetése</string>
     <string name="settings_general_comment_last_visit">A legutóbbi látogatás utáni hozzászólások számának mutatása</string>
     <string name="settings_right_handed_comment_menu">Jobbkezes hozzászólás válasz menü</string>
-    <string name="settings_description_synccit">A Synccit lehetővé teszi az előzmények szinkronizálását a különböző eszközeid és a böngésződ között</string>
     <string name="settings_comment_hide_selftext_image">Címlapkép elrejtése önálló szöveg esetén</string>
     <string name="settings_data_low_quality">Alacsony minőségű képek betöltése</string>
     <string name="settings_view_type">Nézettípus</string>
