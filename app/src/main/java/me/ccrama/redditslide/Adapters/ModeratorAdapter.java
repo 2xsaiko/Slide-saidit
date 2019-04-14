@@ -118,7 +118,7 @@ public class ModeratorAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
         if (dataSet.posts.get(position).getFullName().startsWith("t1"))//IS COMMENT
             return COMMENT;
-        if (dataSet.posts.get(position).getFullName().startsWith("t4"))//IS MESSAGE
+        if (dataSet.posts.get(position).getFullName().startsWith("t6"))//IS MESSAGE
             return MESSAGE;
         return POST;
     }
