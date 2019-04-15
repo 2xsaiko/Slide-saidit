@@ -34,11 +34,11 @@ android {
             minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            resValue "string", "app_name", "Slide"
+            resValue "string", "app_name", "Slide for Saidit"
         }
         debug {
             applicationIdSuffix ".debug"
-            resValue "string", "app_name", "Slide Debug"
+            resValue "string", "app_name", "Slide for Saidit Debug"
         }
 
     }
