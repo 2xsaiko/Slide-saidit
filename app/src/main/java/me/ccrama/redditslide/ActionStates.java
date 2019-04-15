@@ -3,50 +3,32 @@ package me.ccrama.redditslide;
 import net.dean.jraw.models.Comment;
 import net.dean.jraw.models.PublicContribution;
 import net.dean.jraw.models.Submission;
-import net.dean.jraw.models.VoteDirection;
+import net.dean.jraw.models.VoteState;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by carlo_000 on 2/26/2016.
  */
 public class ActionStates {
-    public static final ArrayList<String> upVotedFullnames = new ArrayList<>();
-    public static final ArrayList<String> downVotedFullnames = new ArrayList<>();
+    public static final Map<String, VoteState> votedFullnames = new HashMap<>();
 
-    public static final ArrayList<String> unvotedFullnames = new ArrayList<>();
     public static final ArrayList<String> savedFullnames = new ArrayList<>();
     public static final ArrayList<String> unSavedFullnames = new ArrayList<>();
 
-    public static VoteDirection getVoteDirection(PublicContribution s) {
-        if (upVotedFullnames.contains(s.getFullName())) {
-            return VoteDirection.UPVOTE;
-        } else if (downVotedFullnames.contains(s.getFullName())) {
-            return VoteDirection.DOWNVOTE;
-        } else if (unvotedFullnames.contains(s.getFullName())) {
-            return VoteDirection.NO_VOTE;
-        } else {
-            return s.getVote();
-        }
+    public static VoteState getVoteState(PublicContribution s) {
+        if (!votedFullnames.containsKey(s.getFullName())) return s.getVote();
+
+        VoteState state = votedFullnames.get(s.getFullName());
+        if (state == null) return s.getVote();
+
+        return state;
     }
 
-    public static void setVoteDirection(PublicContribution s, VoteDirection direction) {
-        String fullname = s.getFullName();
-        upVotedFullnames.remove(fullname);
-        downVotedFullnames.remove(fullname);
-        unvotedFullnames.remove(fullname);
-        switch (direction) {
-
-            case UPVOTE:
-                upVotedFullnames.add(fullname);
-                break;
-            case DOWNVOTE:
-                downVotedFullnames.add(fullname);
-                break;
-            case NO_VOTE:
-                unvotedFullnames.add(fullname);
-                break;
-        }
+    public static void setVoteState(PublicContribution s, VoteState direction) {
+        votedFullnames.put(s.getFullName(), direction);
     }
 
     public static boolean isSaved(Submission s) {

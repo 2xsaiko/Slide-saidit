@@ -29,7 +29,6 @@ import net.dean.jraw.models.Account;
 import net.dean.jraw.models.Comment;
 import net.dean.jraw.models.Submission;
 import net.dean.jraw.models.Subreddit;
-import net.dean.jraw.models.VoteDirection;
 
 import java.util.Arrays;
 import java.util.List;
@@ -364,10 +363,11 @@ public class RedditItemView extends RelativeLayout {
         holder.score.setText(score);
 
         if (Authentication.isLoggedIn) {
-            if (ActionStates.getVoteDirection(comment) == VoteDirection.UPVOTE) {
+            // TODO
+            if (ActionStates.getVoteState(comment).insightful) {
                 holder.score.setTextColor(
                         getContext().getResources().getColor(R.color.md_orange_500));
-            } else if (ActionStates.getVoteDirection(comment) == VoteDirection.DOWNVOTE) {
+            } else if (ActionStates.getVoteState(comment).fun) {
                 holder.score.setTextColor(
                         getContext().getResources().getColor(R.color.md_blue_500));
             } else {

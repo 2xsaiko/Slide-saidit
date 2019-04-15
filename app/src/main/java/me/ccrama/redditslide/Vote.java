@@ -11,40 +11,44 @@ import android.widget.TextView;
 import net.dean.jraw.ApiException;
 import net.dean.jraw.managers.AccountManager;
 import net.dean.jraw.models.PublicContribution;
-import net.dean.jraw.models.VoteDirection;
 
 /**
  * Created by ccrama on 9/19/2015.
  */
 public class Vote extends AsyncTask<PublicContribution, Void, Void> {
 
-    private final VoteDirection direction;
+    private final Vote.Type type;
+    private final boolean on;
     private View v;
     private Context c;
 
-    public Vote(Boolean b, View v, Context c) {
-        direction = b ? VoteDirection.UPVOTE : VoteDirection.DOWNVOTE;
+    public Vote(Vote.Type type, boolean on, View v, Context c) {
+        this.type = type;
+        this.on = on;
         this.v = v;
         this.c = c;
         Reddit.setDefaultErrorHandler(c);
-
     }
 
-    public Vote(View v, Context c) {
-
-        direction = VoteDirection.NO_VOTE;
-
-        this.v = v;
-        this.c = c;
-
-    }
+    // public Vote(View v, Context c) {
+    //     direction = VoteDirection.NO_VOTE;
+    //
+    //     this.v = v;
+    //     this.c = c;
+    // }
 
     @Override
     protected Void doInBackground(PublicContribution... sub) {
-
         if (Authentication.isLoggedIn) {
             try {
-                new AccountManager(Authentication.reddit).vote(sub[0], direction);
+                switch(type) {
+                    case INSIGHTFUL:
+                        new AccountManager(Authentication.reddit).voteInsightful(sub[0], on);
+                        break;
+                    case FUN:
+                        new AccountManager(Authentication.reddit).voteFun(sub[0], on);
+                        break;
+                }
             } catch (ApiException | RuntimeException e) {
                 ((Activity) c).runOnUiThread(new Runnable() {
                     public void run() {
@@ -88,10 +92,12 @@ public class Vote extends AsyncTask<PublicContribution, Void, Void> {
 
 
         return null;
-
-
     }
 
+    public enum Type {
+        INSIGHTFUL,
+        FUN,
+    }
 
 }
 

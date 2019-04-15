@@ -38,7 +38,6 @@ import net.dean.jraw.managers.AccountManager;
 import net.dean.jraw.models.Comment;
 import net.dean.jraw.models.Contribution;
 import net.dean.jraw.models.Submission;
-import net.dean.jraw.models.VoteDirection;
 
 import java.util.List;
 import java.util.Locale;
@@ -388,9 +387,10 @@ public class ContributionAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             holder.score.setText(score);
 
             if (Authentication.isLoggedIn) {
-                if (ActionStates.getVoteDirection(comment) == VoteDirection.UPVOTE) {
+                // TODO
+                if (ActionStates.getVoteState(comment).insightful) {
                     holder.score.setTextColor(mContext.getResources().getColor(R.color.md_orange_500));
-                } else if (ActionStates.getVoteDirection(comment) == VoteDirection.DOWNVOTE) {
+                } else if (ActionStates.getVoteState(comment).fun) {
                     holder.score.setTextColor(mContext.getResources().getColor(R.color.md_blue_500));
                 } else {
                     holder.score.setTextColor(holder.time.getCurrentTextColor());

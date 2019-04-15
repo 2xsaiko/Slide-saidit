@@ -15,7 +15,6 @@ import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -1140,35 +1139,36 @@ public class PopulateNewsViewHolder {
 
         final int commentCount = submission.getCommentCount();
         final int more = LastComments.commentsSince(submission);
-        String scoreRatio =
-                (SettingValues.upvotePercentage && full && submission.getUpvoteRatio() != null) ?
-                        "("
-                                + (int) (submission.getUpvoteRatio() * 100)
-                                + "%)" : "";
+
+        int insCount = submission.getInsightfulCount();
+        int funCount = submission.getFunCount();
+
+        String scoreRatio = (SettingValues.upvotePercentage && full) ?
+                String.format(Locale.getDefault(), "(%d ins | %d fun)", insCount, funCount) : "";
 
         if (!scoreRatio.isEmpty()) {
             TextView percent = holder.itemView.findViewById(R.id.percent);
             percent.setVisibility(View.VISIBLE);
             percent.setText(scoreRatio);
 
-            final double numb = (submission.getUpvoteRatio());
-            if (numb <= .5) {
-                if (numb <= .1) {
-                    percent.setTextColor(ContextCompat.getColor(mContext, R.color.md_blue_500));
-                } else if (numb <= .3) {
-                    percent.setTextColor(ContextCompat.getColor(mContext, R.color.md_blue_400));
-                } else {
-                    percent.setTextColor(ContextCompat.getColor(mContext, R.color.md_blue_300));
-                }
-            } else {
-                if (numb >= .9) {
-                    percent.setTextColor(ContextCompat.getColor(mContext, R.color.md_orange_500));
-                } else if (numb >= .7) {
-                    percent.setTextColor(ContextCompat.getColor(mContext, R.color.md_orange_400));
-                } else {
-                    percent.setTextColor(ContextCompat.getColor(mContext, R.color.md_orange_300));
-                }
-            }
+            // final double numb = (submission.getUpvoteRatio());
+            // if (numb <= .5) {
+            //     if (numb <= .1) {
+            //         percent.setTextColor(ContextCompat.getColor(mContext, R.color.md_blue_500));
+            //     } else if (numb <= .3) {
+            //         percent.setTextColor(ContextCompat.getColor(mContext, R.color.md_blue_400));
+            //     } else {
+            //         percent.setTextColor(ContextCompat.getColor(mContext, R.color.md_blue_300));
+            //     }
+            // } else {
+            //     if (numb >= .9) {
+            //         percent.setTextColor(ContextCompat.getColor(mContext, R.color.md_orange_500));
+            //     } else if (numb >= .7) {
+            //         percent.setTextColor(ContextCompat.getColor(mContext, R.color.md_orange_400));
+            //     } else {
+            //         percent.setTextColor(ContextCompat.getColor(mContext, R.color.md_orange_300));
+            //     }
+            // }
         }
 
         //Save the score so we can use it in the OnClickListeners for the vote buttons

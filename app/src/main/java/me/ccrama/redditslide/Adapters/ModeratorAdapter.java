@@ -51,7 +51,6 @@ import net.dean.jraw.models.Contribution;
 import net.dean.jraw.models.DistinguishedStatus;
 import net.dean.jraw.models.PublicContribution;
 import net.dean.jraw.models.Submission;
-import net.dean.jraw.models.VoteDirection;
 
 import java.util.List;
 import java.util.Locale;
@@ -419,9 +418,10 @@ public class ModeratorAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             holder.score.setText(comment.getScore() + " " + mContext.getResources().getQuantityString(R.plurals.points, comment.getScore()));
 
             if (Authentication.isLoggedIn) {
-                if (ActionStates.getVoteDirection(comment) == VoteDirection.UPVOTE) {
+                // TODO
+                if (ActionStates.getVoteState(comment).insightful) {
                     holder.score.setTextColor(mContext.getResources().getColor(R.color.md_orange_500));
-                } else if (ActionStates.getVoteDirection(comment) == VoteDirection.DOWNVOTE) {
+                } else if (ActionStates.getVoteState(comment).fun) {
                     holder.score.setTextColor(mContext.getResources().getColor(R.color.md_blue_500));
                 } else {
                     holder.score.setTextColor(holder.time.getCurrentTextColor());

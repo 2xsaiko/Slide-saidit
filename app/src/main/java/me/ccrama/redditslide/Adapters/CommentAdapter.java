@@ -53,7 +53,7 @@ import net.dean.jraw.models.Comment;
 import net.dean.jraw.models.CommentNode;
 import net.dean.jraw.models.Contribution;
 import net.dean.jraw.models.Submission;
-import net.dean.jraw.models.VoteDirection;
+import net.dean.jraw.models.VoteState;
 
 import java.io.File;
 import java.io.PrintWriter;
@@ -1149,10 +1149,11 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             final EditText replyLine = baseView.findViewById(R.id.replyLine);
 
             final Comment comment = baseNode.getComment();
-            if (ActionStates.getVoteDirection(comment) == VoteDirection.UPVOTE) {
+            // TODO
+            if (ActionStates.getVoteState(comment).insightful) {
                 upvote.setColorFilter(holder.textColorUp, PorterDuff.Mode.MULTIPLY);
                 upvote.setContentDescription(mContext.getResources().getString(R.string.btn_upvoted));
-            } else if (ActionStates.getVoteDirection(comment) == VoteDirection.DOWNVOTE) {
+            } else if (ActionStates.getVoteState(comment).fun) {
                 downvote.setColorFilter(holder.textColorDown, PorterDuff.Mode.MULTIPLY);
                 downvote.setContentDescription(mContext.getResources().getString(R.string.btn_downvoted));
             } else {
@@ -1544,14 +1545,15 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 @Override
                 public void onSingleClick(View v) {
                     setCommentStateUnhighlighted(holder, comment, baseNode, true);
-                    if (ActionStates.getVoteDirection(comment) == VoteDirection.UPVOTE) {
-                        new Vote(v, mContext).execute(n);
-                        ActionStates.setVoteDirection(comment, VoteDirection.NO_VOTE);
+                    VoteState state = ActionStates.getVoteState(comment);
+                    if (state.insightful) {
+                        new Vote(Vote.Type.INSIGHTFUL, false, v, mContext).execute(n);
+                        ActionStates.setVoteState(comment, state.withInsightful(false));
                         doScoreText(holder, n, CommentAdapter.this);
                         upvote.clearColorFilter();
                     } else {
-                        new Vote(true, v, mContext).execute(n);
-                        ActionStates.setVoteDirection(comment, VoteDirection.UPVOTE);
+                        new Vote(Vote.Type.INSIGHTFUL, true, v, mContext).execute(n);
+                        ActionStates.setVoteState(comment, state.withInsightful(true));
                         downvote.clearColorFilter(); // reset colour
                         doScoreText(holder, n, CommentAdapter.this);
                         upvote.setColorFilter(holder.textColorUp, PorterDuff.Mode.MULTIPLY);
@@ -1563,15 +1565,15 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 @Override
                 public void onSingleClick(View v) {
                     setCommentStateUnhighlighted(holder, comment, baseNode, true);
-                    if (ActionStates.getVoteDirection(comment) == VoteDirection.DOWNVOTE) {
-                        new Vote(v, mContext).execute(n);
-                        ActionStates.setVoteDirection(comment, VoteDirection.NO_VOTE);
+                    VoteState state = ActionStates.getVoteState(comment);
+                    if (state.fun) {
+                        new Vote(Vote.Type.FUN, false, v, mContext).execute(n);
+                        ActionStates.setVoteState(comment, state.withFun(false));
                         doScoreText(holder, n, CommentAdapter.this);
                         downvote.clearColorFilter();
-
                     } else {
-                        new Vote(false, v, mContext).execute(n);
-                        ActionStates.setVoteDirection(comment, VoteDirection.DOWNVOTE);
+                        new Vote(Vote.Type.FUN, true, v, mContext).execute(n);
+                        ActionStates.setVoteState(comment, state.withFun(true));
                         upvote.clearColorFilter(); // reset colour
                         doScoreText(holder, n, CommentAdapter.this);
                         downvote.setColorFilter(holder.textColorDown, PorterDuff.Mode.MULTIPLY);

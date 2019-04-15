@@ -58,7 +58,7 @@ import net.dean.jraw.models.DistinguishedStatus;
 import net.dean.jraw.models.Ruleset;
 import net.dean.jraw.models.Submission;
 import net.dean.jraw.models.SubredditRule;
-import net.dean.jraw.models.VoteDirection;
+import net.dean.jraw.models.VoteState;
 
 import org.apache.commons.text.StringEscapeUtils;
 
@@ -1374,16 +1374,15 @@ public class CommentAdapterHelper {
         titleString.append(spacer);
 
         int scoreColor;
-        switch (ActionStates.getVoteDirection(comment)) {
-            case UPVOTE:
-                scoreColor = (holder.textColorUp);
-                break;
-            case DOWNVOTE:
-                scoreColor = (holder.textColorDown);
-                break;
-            default:
-                scoreColor = (holder.textColorRegular);
-                break;
+
+        // TODO
+        VoteState state = ActionStates.getVoteState(comment);
+        if (state.insightful) {
+            scoreColor = holder.textColorUp;
+        } else if (state.fun) {
+            scoreColor = holder.textColorDown;
+        } else {
+            scoreColor = holder.textColorRegular;
         }
 
         String scoreText;
@@ -1574,28 +1573,29 @@ public class CommentAdapterHelper {
 
     public static int getScoreText(Comment comment) {
         int submissionScore = comment.getScore();
-        switch (ActionStates.getVoteDirection(comment)) {
-            case UPVOTE: {
-                if (comment.getVote() != VoteDirection.UPVOTE) {
-                    if (comment.getVote() == VoteDirection.DOWNVOTE) ++submissionScore;
-                    ++submissionScore; //offset the score by +1
-                }
-                break;
-            }
-            case DOWNVOTE: {
-                if (comment.getVote() != VoteDirection.DOWNVOTE) {
-                    if (comment.getVote() == VoteDirection.UPVOTE) --submissionScore;
-                    --submissionScore; //offset the score by +1
-                }
-                break;
-            }
-            case NO_VOTE:
-                if (comment.getVote() == VoteDirection.UPVOTE && comment.getAuthor()
-                        .equalsIgnoreCase(Authentication.name)) {
-                    submissionScore--;
-                }
-                break;
+
+        VoteState state = ActionStates.getVoteState(comment);
+
+        if (state.insightful && !comment.getVote().insightful) {
+            submissionScore += 2;
         }
+
+        if (state.fun && !comment.getVote().fun) {
+            submissionScore += 1;
+        }
+
+        if (!state.insightful && comment.getVote().insightful) {
+            submissionScore -= 2;
+        }
+
+        if (!state.fun && comment.getVote().fun) {
+            submissionScore -= 1;
+        }
+
+        if (state.insightful && comment.getAuthor().equalsIgnoreCase(Authentication.name)) {
+            submissionScore -= 2;
+        }
+
         return submissionScore;
     }
 

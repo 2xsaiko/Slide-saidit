@@ -8,7 +8,7 @@ import com.lusfold.androidkeyvaluestore.utils.CursorUtils;
 
 import net.dean.jraw.models.Contribution;
 import net.dean.jraw.models.Submission;
-import net.dean.jraw.models.VoteDirection;
+import net.dean.jraw.models.VoteState;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -101,7 +101,7 @@ public class HasSeen {
         }
         return (hasSeen.contains(fullname)
                 || s.getDataNode().has("visited") && s.getDataNode().get("visited").asBoolean()
-                || s.getVote() != VoteDirection.NO_VOTE);
+                || s.getVote() != VoteState.none());
     }
 
     public static boolean getSeen(String s) {
