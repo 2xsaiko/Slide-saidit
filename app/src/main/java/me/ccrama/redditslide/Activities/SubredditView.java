@@ -1132,6 +1132,10 @@ public class SubredditView extends BaseActivity {
                 new PopupMenu(SubredditView.this, findViewById(R.id.anchor), Gravity.RIGHT);
         final Spannable[] base = SortingUtil.getSortingSpannables(subreddit);
         for (Spannable s : base) {
+            // Do not add option for "Best" in any subreddit except for the frontpage.
+            if (!subreddit.toLowerCase().equals("frontpage") && s.toString().equals(getString(R.string.sorting_best))) {
+                continue;
+            }
             MenuItem m = popup.getMenu().add(s);
         }
         popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -1164,6 +1168,10 @@ public class SubredditView extends BaseActivity {
                     case 4:
                         SortingUtil.setSorting(subreddit, Sorting.CONTROVERSIAL);
                         openPopupTime();
+                        break;
+                    case 5:
+                        SortingUtil.setSorting(subreddit, Sorting.BEST);
+                        reloadSubs();
                         break;
                 }
                 return true;

@@ -343,7 +343,7 @@ public class GifUtils {
             if (url.contains("v.redd.it")) {
                 return VideoType.VREDDIT;
             }
-            if (url.contains(".mp4") || url.contains("webm") || url.contains("redditmedia.com")) {
+            if (url.contains(".mp4") || url.contains("webm") || url.contains("redditmedia.com") || url.contains("preview.redd.it")) {
                 return VideoType.DIRECT;
             }
             if (url.contains("gfycat") && !url.contains("mp4")) return VideoType.GFYCAT;
@@ -358,6 +358,9 @@ public class GifUtils {
         public void loadGfycat(String name, Gson gson) throws Exception {
             showProgressBar(c, progressBar, false);
             if (!name.startsWith("/")) name = "/" + name;
+            if (name.contains("-")) {
+                name = name.split("-")[0];
+            }
             String gfycatUrl = "https://api.gfycat.com/v1/gfycats" + name;
             LogUtil.v(gfycatUrl);
             final JsonObject result = HttpUtil.getJsonObject(client, gson, gfycatUrl);
