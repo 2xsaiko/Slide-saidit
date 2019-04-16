@@ -1592,10 +1592,6 @@ public class CommentAdapterHelper {
             submissionScore -= 1;
         }
 
-        if (state.insightful && comment.getAuthor().equalsIgnoreCase(Authentication.name)) {
-            submissionScore -= 2;
-        }
-
         return submissionScore;
     }
 

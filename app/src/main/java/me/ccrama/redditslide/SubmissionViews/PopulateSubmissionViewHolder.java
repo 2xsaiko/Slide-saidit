@@ -3550,10 +3550,6 @@ public class PopulateSubmissionViewHolder {
             submissionScore -= 1;
         }
 
-        if (!state.insightful && submission.getAuthor().equalsIgnoreCase(Authentication.name)) {
-            submissionScore -= 2;
-        }
-
         if (submissionScore >= 10000 && SettingValues.abbreviateScores) {
             holder.score.setText(String.format(Locale.getDefault(), "%.1fk",
                     (((double) submissionScore) / 1000)));
