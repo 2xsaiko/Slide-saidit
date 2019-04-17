@@ -3108,11 +3108,6 @@ public class PopulateSubmissionViewHolder {
                                 b.sheet(4, nsfw_drawable,
                                         mContext.getString(R.string.mod_btn_mark_nsfw));
                             }
-                            if (submission.getDataNode().get("spoiler").asBoolean()) {
-                                b.sheet(5, nsfw_drawable, mContext.getString(R.string.mod_btn_unmark_spoiler));
-                            } else {
-                                b.sheet(5, nsfw_drawable, mContext.getString(R.string.mod_btn_mark_spoiler));
-                            }
 
                             b.sheet(2, delete_drawable,
                                     mContext.getString(R.string.delete_submission));
