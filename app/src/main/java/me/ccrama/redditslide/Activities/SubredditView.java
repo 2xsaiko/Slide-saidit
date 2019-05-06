@@ -219,7 +219,9 @@ public class SubredditView extends BaseActivity {
             }
         });
         if (!subreddit.equals("random")
+                && !subreddit.equals("subscribed")
                 && !subreddit.equals("all")
+                && !subreddit.equals("home")
                 && !subreddit.equals("frontpage")
                 && !subreddit.equals("friends")
                 && !subreddit.equals("mod")
@@ -255,7 +257,7 @@ public class SubredditView extends BaseActivity {
         super.onPrepareOptionsMenu(menu);
 
         //Hide the "Submit" menu item if the currently viewed sub is the frontpage or /r/all.
-        if (subreddit.equals("frontpage") || subreddit.equals("all") || subreddit.equals("popular") || subreddit.equals("friends") || subreddit.equals("mod")) {
+        if (subreddit.equals("frontpage") || subreddit.equals("subscribed") || subreddit.equals("all") || subreddit.equals("home") || subreddit.equals("popular") || subreddit.equals("friends") || subreddit.equals("mod")) {
             menu.findItem(R.id.submit).setVisible(false);
             menu.findItem(R.id.sidebar).setVisible(false);
         }
@@ -385,7 +387,9 @@ public class SubredditView extends BaseActivity {
 
                 //Add "search current sub" if it is not frontpage/all/random
                 if (!subreddit.equalsIgnoreCase("frontpage")
+                        && !subreddit.equalsIgnoreCase("subscribed")
                         && !subreddit.equalsIgnoreCase("all")
+                        && !subreddit.equalsIgnoreCase("home")
                         && !subreddit.equalsIgnoreCase("random")
                         && !subreddit.equalsIgnoreCase("popular")
                         && !subreddit.equals("myrandom")
@@ -504,7 +508,9 @@ public class SubredditView extends BaseActivity {
 
         invalidateOptionsMenu();
 
-        if (!subOverride.equalsIgnoreCase("all")
+        if (!subOverride.equalsIgnoreCase("subscribed")
+                && !subOverride.equalsIgnoreCase("all")
+                && !subOverride.equalsIgnoreCase("home")
                 && !subOverride.equalsIgnoreCase("frontpage")
                 && !subOverride.equalsIgnoreCase("random")
                 && !subOverride.equalsIgnoreCase("popular")
@@ -978,7 +984,8 @@ public class SubredditView extends BaseActivity {
 
         invalidateOptionsMenu();
 
-        if (!subOverride.equalsIgnoreCase("all") && !subOverride.equalsIgnoreCase("frontpage") &&
+        if (!subOverride.equalsIgnoreCase("subscribed") && !subOverride.equalsIgnoreCase("all") &&
+                !subOverride.equalsIgnoreCase("home") && !subOverride.equalsIgnoreCase("frontpage") &&
                 !subOverride.equalsIgnoreCase("friends") && !subOverride.equalsIgnoreCase("mod") &&
                 !subOverride.contains("+") && !subOverride.contains(".") && !subOverride.contains(
                 "/m/")) {
@@ -1662,7 +1669,9 @@ public class SubredditView extends BaseActivity {
                                 if (isChecked) {
                                     final String sub = subreddit.getDisplayName();
 
-                                    if (!sub.equalsIgnoreCase("all")
+                                    if (!sub.equalsIgnoreCase("subscribed")
+                                            && !sub.equalsIgnoreCase("all")
+                                            && !sub.equalsIgnoreCase("home")
                                             && !sub.equalsIgnoreCase("frontpage")
                                             &&
                                             !sub.equalsIgnoreCase("friends")

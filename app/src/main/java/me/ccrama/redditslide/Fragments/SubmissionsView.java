@@ -187,7 +187,9 @@ public class SubmissionsView extends Fragment implements SubmissionDisplay {
 
                         //Add "search current sub" if it is not frontpage/all/random
                         if (!id.equalsIgnoreCase("frontpage")
+                                && !id.equalsIgnoreCase("subscribed")
                                 && !id.equalsIgnoreCase("all")
+                                && !id.equalsIgnoreCase("home")
                                 && !id.contains(".")
                                 && !id.contains("/m/")
                                 && !id.equalsIgnoreCase("friends")

@@ -134,14 +134,14 @@ public class Login extends BaseActivityAnim {
             subNames.add(s.getDisplayName().toLowerCase(Locale.ENGLISH));
         }
         subNames = UserSubscriptions.sort(subNames);
-        if (!subNames.contains("slideforreddit")) {
+        if (!subNames.contains("slideforsaidit")) {
             new AlertDialogWrapper.Builder(Login.this).setTitle(
                     R.string.login_subscribe_rslideforreddit)
                     .setMessage(R.string.login_subscribe_rslideforreddit_desc)
                     .setPositiveButton(R.string.btn_yes, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            subNames.add(2, "slideforreddit");
+                            subNames.add(2, "slideforsaidit");
                             UserSubscriptions.setSubscriptions(subNames);
                             Reddit.forceRestart(Login.this, true);
                         }

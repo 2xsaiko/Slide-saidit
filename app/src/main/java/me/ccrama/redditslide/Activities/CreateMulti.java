@@ -140,7 +140,7 @@ public class CreateMulti extends BaseActivityAnim {
         //Remove special subreddits from list and store it in "all"
         int i = 0;
         for (String s : sorted) {
-            if (!s.equals("all") && !s.equals("frontpage") && !s.contains("+") && !s.contains(".") && !s.contains("/m/")) {
+            if (!s.equals("subscribed") && !s.equals("all") && !s.equals("home") && !s.equals("frontpage") && !s.contains("+") && !s.contains(".") && !s.contains("/m/")) {
                 all[i] = s;
                 i++;
             }

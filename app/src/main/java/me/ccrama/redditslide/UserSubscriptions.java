@@ -40,7 +40,7 @@ import me.ccrama.redditslide.util.NetworkUtil;
 public class UserSubscriptions {
     public static final String       SUB_NAME_TO_PROPERTIES = "multiNameToSubs";
     public static final List<String> defaultSubs            =
-            Arrays.asList("frontpage", "all", "announcements", "Art", "AskReddit", "askscience",
+            Arrays.asList("frontpage", "subscribed", "all", "home", "announcements", "Art", "AskReddit", "askscience",
                     "aww", "blog", "books", "creepy", "dataisbeautiful", "DIY", "Documentaries",
                     "EarthPorn", "explainlikeimfive", "Fitness", "food", "funny", "Futurology",
                     "gadgets", "gaming", "GetMotivated", "gifs", "history", "IAmA",
@@ -51,7 +51,7 @@ public class UserSubscriptions {
                     "todayilearned", "TwoXChromosomes", "UpliftingNews", "videos", "worldnews",
                     "WritingPrompts");
     public static final List<String> specialSubreddits      =
-            Arrays.asList("frontpage", "all", "random", "randnsfw", "myrandom", "friends", "mod",
+            Arrays.asList("frontpage", "subscribed", "all", "home", "random", "randnsfw", "myrandom", "friends", "mod",
                     "popular");
     public static SharedPreferences subscriptions;
     public static SharedPreferences multiNameToSubs;
@@ -743,8 +743,16 @@ public class UserSubscriptions {
             subs.add("frontpage");
         }
 
+        if (!subs.contains("subscribed")) {
+            subs.add("subscribed");
+        }
+
         if (!subs.contains("all")) {
             subs.add("all");
+        }
+
+        if (!subs.contains("home")) {
+            subs.add("home");
         }
 
         return sortNoExtras(subs);

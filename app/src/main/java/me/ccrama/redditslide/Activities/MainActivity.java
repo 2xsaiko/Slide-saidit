@@ -517,7 +517,9 @@ public class MainActivity extends BaseActivity
                     || subreddit.contains(".")
                     || subreddit.contains("+")
                     || subreddit.equals("frontpage")
-                    || subreddit.equals("all")) {
+                    || subreddit.equals("subscribed")
+                    || subreddit.equals("all")
+                    || subreddit.equals("home")) {
                 if (menu.findItem(R.id.submit) != null) {
                     menu.findItem(R.id.submit).setVisible(false);
                 }
@@ -571,7 +573,9 @@ public class MainActivity extends BaseActivity
                 filterContent(shouldLoad);
                 return true;
             case R.id.sidebar:
-                if (!subreddit.equals("all")
+                if (!subreddit.equals("subscribed")
+                        && !subreddit.equals("all")
+                        && !subreddit.equals("home")
                         && !subreddit.equals("frontpage")
                         && !subreddit.contains(".")
                         && !subreddit.contains("+")
@@ -656,7 +660,9 @@ public class MainActivity extends BaseActivity
 
                 //Add "search current sub" if it is not frontpage/all/random
                 if (!subreddit.equalsIgnoreCase("frontpage")
+                        && !subreddit.equalsIgnoreCase("subscribed")
                         && !subreddit.equalsIgnoreCase("all")
+                        && !subreddit.equalsIgnoreCase("home")
                         && !subreddit.contains(".")
                         && !subreddit.contains("/m/")
                         && !subreddit.equalsIgnoreCase("friends")
@@ -952,7 +958,7 @@ public class MainActivity extends BaseActivity
                                 try {
                                     SubredditPaginator p =
                                             new SubredditPaginator(Authentication.reddit,
-                                                    "slideforreddit");
+                                                    "slideforsaidit");
                                     p.setLimit(2);
                                     ArrayList<Submission> posts = new ArrayList<>(p.next());
                                     for (Submission s : posts) {
@@ -2500,7 +2506,9 @@ public class MainActivity extends BaseActivity
                             if (isChecked) {
                                 final String sub = subreddit.getDisplayName();
 
-                                if (!sub.equalsIgnoreCase("all")
+                                if (!sub.equalsIgnoreCase("subscribed")
+                                        && !sub.equalsIgnoreCase("all")
+                                        && !sub.equalsIgnoreCase("home")
                                         && !sub.equalsIgnoreCase("frontpage")
                                         && !sub.equalsIgnoreCase("friends")
                                         && !sub.equalsIgnoreCase("mod")
@@ -2856,7 +2864,9 @@ public class MainActivity extends BaseActivity
 
         invalidateOptionsMenu();
 
-        if (!subreddit.equalsIgnoreCase("all")
+        if (!subreddit.equalsIgnoreCase("subscribed")
+                && !subreddit.equalsIgnoreCase("all")
+                && !subreddit.equalsIgnoreCase("home")
                 && !subreddit.equalsIgnoreCase("frontpage")
                 && !subreddit.equalsIgnoreCase("friends")
                 && !subreddit.equalsIgnoreCase("mod")
@@ -3380,7 +3390,9 @@ public class MainActivity extends BaseActivity
 
         invalidateOptionsMenu();
 
-        if (!subreddit.equalsIgnoreCase("all")
+        if (!subreddit.equalsIgnoreCase("subscribed")
+                && !subreddit.equalsIgnoreCase("all")
+                && !subreddit.equalsIgnoreCase("home")
                 && !subreddit.equalsIgnoreCase("frontpage")
                 && !subreddit.equalsIgnoreCase("friends")
                 && !subreddit.equalsIgnoreCase("mod")

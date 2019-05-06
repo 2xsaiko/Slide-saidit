@@ -30,7 +30,7 @@ public class UserSubscriptionsTest {
     @Test
     public void sortsSubreddits() {
         assertThat(UserSubscriptions.sort(subreddits), is(new ArrayList<>(Arrays.asList(
-                "pinned", "pinned2", "frontpage", "all", "random", "friends", "mod", "aaa", "xyy", "xyz"
+                "pinned", "pinned2", "frontpage", "subscribed", "all", "home", "random", "friends", "mod", "aaa", "xyy", "xyz"
         ))));
     }
 

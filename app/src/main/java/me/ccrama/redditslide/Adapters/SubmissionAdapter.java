@@ -201,7 +201,9 @@ public class SubmissionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
                     (subreddit.equals("frontpage")
                             || subreddit.equals("mod")
                             || subreddit.equals("friends")
+                            || (subreddit.equals("subscribed"))
                             || (subreddit.equals("all"))
+                            || (subreddit.equals("home"))
                             || subreddit.contains(".")
                             || subreddit.contains("+")));
             holder.itemView.setOnClickListener(new OnSingleClickListener() {

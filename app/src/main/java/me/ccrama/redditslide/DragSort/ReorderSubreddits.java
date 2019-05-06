@@ -554,7 +554,9 @@ public class ReorderSubreddits extends BaseActivityAnim {
         final ArrayList<String> subs2 =
                 UserSubscriptions.sort(UserSubscriptions.getSubscriptions(this));
         subs2.remove("frontpage");
+        subs2.remove("subscribed");
         subs2.remove("all");
+        subs2.remove("home");
 
         ArrayList<String> toRemove = new ArrayList<>();
         for (String s : subs2) {

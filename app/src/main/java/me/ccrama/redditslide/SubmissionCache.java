@@ -175,7 +175,9 @@ public class SubmissionCache {
                 || (baseSub.equals("nomatching") && (SettingValues.colorSubName
                 && Palette.getColor(subname) != Palette.getDefaultColor()))) {
             boolean secondary = (baseSub.equalsIgnoreCase("frontpage")
+                    || (baseSub.equalsIgnoreCase("subscribed"))
                     || (baseSub.equalsIgnoreCase("all"))
+                    || (baseSub.equalsIgnoreCase("home"))
                     || (baseSub.equalsIgnoreCase("popular"))
                     || (baseSub.equalsIgnoreCase("friends"))
                     || (baseSub.equalsIgnoreCase("mod"))

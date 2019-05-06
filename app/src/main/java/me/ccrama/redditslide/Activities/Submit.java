@@ -137,7 +137,9 @@ public class Submit extends BaseActivity {
 
         if (subreddit != null
                 && !subreddit.equals("frontpage")
+                && !subreddit.equals("subscribed")
                 && !subreddit.equals("all")
+                && !subreddit.equals("home")
                 && !subreddit.equals("friends")
                 && !subreddit.equals("mod")
                 && !subreddit.contains("/m/")
