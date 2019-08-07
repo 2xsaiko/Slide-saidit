@@ -17,6 +17,7 @@ import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.v4.app.FragmentManager;
@@ -573,7 +574,7 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                                     mPage.overrideFab = false;
                                     currentlyEditingId = "";
                                     backedText = "";
-                                    View view = ((Activity) mContext).getCurrentFocus();
+                                    View view = ((Activity) mContext).findViewById(android.R.id.content);
                                     if (view != null) {
                                         InputMethodManager imm =
                                                 (InputMethodManager) mContext.getSystemService(
@@ -726,6 +727,17 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                     }
                 }
             });
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                replyLine.setOnFocusChangeListener((v, b) -> {
+                    if (b) {
+                        v.postDelayed(() -> {
+                            if (!v.hasFocus())
+                                v.requestFocus();
+                        }, 100);
+                    }
+                });
+            }
             replyLine.requestFocus();
             InputMethodManager imm =
                     (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -753,7 +765,7 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                                 currentlyEditing = null;
                                 editingPosition = -1;
                                 //Hide soft keyboard
-                                View view = ((Activity) mContext).getCurrentFocus();
+                                View view = ((Activity) mContext).findViewById(android.R.id.content);
                                 if (view != null) {
                                     InputMethodManager imm =
                                             (InputMethodManager) mContext.getSystemService(
@@ -764,6 +776,11 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                         }
                     });
         } else {
+            View view = ((Activity) mContext).findViewById(android.R.id.content);
+            if (view != null) {
+                InputMethodManager imm = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+            }
             collapseAndHide(replyArea);
         }
     }
@@ -1438,7 +1455,17 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                                 builder.show();
                             }
                         });
-                        replyLine.requestFocus();
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                            replyLine.setOnFocusChangeListener((view, b) -> {
+                                if (b) {
+                                    view.postDelayed(() -> {
+                                        if (!view.hasFocus())
+                                            view.requestFocus();
+                                    }, 100);
+                                }
+                            });
+                        }
+                        replyLine.requestFocus(); // TODO: Not working when called a second time
                         InputMethodManager imm = (InputMethodManager) mContext.getSystemService(
                                 Context.INPUT_METHOD_SERVICE);
                         imm.toggleSoftInput(InputMethodManager.SHOW_FORCED,
@@ -1486,7 +1513,7 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                             editingPosition = -1;
                         }
                         //Hide soft keyboard
-                        View view = ((Activity) mContext).getCurrentFocus();
+                        View view = ((Activity) mContext).findViewById(android.R.id.content);
                         if (view != null) {
                             InputMethodManager imm = (InputMethodManager) mContext.getSystemService(
                                     Context.INPUT_METHOD_SERVICE);
@@ -1502,7 +1529,7 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                         currentlyEditingId = "";
                         backedText = "";
                         mPage.overrideFab = false;
-                        View view = ((Activity) mContext).getCurrentFocus();
+                        View view = ((Activity) mContext).findViewById(android.R.id.content);
                         if (view != null) {
                             InputMethodManager imm = (InputMethodManager) mContext.getSystemService(
                                     Context.INPUT_METHOD_SERVICE);
@@ -1682,7 +1709,7 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                             mPage.overrideFab = false;
                             currentlyEditingId = "";
                             backedText = "";
-                            View view = ((Activity) mContext).getCurrentFocus();
+                            View view = ((Activity) mContext).findViewById(android.R.id.content);
                             if (view != null) {
                                 InputMethodManager imm =
                                         (InputMethodManager) mContext.getSystemService(
@@ -1750,7 +1777,7 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                             mPage.overrideFab = false;
                             currentlyEditingId = "";
                             backedText = "";
-                            View view = ((Activity) mContext).getCurrentFocus();
+                            View view = ((Activity) mContext).findViewById(android.R.id.content);
                             if (view != null) {
                                 InputMethodManager imm =
                                         (InputMethodManager) mContext.getSystemService(
@@ -1807,7 +1834,7 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                             mPage.overrideFab = false;
                             currentlyEditingId = "";
                             backedText = "";
-                            View view = ((Activity) mContext).getCurrentFocus();
+                            View view = ((Activity) mContext).findViewById(android.R.id.content);
                             if (view != null) {
                                 InputMethodManager imm =
                                         (InputMethodManager) mContext.getSystemService(

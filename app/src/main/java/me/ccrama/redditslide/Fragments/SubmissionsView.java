@@ -33,12 +33,16 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.mikepenz.itemanimators.AlphaInAnimator;
 import com.mikepenz.itemanimators.SlideUpAlphaAnimator;
 
-import me.ccrama.redditslide.Activities.*;
 import net.dean.jraw.models.Submission;
 
 import java.util.List;
 import java.util.Locale;
 
+import me.ccrama.redditslide.Activities.BaseActivity;
+import me.ccrama.redditslide.Activities.MainActivity;
+import me.ccrama.redditslide.Activities.Search;
+import me.ccrama.redditslide.Activities.Submit;
+import me.ccrama.redditslide.Activities.SubredditView;
 import me.ccrama.redditslide.Adapters.SubmissionAdapter;
 import me.ccrama.redditslide.Adapters.SubmissionDisplay;
 import me.ccrama.redditslide.Adapters.SubredditPosts;
@@ -159,6 +163,7 @@ public class SubmissionsView extends Fragment implements SubmissionDisplay {
 
             if (SettingValues.fabType == Constants.FAB_POST) {
                 fab.setImageResource(R.drawable.add);
+                fab.setContentDescription(getString(R.string.btn_fab_post));
                 fab.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -169,6 +174,7 @@ public class SubmissionsView extends Fragment implements SubmissionDisplay {
                 });
             } else if (SettingValues.fabType == Constants.FAB_SEARCH) {
                 fab.setImageResource(R.drawable.search);
+                fab.setContentDescription(getString(R.string.btn_fab_search));
                 fab.setOnClickListener(new View.OnClickListener() {
                     String term;
                     @Override
@@ -235,6 +241,7 @@ public class SubmissionsView extends Fragment implements SubmissionDisplay {
                 });
             } else {
                 fab.setImageResource(R.drawable.hide);
+                fab.setContentDescription(getString(R.string.btn_fab_hide));
                 fab.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

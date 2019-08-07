@@ -13,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.inputmethod.InputMethodManager;
 
 import net.dean.jraw.models.Submission;
 
@@ -81,6 +82,12 @@ public class CommentsScreen extends BaseActivityAnim implements SubmissionDispla
         }
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        InputMethodManager imm = (InputMethodManager) getSystemService(BaseActivityAnim.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(findViewById(android.R.id.content).getWindowToken(), 0);
+    }
 
     @Override
     public void onDestroy() {
