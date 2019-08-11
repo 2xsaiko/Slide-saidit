@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
-import me.ccrama.redditslide.Toolbox.Toolbox;
 import net.dean.jraw.ApiException;
 import net.dean.jraw.http.NetworkException;
 import net.dean.jraw.managers.AccountManager;
@@ -32,6 +31,7 @@ import me.ccrama.redditslide.Activities.MainActivity;
 import me.ccrama.redditslide.Activities.MultiredditOverview;
 import me.ccrama.redditslide.Activities.NewsActivity;
 import me.ccrama.redditslide.DragSort.ReorderSubreddits;
+import me.ccrama.redditslide.Toolbox.Toolbox;
 import me.ccrama.redditslide.util.NetworkUtil;
 
 /**
@@ -40,16 +40,9 @@ import me.ccrama.redditslide.util.NetworkUtil;
 public class UserSubscriptions {
     public static final String       SUB_NAME_TO_PROPERTIES = "multiNameToSubs";
     public static final List<String> defaultSubs            =
-            Arrays.asList("frontpage", "subscribed", "all", "home", "announcements", "Art", "AskReddit", "askscience",
-                    "aww", "blog", "books", "creepy", "dataisbeautiful", "DIY", "Documentaries",
-                    "EarthPorn", "explainlikeimfive", "Fitness", "food", "funny", "Futurology",
-                    "gadgets", "gaming", "GetMotivated", "gifs", "history", "IAmA",
-                    "InternetIsBeautiful", "Jokes", "LifeProTips", "listentothis",
-                    "mildlyinteresting", "movies", "Music", "news", "nosleep", "nottheonion",
-                    "OldSchoolCool", "personalfinance", "philosophy", "photoshopbattles", "pics",
-                    "science", "Showerthoughts", "space", "sports", "television", "tifu",
-                    "todayilearned", "TwoXChromosomes", "UpliftingNews", "videos", "worldnews",
-                    "WritingPrompts");
+            Arrays.asList("frontpage", "subscribed", "all", "home", "asksaidit", "books", "censorship",
+                    "images", "internet", "meanwhileonreddit", "music", "news", "physics", "pics", "politics",
+                    "privacy", "saidit", "space", "videos", "whatever", "worldnews");
     public static final List<String> specialSubreddits      =
             Arrays.asList("frontpage", "subscribed", "all", "home", "random", "randnsfw", "myrandom", "friends", "mod",
                     "popular");
