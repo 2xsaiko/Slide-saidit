@@ -1140,7 +1140,7 @@
     <string name="setting_notification_piggybacking_desc">Cercar novetats en la safata d\'entrada només quan l\'aplicació oficial de Reddit rebi una notificació emergent</string>
     <string name="install_notif_piggyback">Instal·li l\'aplicació oficial de Reddit per activar les notificacions connectades</string>
     <string name="success_block_user">Usuari bloquejat amb èxit</string>
-    <string name="settings_highlight_time_desc"><![CDATA[Requereix que s'habiliti l'opció \'Mostrar el nombre de comentaris des de la darrera visita\' a Configuració > Disseny d'entrada]]></string>
+    <string name="settings_highlight_time_desc"><![CDATA[Requereix que s\'habiliti l\'opció \'Mostrar el nombre de comentaris des de la darrera visita\' a Configuració > Disseny d\'entrada]]></string>
     <string name="settings_colored_time">Tintar la bombolla horària per a comentaris nous</string>
     <string name="theme_deep">En profunditat</string>
     <string name="type_vreddit">Vídeo de Reddit</string>

@@ -1081,7 +1081,7 @@
     <string name="setting_notification_piggybacking_desc">Controlla la posta solo quando l\'app ufficiale di Reddit riceve una notifica push</string>
     <string name="install_notif_piggyback">Installa l\'app Reddit ufficiale per abilitare le notifiche Piggybacking</string>
     <string name="success_block_user">Utente bloccato con successo</string>
-    <string name="settings_highlight_time_desc"><![CDATA[Richiede \'Mostra il conteggio dei commenti dall'ultima visita\' da abilitare in Impostazioni > Post layout]]></string>
+    <string name="settings_highlight_time_desc"><![CDATA[Richiede \'Mostra il conteggio dei commenti dall\'ultima visita\' da abilitare in Impostazioni > Post layout]]></string>
     <string name="settings_colored_time">Bolla temporale colorata per nuovi commenti</string>
     <string name="theme_deep">In profondità</string>
     <string name="type_vreddit">Reddit Video</string>
