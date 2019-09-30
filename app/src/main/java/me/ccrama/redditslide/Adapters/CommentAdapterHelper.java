@@ -248,7 +248,7 @@ public class CommentAdapterHelper {
                                     if (rule.getKind() == SubredditRule.RuleKind.COMMENT
                                             || rule.getKind() == SubredditRule.RuleKind.ALL) {
                                         RadioButton btn = new RadioButton(mContext);
-                                        btn.setText(rule.getViolationReason());
+                                        btn.setText(rule.getShortName());
                                         reasonGroup.addView(btn, reasonGroup.getChildCount() - 2);
                                         btn.getLayoutParams().width = WindowManager.LayoutParams.MATCH_PARENT;
                                     }
